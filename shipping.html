@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Shopping Wizard</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="shipping.css" /> 
+
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+      <nav>
+          logo
+      </nav>
+
+      <!-- Shipping -->  
+      <div class="container">
+        <div class="process"></div>
+        <div class="main-content">
+            <div class="info">
+                <h3>Shipping</h3>
+                <h4>Shipping type</h4>
+                <form action="#"">
+                    <div class="shippingType">
+                        <input type="radio" id="free" name="shipping-type" value="Free shipment (72H)">
+                        <label for="free">Free shipment (72H)</label><br>
+                        <input type="radio" id="extra" name="shipping-type" value="Extra shipping (48h)">
+                        <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
+                        <input type="radio" id="premium" name="shipping-type" value="Premium (24h)">
+                        <label for="premium">JPremium (24h) <span class="shipping">9,99$</span></label>
+                    </div>  
+
+                    <!-- 
+                    <div class="timeArrive">
+                        <h4>Your order will arrive:</h4>
+                        <h4>estimate delivery date:</h4>
+                        <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
+                    </div> 
+                    -->
+
+                    <div class="gift-check">
+                        <label>
+                          <input type="checkbox">
+                          Is it a gift?
+                        </label>
+                    </div>
+                    <div class="gift-message">
+                        <textarea rows="4" cols="50" name="comment"></textarea>
+                    </div>
+                    <div class="giftWrapper">
+                        <p>Gift wrapper image</p>
+                        <input type="button" value="Select image">
+                    </div>
+                </form>
+            </div>
+            <div class="timing">
+                <p>your started registering <span>3 minutes ago</span></p>
+                <p>Hurry up!</p>
+            </div>
+        </div>
+
+
+      </div>
+
+      <footer>
+        <p><strong>Shopping Wizard 2021</strong></p>
+      </footer>
+    <!-- <script src="shipping.js" async defer></script> --> 
+    <script>
+        var shipType = document.getElementById('premium');
+        var shippingType = document.getElementsByClassName('shippingType');
+
+        shipType.addEventListener("click", () => {
+            var extraInfo = document.createElement('div');
+        });
+        
+        function addExtraInfo() {
+            var extraInfo = document.createElement('div');
+            extraInfo.textContent =  "AAAA"
+            console.log(extraInfo.textContent);
+            // document.body.appendChild(extraInfo);
+           
+        }
+
+    </script>
+  </body>
+</html>
