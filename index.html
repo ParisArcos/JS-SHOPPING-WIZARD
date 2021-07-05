@@ -26,30 +26,60 @@
     <div class="container">
       <!--Contenedor principal-->
       <div class="col-container">
-        <!--Contenedor izquierdo-->        
+        <!--Contenedor izquierdo--> 
+        <div class="img-big">
+          <img src="600x400-0.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+        <div class="img-big">
+          <img src="600x400-1.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+        <div class="img-big">
+          <img src="600x400-2.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>   
+        <div class="img-big">
+          <img src="600x400-3.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+        <div class="img-big">
+          <img src="600x400-4.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+            
         <div class="carrousel">
-          <div class="img-big">
-            <img src="600x400-1.png" alt="Main-Image" />
-            <!--img principal-->
-            <!--spam new!/sale! (EXTRA)-->
-            <!--hoover=Boton comprar(EXTRA)-->
-          </div>
+          
           <!--Carrusel de imagenes-->
           <div class="img-small">
-            <img src="600x400-2.png" alt="Small-Image1" /><!--img1-->
+            <img class="mini cursor" data-num=1 src="600x400-0.png" alt="Small-Image4" />
           </div>
           <div class="img-small">
-            <img src="600x400-3.png" alt="Small-Image2" /><!--img2-->
+            <img class="mini cursor" src="600x400-1.png" alt="Small-Image3" /><!--img3-->
+          </div>
+          <div class="img-small">            
+            <img class="mini cursor" src="600x400-2.png" alt="Small-Image1" /><!--img1-->
           </div>
           <div class="img-small">
-            <img src="600x400-4.png" alt="Small-Image3" /><!--img3-->
+            <img class="mini cursor" src="600x400-3.png" alt="Small-Image2" /><!--img2-->
           </div>
           <div class="img-small">
-            <img src="600x400-5.png" alt="Small-Image4" />
-            <!--NEXT (EXTRA)-->
+            <img class="mini cursor" src="600x400-4.png" alt="Small-Image3" /><!--img3-->
           </div>
+          
         </div>
       </div>
+      
       <div class="col-container">
         <!--Contenedor derecho-->
         <div class="name">
@@ -125,17 +155,24 @@
       </div>
     </div>
 
-<<<<<<< HEAD
       <footer>
         <p><strong>Shopping Wizard 2021</strong></p>
       </footer>
       
-=======
-    <footer>
-      <p><strong>Shopping Wizard 2021</strong></p>
-    </footer>
-
->>>>>>> 80a95894188cc652a1b94a8d78aecc465cc265ef
     <script src="assets/script.js" async defer></script>
+
+    <script>
+      var slides = document.getElementsByClassName("img-big");
+      var minis = document.getElementsByClassName("mini");
+      console.log(minis);
+
+    for (let s = 0; s < minis.length; s++) {
+      var number=s;
+      minis[s].addEventListener("click", currentSlide(s));   
+    }
+
+     
+      </script>
+
   </body>
 </html>

@@ -6,12 +6,17 @@
   align-items: flex-start;
 }
 .col-container {
+  position: relative;
   width: 50%;
   margin: 5%;
+}
+.cursor {
+  cursor: pointer;
 }
 
 /*? columna de la izquierda */
 .img-big {
+  display: none;
   width: auto;
   padding: 5%;
 }
@@ -22,9 +27,18 @@
   padding: 5%;
 }
 .img-small {
-  max-width: 100%;
-  height: auto;
+  float: left;
   margin: 1%;
+}
+.mini {
+  opacity: 0.6;
+  width: 75px;
+  height: 50px;
+}
+
+.active,
+.mini:hover {
+  opacity: 1;
 }
 
 /*? columna de la derecha */
