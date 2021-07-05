@@ -1,4 +1,51 @@
 /* Generics */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.col-container {
+  width: 50%;
+  margin: 5%;
+}
+
+/*? columna de la izquierda */
+.img-big {
+  width: auto;
+  padding: 5%;
+}
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.img-small {
+  max-width: 100%;
+  height: auto;
+  margin: 1%;
+}
+/*? columna de la derecha */
+.name {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  align-self: flex-end;
+  margin: 5%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  margin: 5%;
+}
+.button-submit {
+  align-self: flex-end;
+  margin: 10%;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;

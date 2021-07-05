@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -25,7 +25,7 @@
     </header>
     <div class="container">
       <!--Contenedor principal-->
-      <div class="left-container">
+      <div class="col-container">
         <!--Contenedor izquierdo-->
         <div class="img-big">
           <img src="600x400.png" alt="Main-Image" />
@@ -50,18 +50,18 @@
           </div>
         </div>
       </div>
-      <div class="right-container">
+      <div class="col-container">
         <!--Contenedor derecho-->
         <div class="name">
           <!--Nombre Producto-->
-          <h2>NOMBRE PRODUCTO</h2>
-          <span>new!</span>
+          <h2>{productName}</h2>
+          <span class="tag">new!</span>
         </div>
         <div class="info">
           <!--Contenedor Informacion-->
           <div class="price">
             <!--Precio-->
-            <h3>PRECIO X€</h3>
+            <h3>{productPrice}€</h3>
           </div>
           <div class="description">
             <!--Descpcion-->
@@ -78,43 +78,48 @@
           </div>
           <div class="selection1">
             <!--Select 1-->
-            <h4>selection1</h4>
+            <h4>{productSize}</h4>
             <select id="selection1">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
             </select>
           </div>
           <div class="selection2">
             <!--Selectpicker 2-->
-            <h4>selection2</h4>
+            <h4>{productColor}</h4>
             <select id="selection2">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+              <option value="white">white</option>
+              <option value="black">black</option>
+              <option value="camel">camel</option>
+              <option value="green">green</option>
+              <option value="red">red</option>
             </select>
           </div>
           <div class="button-submit">
             <button type="submit">Comprar</button>
           </div>
           <div class="additional-info">
+            <details>
+              <h3></h3><summary>Info Adicional</summary></h3>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </p>
+            </details>
             <!--Desplegable info adicional(EXTRA)-->
-            <h3>Info Adicional</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
           </div>
         </div>
       </div>
