@@ -64,10 +64,13 @@
                         <p>Gift wrapper image</p>
                         <input type="button" value="Select image">
                     </div>
+                    <div class="">
+                      <input type="button" class="reset" value="Clear">
+                    </div>
                 </form>
             </div>
             <div class="timing">
-                <p>your started registering <span id="countdown">03:00</span> minutes ago</p>
+                <p>your started registering <span id="countdown"></span> minutes ago</p>
                 <p>Hurry up!</p>
             </div>
         </div>
@@ -80,7 +83,7 @@
       </footer>
     <!-- <script src="shipping.js" async defer></script> --> 
     <script>
-
+        
         // Control information on shipping time
         var infoShipping = document.getElementById('infoShipping');
         var shipBtns = document.querySelectorAll('.shippingType input');
@@ -110,14 +113,23 @@
         var time = staringMinutes * 60;
         var countdownEl = document.getElementById('countdown');
 
-        setInterval(updateCountdown, 1000)
+        var setTime = setInterval(updateCountdown, 1000);
+        
         function updateCountdown() {
             let minutes = Math.floor(time / 60);
             let seconds = time % 60;
             seconds = seconds < 10 ? '0' + seconds : seconds;
             countdownEl.innerHTML = `${minutes}:${seconds}`;
             time--;
+
+            if  (minutes <= 0 && seconds == 0) {
+              clearInterval(setTime);
+              alert("Time is up!");
+            }
         }
+
+
+
     </script>
   </body>
 </html>
