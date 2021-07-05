@@ -1,19 +1,40 @@
-<<<<<<< HEAD
-.flex {
-    display: flex;
-    flex-wrap: wrap;
+/* Generics */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
-=======
-/*--
-1
-2
-3
-4
-5
-6
-7
-8
-9
-0
-*/
->>>>>>> 0b9d4895d050ce88ed7b38c26c2a50ef207f9644
+.red {
+  background-color: red;
+}
+#timer-sesion {
+  text-align: center;
+  padding: 15px;
+}
+.product-color {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: solid 1px black;
+}
+/* Thank You Page */
+#thank-you .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#thank-you .card {
+  background-color: white;
+  box-shadow: 0 5px 10px #00000026;
+  padding: 1.5rem 1.5rem;
+}
+#thank-you.product-image,
+#thank-you.product-details {
+  padding: 17.5px;
+}
+#thank-you .flex > div {
+  margin-bottom: 25px;
+}
+#thank-you {
+  background-color: #f4f4f4;
+  padding: 1rem;
+}

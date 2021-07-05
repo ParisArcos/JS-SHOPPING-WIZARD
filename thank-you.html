@@ -1,0 +1,90 @@
+<section id="thank-you">
+  <h1>Your order is complete!</h1>
+  <p>Thank you for your order!</p>
+
+  <div class="flex">
+    <div class="order-purchases">
+      <div class="card">
+        <h3>Your purchase</h3>
+        <div class="flex">
+          <div class="product-image">
+            <img
+              width="150"
+              class="img-fluid"
+              src="https://www.americanzone.net/wp-content/uploads/2016/06/Grey-T-Shirt-PNG.png"
+            />
+          </div>
+          <div class="product-details">
+            <p>Product Name</p>
+
+            <p>Size: {productSize}</p>
+
+            
+            <p>Color: <span class="product-color red"><!--{productColor}--></span></p>
+
+            <div id="delivery-date">
+              <span>Estimated delivery date:</span>
+              <p>Between 21 of July of 2021 14:00h <br />
+              and 21 of July of 2021 20:00h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-payment-details">
+      <div class="card">
+        <p><strong>Payment details</strong></p><br>
+        <p>{productName}: <strong>{productPrice}€</strong></p>
+        <p>{shippingName}: <strong>{shippingCost}€</strong></p>
+        <hr />
+        <p>Total: {orderTotal}€</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="timer-sesion">
+    <p>Your registration took: <strong>{time with format X minutes and Y seconds }</strong>.</p>
+  </section>
+</section>
+
+<style>
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  .card {
+    background-color: white;
+    box-shadow: 0 5px 10px #00000026;
+    padding: 1.5rem 1.5rem;
+  }
+  .product-image,
+  .product-details {
+    padding: 17.5px;
+  }
+  .product-color {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: solid 1px black;
+  }
+  .red {
+    background-color: red;
+  }
+  #timer-sesion {
+      text-align: center;
+    padding: 15px;
+  }
+  .flex > div {
+    margin-bottom: 25px;
+  }
+  #thank-you {
+      background-color: #f4f4f4;
+      padding: 1rem;
+  }
+</style>
