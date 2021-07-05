@@ -39,7 +39,8 @@
                         <input type="radio" id="extra" name="shipping-type" value="Extra shipping (48h)">
                         <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
                         <input type="radio" id="premium" name="shipping-type" value="Premium (24h)">
-                        <label for="premium">JPremium (24h) <span class="shipping">9,99$</span></label>
+                        <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
+                        <div id="infoShipping"></div>
                     </div>  
 
                     <!-- 
@@ -81,29 +82,27 @@
     <script>
 
         // Control information on shipping time
-        var shipPremium = document.getElementById('premium');
-        var shipExtra = document.getElementById('extra'); 
-        var shippingType = document.getElementsByClassName('shippingType');
-        // console.log(shippingType)
+        var infoShipping = document.getElementById('infoShipping');
+        var shipBtns = document.querySelectorAll('.shippingType input');
 
-        shipPremium.addEventListener("click", () => {
-            var infoPremium = document.createElement('div');
-            infoPremium.innerHTML =  `
-            <h4>Your order will arrive:</h4>
-            <h4>estimate delivery date:</h4>
-            <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
-            `;
-            shippingType[0].appendChild(infoPremium);
-        });
-
-        shipExtra.addEventListener("click", () => {
-            var infoExtra = document.createElement('div');
-            infoExtra.innerHTML =  `
-            <h4>Your order will arrive:</h4>
-            <h4>estimate delivery date:</h4>
-            <p>Between <span>25 de Julio de 2020 14:00h</span> and <span>25 de Julio de 2020 20:00h.</span></p>
-            `;
-            shippingType[0].appendChild(infoExtra);
+        shipBtns.forEach(shipBtn => {
+            shipBtn.addEventListener('click', (e) => {
+              if (e.target.id == "extra") {
+                infoShipping.innerHTML =  `
+                  <h4>Your order will arrive:</h4>
+                  <h4>estimate delivery date:</h4>
+                  <p>Between <span>25 de Julio de 2020 14:00h</span> and <span>25 de Julio de 2020 20:00h.</span></p>
+                  `;               
+              } else if (e.target.id == "premium") {
+                infoShipping.innerHTML =  `
+                  <h4>Your order will arrive:</h4>
+                  <h4>estimate delivery date:</h4>
+                  <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
+                  `;
+              } else if (e.target.id == "free") {
+                infoShipping.innerHTML = '';
+              }
+            }) 
         });
 
         // Control timing 
@@ -118,10 +117,6 @@
             seconds = seconds < 10 ? '0' + seconds : seconds;
             countdownEl.innerHTML = `${minutes}:${seconds}`;
             time--;
-
-            if (minutes <= 0) {
-              clearInterval();
-            }
         }
     </script>
   </body>
