@@ -66,7 +66,7 @@
                 </form>
             </div>
             <div class="timing">
-                <p>your started registering <span>3 minutes ago</span></p>
+                <p>your started registering <span id="countdown">03:00</span> minutes ago</p>
                 <p>Hurry up!</p>
             </div>
         </div>
@@ -79,20 +79,50 @@
       </footer>
     <!-- <script src="shipping.js" async defer></script> --> 
     <script>
-        var shipType = document.getElementById('premium');
+
+        // Control information on shipping time
+        var shipPremium = document.getElementById('premium');
+        var shipExtra = document.getElementById('extra'); 
         var shippingType = document.getElementsByClassName('shippingType');
         // console.log(shippingType)
-        shipType.addEventListener("click", () => {
-            var extraInfo = document.createElement('div');
-            extraInfo.innerHTML =  `
+
+        shipPremium.addEventListener("click", () => {
+            var infoPremium = document.createElement('div');
+            infoPremium.innerHTML =  `
             <h4>Your order will arrive:</h4>
             <h4>estimate delivery date:</h4>
             <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
             `;
-            shippingType[0].appendChild(extraInfo);
-
+            shippingType[0].appendChild(infoPremium);
         });
 
+        shipExtra.addEventListener("click", () => {
+            var infoExtra = document.createElement('div');
+            infoExtra.innerHTML =  `
+            <h4>Your order will arrive:</h4>
+            <h4>estimate delivery date:</h4>
+            <p>Between <span>25 de Julio de 2020 14:00h</span> and <span>25 de Julio de 2020 20:00h.</span></p>
+            `;
+            shippingType[0].appendChild(infoExtra);
+        });
+
+        // Control timing 
+        var staringMinutes = 3;
+        var time = staringMinutes * 60;
+        var countdownEl = document.getElementById('countdown');
+
+        setInterval(updateCountdown, 1000)
+        function updateCountdown() {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+            countdownEl.innerHTML = `${minutes}:${seconds}`;
+            time--;
+
+            if (minutes <= 0) {
+              clearInterval();
+            }
+        }
     </script>
   </body>
 </html>
