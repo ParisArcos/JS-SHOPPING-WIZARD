@@ -1,12 +1,87 @@
-/*--
-1
-2
-3
-4
-5
-6
-7
-8
-9
-0
-*/
+/* Generics */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.col-container {
+  width: 50%;
+  margin: 5%;
+}
+
+/*? columna de la izquierda */
+.img-big {
+  width: auto;
+  padding: 5%;
+}
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.img-small {
+  max-width: 100%;
+  height: auto;
+  margin: 1%;
+}
+/*? columna de la derecha */
+.name {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  align-self: flex-end;
+  margin: 5%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  margin: 5%;
+}
+.button-submit {
+  align-self: flex-end;
+  margin: 10%;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.red {
+  background-color: red;
+}
+#timer-sesion {
+  text-align: center;
+  padding: 15px;
+}
+.product-color {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: solid 1px black;
+}
+/* Thank You Page */
+#thank-you .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#thank-you .card {
+  background-color: white;
+  box-shadow: 0 5px 10px #00000026;
+  padding: 1.5rem 1.5rem;
+}
+#thank-you.product-image,
+#thank-you.product-details {
+  padding: 17.5px;
+}
+#thank-you .flex > div {
+  margin-bottom: 25px;
+}
+#thank-you {
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
