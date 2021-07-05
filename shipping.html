@@ -10,7 +10,7 @@
     <title>Shopping Wizard</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="shipping.css" /> 
+    <link rel="stylesheet" href="assets/style.css" />
 
   </head>
 
@@ -81,18 +81,14 @@
     <script>
         var shipType = document.getElementById('premium');
         var shippingType = document.getElementsByClassName('shippingType');
-
+        console.log(shippingType)
         shipType.addEventListener("click", () => {
             var extraInfo = document.createElement('div');
-        });
-        
-        function addExtraInfo() {
-            var extraInfo = document.createElement('div');
             extraInfo.textContent =  "AAAA"
-            console.log(extraInfo.textContent);
-            // document.body.appendChild(extraInfo);
-           
-        }
+            
+            shippingType[0].appendChild(extraInfo);
+
+        });
 
     </script>
   </body>
