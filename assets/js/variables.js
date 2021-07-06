@@ -110,6 +110,7 @@ var shipping = {
   type: "",
   amount: 0,
   date: "",
+  shippingPrice: "",
 };
 /**
  * Gift Global Variables
