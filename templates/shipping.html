@@ -104,7 +104,7 @@
 
                     <div class="giftCheck">
                         <label> Is it a gift?</label>
-                        <input type="checkbox" name="giftCheck">
+                        <input type="checkbox" name="gift-check">
                     </div>
                     <div class="giftMessage">
                         <label>Gift Message</label>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="giftWrapper">
                         <label>Gift wrapper image</label>
-                        <input type="file" value="Select image" name="giftWrapper" accept=".jpg, .jpeg, .png">
+                        <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
                     </div>
                     <div class="reset">
                       <input type="button" class="reset" value="Clear" onclick="clearFunction()">
@@ -172,14 +172,14 @@
               if (e.target.id == "extra") {
                 infoShipping.innerHTML =  `
                   <h4>Your order will arrive:</h4>
-                  <h4>estimate delivery date:</h4>
-                  <p>Between <span>25 de Julio de 2020 14:00h</span> and <span>25 de Julio de 2020 20:00h.</span></p>
+                  <p>estimate delivery date:</p>
+                  <p>Between <span style="font-weight: bold;">25 de Julio de 2020 14:00h</span> and <span style="font-weight: bold;">25 de Julio de 2020 20:00h.</span></p>
                   `;               
               } else if (e.target.id == "premium") {
                 infoShipping.innerHTML =  `
                   <h4>Your order will arrive:</h4>
-                  <h4>estimate delivery date:</h4>
-                  <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
+                  <p>estimate delivery date:</p>
+                  <p>Between <span style="font-weight: bold;">21 de Julio de 2020 14:00h</span> and <span style="font-weight: bold;">21 de Julio de 2020 20:00h.</span></p>
                   `;
               } else if (e.target.id == "free") {
                 infoShipping.innerHTML = '';
@@ -208,6 +208,18 @@
         }     
 
         // Form on submit
+        var gift = {
+            isset: false,
+            message: "",
+            image: "",
+        };
+
+        var shipping = {
+            type: "",
+            amount: 0,
+            date: "",
+        };
+
         var form = document.querySelector('#shipping-form-submit');   
         form.addEventListener('submit', function(event){
           event.preventDefault();
@@ -215,13 +227,25 @@
           let formData = new FormData(form);
           // Display the values
           for(var input of formData.entries()) {
-
+            console.log(input)
+            // shipping data
             if (input[0] == 'shipping-type') {
-              shipping.type = input[1];
-            }
-            
-          }
+                shipping.type = input[1];
+            } 
 
+            shipping.date = infoShipping.innerHTML;
+            
+            // gift data
+            if (input[0] == 'gift-check') {
+                gift.isset = input[1];
+            } 
+            if (input[0] == 'comment') {
+                gift.message = input[1];
+            } 
+            if (input[0] == 'gift-wrapper') {
+                gift.image = input[1];
+            } 
+          }
         });
 
         // Form clear
