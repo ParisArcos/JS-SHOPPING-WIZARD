@@ -2,46 +2,46 @@
  * User Global Variables
  */
 var user = {
-  userName,
-  email,
-  password,
-  firstName,
-  lastName,
-  birthday,
-  firstAddress,
-  secondAddress,
-  postalCode,
-  country,
-  phoneCountryCode,
-  phoneNumber,
+  userName: '',
+  email: '',
+  password: '',
+  firstName: '',
+  lastName: '',
+  birthday: '',
+  firstAddress: '',
+  secondAddress: '',
+  postalCode: '',
+  country: '',
+  phoneCountryCode: '',
+  phoneNumber: ''
 };
 /**
  * Product Global Variables
  */
 var product = {
-  name,
-  price,
-  size,
+  name: '',
+  price: '',
+  size: '',
   colors: {
-    color,
-    imageURL,
+    color: '',
+    imageURL: '',
   },
 };
 /**
  * Shipping Global Variables
  */
 var shipping = {
-  type,
-  amount,
-  date,
+  type: '',
+  amount: '',
+  date: '',
 };
 /**
  * Gift Global Variables
  */
 var gift = {
-  isset: false,
-  message,
-  image,
+  isset: '',
+  message: '',
+  image: '',
 };
 
 var slide = document.getElementById("img-big");
