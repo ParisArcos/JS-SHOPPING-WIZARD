@@ -103,20 +103,19 @@
                     </div>  
 
                     <div class="giftCheck">
-                        <label>
-                          <input type="checkbox" name="giftCheck">
-                          Is it a gift?
-                        </label>
+                        <label> Is it a gift?</label>
+                        <input type="checkbox" name="giftCheck">
                     </div>
                     <div class="giftMessage">
+                        <label>Gift Message</label>
                         <textarea rows="4" cols="50" name="comment"></textarea>
                     </div>
                     <div class="giftWrapper">
-                        <p>Gift wrapper image</p>
-                        <input type="button" value="Select image" name="giftWrapper">
+                        <label>Gift wrapper image</label>
+                        <input type="file" value="Select image" name="giftWrapper" accept=".jpg, .jpeg, .png">
                     </div>
                     <div class="reset">
-                      <input type="button" class="reset" value="Clear">
+                      <input type="button" class="reset" value="Clear" onclick="clearFunction()">
                     </div>
 
                     <input type="submit" value="submit form">
@@ -224,6 +223,12 @@
           }
 
         });
+
+        // Form clear
+        function clearFunction() {
+            form.reset();
+        }
+
     </script>
   </body>
 </html>
