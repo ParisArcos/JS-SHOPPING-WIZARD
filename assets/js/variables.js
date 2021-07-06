@@ -19,29 +19,62 @@ var user = {
  * Product Global Variables
  */
 var product = {
-  name: '',
-  price: '',
-  size: '',
-  colors: {
-    color: '',
-    imageURL: '',
-  },
+  name: 'Camiseta básica',
+  price: 9.99,
+  size: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+  colors: [
+    {
+      colorName: 'Arena',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#bbac9a'
+    },
+    {
+      colorName: 'Blanco',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#fff'
+    },
+    {
+      colorName: 'Gris medio',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#646174'
+    },
+    {
+      colorName: 'Kaki',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#c6d47d'
+    },
+    {
+      colorName: 'Lila',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#c6bbd5'
+    },
+    {
+      colorName: 'Lima',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#646174'
+    },
+    {
+      colorName: 'Negro',
+      imageURL: 'assets/img/arena.webp',
+      colorHex: '#131217'
+    },
+  ]
 };
 /**
  * Shipping Global Variables
  */
 var shipping = {
   type: '',
-  amount: '',
-  date: '',
+  amount: 0,
+  date: ''
 };
 /**
  * Gift Global Variables
  */
 var gift = {
-  isset: '',
+  isset: false,
   message: '',
-  image: '',
+  image: ''
 };
 
 var slide = document.getElementById("img-big");
