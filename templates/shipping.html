@@ -95,11 +95,15 @@
                     <div class="shippingType">
                         <input type="radio" id="free" name="shipping-type" value="Free shipment (72H)">
                         <label for="free">Free shipment (72H)</label><br>
+
                         <input type="radio" id="extra" name="shipping-type" value="Extra shipping (48h)">
                         <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
+
                         <input type="radio" id="premium" name="shipping-type" value="Premium (24h)">
                         <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
+
                         <div id="infoShipping"></div>
+                        <input type="text" value="" name="shipping-info">
                     </div>  
 
                     <div class="giftCheck">
@@ -115,10 +119,11 @@
                         <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
                     </div>
                     <div class="reset">
-                      <input type="button" class="reset" value="Clear" onclick="clearFunction()">
+                        <input type="button" class="reset" value="Clear" onclick="clearFunction()">
                     </div>
-
-                    <input type="submit" value="submit form">
+                    <div class="reset">
+                        <input type="submit" value="submit form">
+                    </div>
                 </form>
             </div>
             <div class="timing">
@@ -195,17 +200,27 @@
         var setTime = setInterval(updateCountdown, 1000);
         
         function updateCountdown() {
-            let minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            countdownEl.innerHTML = `${minutes}:${seconds}`;
-            time--;
+          for (let i = 0; i < sections.length; i++) {
+            if (sections[i].id === "shipping") {
+                staringMinutes = 3;   
+            } else if (sections[i].id === "address") {
+                staringMinutes = 2;  
+            } else if (sections[i].id === "finish") {
+                staringMinutes = 4;  
+            } 
+          }
+          
+          let minutes = Math.floor(time / 60);
+          let seconds = time % 60;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+          countdownEl.innerHTML = `${minutes}:${seconds}`;
+          time--;
 
-            if  (minutes <= 0 && seconds == 0) {
-              clearInterval(setTime);
-              alert("Time is up!");
-            }
-        }     
+          if  (minutes <= 0 && seconds == 0) {
+            clearInterval(setTime);
+            alert("Time is up!");
+          }
+        }  
 
         // Form on submit
         var gift = {
@@ -218,6 +233,7 @@
             type: "",
             amount: 0,
             date: "",
+            shippingPrice: "",
         };
 
         var form = document.querySelector('#shipping-form-submit');   
@@ -231,9 +247,15 @@
             // shipping data
             if (input[0] == 'shipping-type') {
                 shipping.type = input[1];
+                if (shipping.type == "Extra shipping (48h)") {
+                    shipping.shippingPrice =  4.99;
+                } else if (shipping.type == "Premium (24h)") {
+                  shipping.shippingPrice = 9.99;
+                }
+                console.log(shipping.shippingPrice)
             } 
 
-            shipping.date = infoShipping.innerHTML;
+            // shipping.date = infoShipping.innerHTML;
             
             // gift data
             if (input[0] == 'gift-check') {
