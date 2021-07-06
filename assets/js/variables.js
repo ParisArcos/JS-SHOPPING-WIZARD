@@ -5,16 +5,16 @@ var user = {
   username: "",
   email: "",
   password: "",
-  password2: "",
-  fname: "",
-  lname: "",
+  firstName: "",
+  lastName: "",
   birthday: "",
   address1: "",
   address2: "",
-  pcode: "",
+  postalCode: "",
   country: "",
-  phone: "",
+  phoneCountry: "",
   phoneNumber: "",
+  regularAddress: false
 };
 /**
  * Product Global Variables
