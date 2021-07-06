@@ -26,15 +26,13 @@
     <header>
       <nav>logo</nav>
     </header>
-    <div class="container">
+    <div id="main">
       <!--Contenedor principal-->
+      <div class="flex">
       <div class="col-container">
-        <!--Contenedor izquierdo-->
-        <div class="img-big">
-          <img src="600x400.png" alt="Main-Image" />
         <!--Contenedor izquierdo--> 
         <div class="img-big">
-          <img id="img-big" src="assets/img/600x400-1.png" alt="Main-Image" />
+          <img id="img-big" class="img-fluid" src="assets/img/600x400-1.png" alt="Main-Image" />
           <!--img principal-->
           <!--spam new!/sale! (EXTRA)-->
           <!--hoover=Boton comprar(EXTRA)-->
@@ -68,14 +66,14 @@
         <!--Contenedor derecho-->
         <div class="name">
           <!--Nombre Producto-->
-          <h2>{productName}</h2>
+          <h2 id=name >{productName}</h2>
           <span class="tag">new!</span>
         </div>
         <div class="info">
           <!--Contenedor Informacion-->
           <div class="price">
             <!--Precio-->
-            <h3>{productPrice}€</h3>
+            <h3 id=price>{productPrice}€</h3>
           </div>
           <div class="description">
             <!--Descpcion-->
@@ -90,26 +88,18 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
           </div>
+          <form name="product-form" id="product-form" action="#" >
+            <input type="hidden" id="productName" name="productName" value="{productName}">
+            <input type="hidden" id="productPrice" name="productPrice" value="{productPrice}">
           <div class="selection1">
             <!--Select 1-->
-            <h4>{productSize}</h4>
-            <select id="selection1">
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45">45</option>
-            </select>
+            <h4>Size</h4>
+            <select id="selection1" name="selection1"> </select>
           </div>
           <div class="selection2">
             <!--Selectpicker 2-->
-            <h4>{productColor}</h4>
-            <select id="selection2">
+            <h4>Color</h4>
+            <select id="selection2" name="selection2">
               <option value="white">white</option>
               <option value="black">black</option>
               <option value="camel">camel</option>
@@ -120,6 +110,7 @@
           <div class="button-submit">
             <button type="submit">Comprar</button>
           </div>
+          </form>
           <div class="additional-info">
             <details>
               <h3></h3><summary>Info Adicional</summary></h3>
@@ -138,16 +129,15 @@
         </div>
       </div>
     </div>
+    </div>
 
     <footer>
       <p><strong>Shopping Wizard 2021</strong></p>
     </footer>
-
-      <footer>
-        <p><strong>Shopping Wizard 2021</strong></p>
-      </footer>
+    <script>
       
-
+    
+    </script>
     <!-- Script tags -->
     <script src="assets/js/variables.js"></script>
     <script src="assets/js/functions.js"></script>

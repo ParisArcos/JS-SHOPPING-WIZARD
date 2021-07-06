@@ -1,5 +1,7 @@
 /* Generics */
-
+#main {
+  padding: 2.5%;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -7,8 +9,8 @@
 }
 .col-container {
   position: relative;
-  width: 50%;
-  margin: 5%;
+  max-width: calc(50% - 5%);
+  padding: 2.5%;
 }
 .cursor {
   cursor: pointer;
@@ -16,8 +18,8 @@
 
 /*? columna de la izquierda */
 .img-big {
-  width: auto;
-  padding: 5%;
+  max-width: 100%;
+  height: auto;
 }
 .carrousel {
   display: flex;
@@ -78,10 +80,13 @@
   border: solid 1px black;
 }
 /* Thank You Page */
-#thank-you .flex {
+.flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.flex > div {
+  margin-bottom: 25px;
 }
 #thank-you .card {
   background-color: white;
@@ -92,10 +97,15 @@
 #thank-you.product-details {
   padding: 17.5px;
 }
-#thank-you .flex > div {
-  margin-bottom: 25px;
-}
+
 #thank-you {
   background-color: #f4f4f4;
   padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flex > div {
+      max-width: 100%;
+  }
 }
