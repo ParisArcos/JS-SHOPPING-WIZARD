@@ -2,24 +2,25 @@
  * User Global Variables
  */
 var user = {
-  userName: '',
-  email: '',
-  password: '',
-  firstName: '',
-  lastName: '',
-  birthday: '',
-  firstAddress: '',
-  secondAddress: '',
-  postalCode: '',
-  country: '',
-  phoneCountryCode: '',
-  phoneNumber: ''
+  username: "",
+  email: "",
+  password: "",
+  password2: "",
+  fname: "",
+  lname: "",
+  birthday: "",
+  address1: "",
+  address2: "",
+  pcode: "",
+  country: "",
+  phone: "",
+  phoneNumber: "",
 };
 /**
  * Product Global Variables
  */
 var product = {
-  name: 'Camiseta básica',
+  name: "Camiseta básica",
   price: 9.99,
   size: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
   combination: [
@@ -100,24 +101,27 @@ var product = {
           'assets/img/products/negro/4.webp'
       ]
     },
-  ]
+  ],
 };
 /**
  * Shipping Global Variables
  */
 var shipping = {
-  type: '',
+  type: "",
   amount: 0,
-  date: ''
+  date: "",
 };
 /**
  * Gift Global Variables
  */
 var gift = {
   isset: false,
-  message: '',
-  image: ''
+  message: "",
+  image: "",
 };
+/**
+ * Index Global Variables
+ */
 
 var slide = document.getElementById("img-big");
 var minis = document.querySelectorAll(".mini");

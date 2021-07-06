@@ -29,9 +29,6 @@
     <div class="container">
       <!--Contenedor principal-->
       <div class="col-container">
-        <!--Contenedor izquierdo-->
-        <div class="img-big">
-          <img src="600x400.png" alt="Main-Image" />
         <!--Contenedor izquierdo--> 
         <div class="img-big">
           <img id="img-big" src="assets/img/600x400-1.png" alt="Main-Image" />
@@ -90,10 +87,13 @@
               sunt in culpa qui officia deserunt mollit anim id est laborum."
             </p>
           </div>
+          <form name="product-form" id="product-form" action="#" >
+            <input type="hidden" id="productName" name="productName" value="{productName}">
+            <input type="hidden" id="productPrice" name="productPrice" value="{productPrice}">
           <div class="selection1">
             <!--Select 1-->
             <h4>{productSize}</h4>
-            <select id="selection1">
+            <select id="selection1" name="selection1">
               <option value="36">36</option>
               <option value="37">37</option>
               <option value="38">38</option>
@@ -109,7 +109,7 @@
           <div class="selection2">
             <!--Selectpicker 2-->
             <h4>{productColor}</h4>
-            <select id="selection2">
+            <select id="selection2" name="selection2">
               <option value="white">white</option>
               <option value="black">black</option>
               <option value="camel">camel</option>
@@ -120,6 +120,7 @@
           <div class="button-submit">
             <button type="submit">Comprar</button>
           </div>
+          </form>
           <div class="additional-info">
             <details>
               <h3></h3><summary>Info Adicional</summary></h3>
@@ -142,12 +143,14 @@
     <footer>
       <p><strong>Shopping Wizard 2021</strong></p>
     </footer>
-
-      <footer>
-        <p><strong>Shopping Wizard 2021</strong></p>
-      </footer>
+    <script>
       
+     
 
+
+
+    
+    </script>
     <!-- Script tags -->
     <script src="assets/js/variables.js"></script>
     <script src="assets/js/functions.js"></script>
