@@ -10,7 +10,15 @@
     <title>Shopping Wizard</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Style tags -->
     <link rel="stylesheet" href="assets/style.css" />
+    <!-- Script tags -->
+    <script src="assets/js/variables.js"></script>
+    <script src="assets/js/functions.js"></script>
+
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/forms.js"></script>
   </head>
 
   <body>
@@ -29,6 +37,9 @@
         <!--Contenedor izquierdo-->
         <div class="img-big">
           <img src="600x400.png" alt="Main-Image" />
+        <!--Contenedor izquierdo--> 
+        <div class="img-big">
+          <img src="600x400-0.png" alt="Main-Image" />
           <!--img principal-->
           <!--spam new!/sale! (EXTRA)-->
           <!--hoover=Boton comprar(EXTRA)-->
@@ -46,10 +57,56 @@
           </div>
           <div class="img-small">
             <img src="150x100(4).png" alt="Small-Image4" />
+        <div class="img-big">
+          <img src="600x400-1.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+        <div class="img-big">
+          <img src="600x400-2.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>   
+        <div class="img-big">
+          <img src="600x400-3.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+        <div class="img-big">
+          <img src="600x400-4.png" alt="Main-Image" />
+          <!--img principal-->
+          <!--spam new!/sale! (EXTRA)-->
+          <!--hoover=Boton comprar(EXTRA)-->
+        </div>
+            
+        <div class="carrousel">
+          <div class="img-big">
+            <img src="assets/img/600x400-1.png" alt="Main-Image" />
+            <!--img principal-->
+            <!--spam new!/sale! (EXTRA)-->
+            <!--hoover=Boton comprar(EXTRA)-->
+          </div>
+          <!--Carrusel de imagenes-->
+          <div class="img-small">
+            <img src="assets/img/600x400-2.png" alt="Small-Image1" /><!--img1-->
+          </div>
+          <div class="img-small">
+            <img src="assets/img/600x400-3.png" alt="Small-Image2" /><!--img2-->
+          </div>
+          <div class="img-small">
+            <img src="assets/img/600x400-4.png" alt="Small-Image3" /><!--img3-->
+          </div>
+          <div class="img-small">
+            <img src="assets/img/600x400-5.png" alt="Small-Image4" />
             <!--NEXT (EXTRA)-->
           </div>
+          
         </div>
       </div>
+      
       <div class="col-container">
         <!--Contenedor derecho-->
         <div class="name">
@@ -129,6 +186,24 @@
       <p><strong>Shopping Wizard 2021</strong></p>
     </footer>
 
+      <footer>
+        <p><strong>Shopping Wizard 2021</strong></p>
+      </footer>
+      
     <script src="assets/script.js" async defer></script>
+
+    <script>
+      var slides = document.getElementsByClassName("img-big");
+      var minis = document.getElementsByClassName("mini");
+      console.log(minis);
+
+    for (let s = 0; s < minis.length; s++) {
+      var number=s;
+      minis[s].addEventListener("click", currentSlide(s));   
+    }
+
+     
+      </script>
+
   </body>
 </html>

@@ -11,7 +11,46 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/style.css" />
+    <style>
 
+        section {
+            width: 80%;  
+            position: absolute;
+            left: 10%;           
+        }
+
+        .process-phrase {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: -15px;
+        }
+
+        .main-content {
+            display: flex;
+        }
+
+        .process-icons {
+            display: flex;  
+            justify-content: space-between;
+            margin-top: -20px;
+        }
+
+        .process-icons button {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid;
+        }
+
+        hr {
+          border: 2px solid lightgrey;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
   </head>
 
   <body>
@@ -26,13 +65,30 @@
       </nav>
 
       <!-- Shipping -->  
-      <div class="container">
-        <div class="process"></div>
+      <section id="shipping">
+        <!-- Buying Process -->
+        <div class="process">
+          <div class="process-phrase">
+              <h5>Profile</h5>
+              <h5>Adrress</h5>
+              <h5>Shipping</h5>
+              <h5>Finish</h5>
+          </div>
+          <div class="horizontalLine"><hr></div>
+          <div class="process-icons">
+              <div><button class="profile-process"></button></div>
+              <div><button class="address-process"></button></div>
+              <div><button class="shipping-process"></button></div>
+              <div><button class="finish-process"></button></div>
+          </div>
+        </div>
+
+        <!-- Shippping info -->
         <div class="main-content">
             <div class="info">
                 <h3>Shipping</h3>
                 <h4>Shipping type</h4>
-                <form action="#"">
+                <form action="#"" class="shipping-form">
                     <div class="shippingType">
                         <input type="radio" id="free" name="shipping-type" value="Free shipment (72H)">
                         <label for="free">Free shipment (72H)</label><br>
@@ -43,47 +99,37 @@
                         <div id="infoShipping"></div>
                     </div>  
 
-                    <!-- 
-                    <div class="timeArrive">
-                        <h4>Your order will arrive:</h4>
-                        <h4>estimate delivery date:</h4>
-                        <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
-                    </div> 
-                    -->
-
-                    <div class="gift-check">
+                    <div class="giftCheck">
                         <label>
-                          <input type="checkbox">
+                          <input type="checkbox" >
                           Is it a gift?
                         </label>
                     </div>
-                    <div class="gift-message">
+                    <div class="giftMessage">
                         <textarea rows="4" cols="50" name="comment"></textarea>
                     </div>
                     <div class="giftWrapper">
                         <p>Gift wrapper image</p>
                         <input type="button" value="Select image">
                     </div>
-                    <div class="">
+                    <div class="reset">
                       <input type="button" class="reset" value="Clear">
                     </div>
                 </form>
             </div>
             <div class="timing">
-                <p>your started registering <span id="countdown"></span> minutes ago</p>
+                <p>You started registering <span id="countdown"></span> minutes ago</p>
                 <p>Hurry up!</p>
             </div>
         </div>
-
-
-      </div>
+      </section>
 
       <footer>
         <p><strong>Shopping Wizard 2021</strong></p>
       </footer>
     <!-- <script src="shipping.js" async defer></script> --> 
     <script>
-        
+
         // Control information on shipping time
         var infoShipping = document.getElementById('infoShipping');
         var shipBtns = document.querySelectorAll('.shippingType input');
@@ -128,7 +174,7 @@
             }
         }
 
-
+        //   
 
     </script>
   </body>
