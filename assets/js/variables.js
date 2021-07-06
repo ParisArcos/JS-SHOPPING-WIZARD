@@ -44,5 +44,8 @@ var gift = {
   image,
 };
 
+var slide = document.getElementById("img-big");
+var minis = document.querySelectorAll(".mini");
+var count = 0;
 //onclick event-> forOf-> currentSlide(index)
 //
