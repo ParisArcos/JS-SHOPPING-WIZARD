@@ -12,47 +12,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/style.css" />
     <style>
+      section {
+        width: 80%;
+        position: absolute;
+        left: 10%;
+      }
 
-        section {
-            width: 80%;  
-            position: absolute;
-            left: 10%;           
-        }
+      .process-phrase {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -15px;
+      }
 
-        .process-phrase {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: -15px;
-        }
+      .main-content {
+        display: flex;
+      }
 
-        .main-content {
-            display: flex;
-        }
+      .process-icons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -20px;
+      }
 
-        .process-icons {
-            display: flex;  
-            justify-content: space-between;
-            margin-top: -20px;
-        }
+      .profile-icon,
+      .address-icon,
+      .shipping-icon,
+      .finish-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid;
+        background-color: white;
+      }
 
-        .profile-icon, .address-icon, 
-        .shipping-icon, .finish-icon  {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 1px solid;
-            background-color: white;
-        }
+      hr {
+        border: 2px solid lightgrey;
+      }
 
-        hr {
-          border: 2px solid lightgrey;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-        }
-
+      footer {
+        position: fixed;
+        bottom: 0;
+      }
     </style>
   </head>
 
@@ -63,167 +63,182 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-      <nav>
-          logo
-      </nav>
+    <nav>logo</nav>
 
-      <!-- Shipping -->  
-      <section id="shipping">
-        <!-- Buying Process -->
-        <div class="process">
-          <div class="process-phrase">
-              <h5>Profile</h5>
-              <h5>Adrress</h5>
-              <h5>Shipping</h5>
-              <h5>Finish</h5>
-          </div>
-          <div class="horizontalLine"><hr></div>
-          <div class="process-icons">
-              <div class="profile-icon"></div>
-              <div class="address-icon"></div>
-              <div class="shipping-icon"></div>
-              <div class="finish-icon"></div>
-          </div>
+    <!-- Shipping -->
+    <section id="shipping">
+      <!-- Buying Process -->
+      <div class="process">
+        <div class="process-phrase">
+          <h5>Profile</h5>
+          <h5>Adrress</h5>
+          <h5>Shipping</h5>
+          <h5>Finish</h5>
         </div>
-
-        <!-- Shippping info -->
-        <div class="main-content">
-            <div class="info">
-                <h3>Shipping</h3>
-                <h4>Shipping type</h4>
-                <form id="shipping-form-submit" action="#" class="shipping-form">
-                    <div class="shippingType">
-                        <input type="radio" id="free" name="shipping-type" value="Free shipment (72H)">
-                        <label for="free">Free shipment (72H)</label><br>
-                        <input type="radio" id="extra" name="shipping-type" value="Extra shipping (48h)">
-                        <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
-                        <input type="radio" id="premium" name="shipping-type" value="Premium (24h)">
-                        <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
-                        <div id="infoShipping"></div>
-                    </div>  
-
-                    <div class="giftCheck">
-                        <label>
-                          <input type="checkbox" name="giftCheck">
-                          Is it a gift?
-                        </label>
-                    </div>
-                    <div class="giftMessage">
-                        <textarea rows="4" cols="50" name="comment"></textarea>
-                    </div>
-                    <div class="giftWrapper">
-                        <p>Gift wrapper image</p>
-                        <input type="button" value="Select image" name="giftWrapper">
-                    </div>
-                    <div class="reset">
-                      <input type="button" class="reset" value="Clear">
-                    </div>
-
-                    <input type="submit" value="submit form">
-                </form>
-            </div>
-            <div class="timing">
-                <p>You started registering <span id="countdown"></span> minutes ago</p>
-                <p>Hurry up!</p>
-            </div>
+        <div class="horizontalLine"><hr /></div>
+        <div class="process-icons">
+          <div class="profile-icon"></div>
+          <div class="address-icon"></div>
+          <div class="shipping-icon"></div>
+          <div class="finish-icon"></div>
         </div>
-      </section>
+      </div>
 
-      <footer>
-        <p><strong>Shopping Wizard 2021</strong></p>
-      </footer>
-    <!-- <script src="shipping.js" async defer></script> --> 
+      <!-- Shippping info -->
+      <div class="main-content">
+        <div class="info">
+          <h3>Shipping</h3>
+          <h4>Shipping type</h4>
+          <form id="shipping-form-submit" action="#" class="shipping-form">
+            <div class="shippingType">
+              <input
+                type="radio"
+                id="free"
+                name="shipping-type"
+                value="Free shipment (72H)"
+              />
+              <label for="free">Free shipment (72H)</label><br />
+              <input
+                type="radio"
+                id="extra"
+                name="shipping-type"
+                value="Extra shipping (48h)"
+              />
+              <label for="extra"
+                >Extra shipping (48h) <span class="shipping">4,99$</span></label
+              ><br />
+              <input
+                type="radio"
+                id="premium"
+                name="shipping-type"
+                value="Premium (24h)"
+              />
+              <label for="premium"
+                >Premium (24h) <span class="shipping">9,99$</span></label
+              >
+              <div id="infoShipping"></div>
+            </div>
+
+            <div class="giftCheck">
+              <label>
+                <input type="checkbox" name="giftCheck" />
+                Is it a gift?
+              </label>
+            </div>
+            <div class="giftMessage">
+              <textarea rows="4" cols="50" name="comment"></textarea>
+            </div>
+            <div class="giftWrapper">
+              <p>Gift wrapper image</p>
+              <input type="button" value="Select image" name="giftWrapper" />
+            </div>
+            <div class="reset">
+              <input type="button" class="reset" value="Clear" />
+            </div>
+
+            <input type="submit" value="submit form" />
+          </form>
+        </div>
+        <div class="timing">
+          <p>
+            You started registering <span id="countdown"></span> minutes ago
+          </p>
+          <p>Hurry up!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Shopping Wizard 2021</strong></p>
+    </footer>
+    <!-- <script src="shipping.js" async defer></script> -->
     <script>
+      // process icon colors
+      var sections = document.getElementsByTagName("section");
+      var profileIcon = document.getElementsByClassName("profile-icon")[0];
+      var addressIcon = document.getElementsByClassName("address-icon")[0];
+      var shippingIcon = document.getElementsByClassName("shipping-icon")[0];
+      var finishIcon = document.getElementsByClassName("finish-icon")[0];
 
-        // process icon colors
-        var sections = document.getElementsByTagName('section');
-        var profileIcon = document.getElementsByClassName('profile-icon')[0];
-        var addressIcon = document.getElementsByClassName('address-icon')[0];
-        var shippingIcon = document.getElementsByClassName('shipping-icon')[0];
-        var finishIcon = document.getElementsByClassName('finish-icon')[0];
-        
-        for (let i = 0; i < sections.length; i++) {
-            if (sections[i].id === "shipping") {
-                profileIcon.style.backgroundColor = "black";
-                addressIcon.style.backgroundColor = "black";
-                shippingIcon.style.backgroundColor = "black";
-            } else if (sections[i].id === "thank-you") {
-                profileIcon.style.backgroundColor = "black";
-                addressIcon.style.backgroundColor = "black";
-                shippingIcon.style.backgroundColor = "black";
-                finishIcon.style.backgroundColor = "black";
-            } else if (sections[i].id === "profile") {
-                profileIcon.style.backgroundColor = "black";
-            } else if (sections[i].id === "address") {
-                profileIcon.style.backgroundColor = "black";
-                addressIcon.style.backgroundColor = "black";
-            } else if (sections[i].id === "finish") {
-                profileIcon.style.backgroundColor = "black";
-                addressIcon.style.backgroundColor = "black";
-                shippingIcon.style.backgroundColor = "black";
-            } 
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i].id === "shipping") {
+          profileIcon.style.backgroundColor = "black";
+          addressIcon.style.backgroundColor = "black";
+          shippingIcon.style.backgroundColor = "black";
+        } else if (sections[i].id === "thank-you") {
+          profileIcon.style.backgroundColor = "black";
+          addressIcon.style.backgroundColor = "black";
+          shippingIcon.style.backgroundColor = "black";
+          finishIcon.style.backgroundColor = "black";
+        } else if (sections[i].id === "profile") {
+          profileIcon.style.backgroundColor = "black";
+        } else if (sections[i].id === "address") {
+          profileIcon.style.backgroundColor = "black";
+          addressIcon.style.backgroundColor = "black";
+        } else if (sections[i].id === "finish") {
+          profileIcon.style.backgroundColor = "black";
+          addressIcon.style.backgroundColor = "black";
+          shippingIcon.style.backgroundColor = "black";
         }
+      }
 
-        // Control information on shipping time
-        var infoShipping = document.getElementById('infoShipping');
-        var shipBtns = document.querySelectorAll('.shippingType input');
+      // Control information on shipping time
+      var infoShipping = document.getElementById("infoShipping");
+      var shipBtns = document.querySelectorAll(".shippingType input");
 
-        shipBtns.forEach(shipBtn => {
-            shipBtn.addEventListener('click', (e) => {
-              if (e.target.id == "extra") {
-                infoShipping.innerHTML =  `
+      shipBtns.forEach((shipBtn) => {
+        shipBtn.addEventListener("click", (e) => {
+          if (e.target.id == "extra") {
+            infoShipping.innerHTML = `
                   <h4>Your order will arrive:</h4>
                   <h4>estimate delivery date:</h4>
                   <p>Between <span>25 de Julio de 2020 14:00h</span> and <span>25 de Julio de 2020 20:00h.</span></p>
-                  `;               
-              } else if (e.target.id == "premium") {
-                infoShipping.innerHTML =  `
+                  `;
+          } else if (e.target.id == "premium") {
+            infoShipping.innerHTML = `
                   <h4>Your order will arrive:</h4>
                   <h4>estimate delivery date:</h4>
                   <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
                   `;
-              } else if (e.target.id == "free") {
-                infoShipping.innerHTML = '';
-              }
-            }) 
-        });
-
-        // Control timing 
-        var staringMinutes = 3;
-        var time = staringMinutes * 60;
-        var countdownEl = document.getElementById('countdown');
-
-        var setTime = setInterval(updateCountdown, 1000);
-        
-        function updateCountdown() {
-            let minutes = Math.floor(time / 60);
-            let seconds = time % 60;
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-            countdownEl.innerHTML = `${minutes}:${seconds}`;
-            time--;
-
-            if  (minutes <= 0 && seconds == 0) {
-              clearInterval(setTime);
-              alert("Time is up!");
-            }
-        }     
-
-        // Form on submit
-        var form = document.querySelector('#shipping-form-submit');   
-        form.addEventListener('submit', function(event){
-          event.preventDefault();
-          
-          let formData = new FormData(form);
-          // Display the values
-          for(var input of formData.entries()) {
-
-            if (input[0] == 'shipping-type') {
-              shipping.type = input[1];
-            }
-            
+          } else if (e.target.id == "free") {
+            infoShipping.innerHTML = "";
           }
-
         });
+      });
+
+      // Control timing
+      var staringMinutes = 3;
+      var time = staringMinutes * 60;
+      var countdownEl = document.getElementById("countdown");
+
+      var setTime = setInterval(updateCountdown, 1000);
+
+      function updateCountdown() {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        countdownEl.innerHTML = `${minutes}:${seconds}`;
+        time--;
+
+        if (minutes <= 0 && seconds == 0) {
+          clearInterval(setTime);
+          alert("Time is up!");
+        }
+      }
+
+      // Form on submit
+      var form = document.querySelector("#shipping-form-submit");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let formData = new FormData(form);
+        // Display the values
+        for (var input of formData.entries()) {
+          if (input[0] == "shipping-type") {
+            shipping.type = input[1];
+          }
+        }
+      });
     </script>
   </body>
 </html>
