@@ -2,17 +2,18 @@
  * User Global Variables
  */
 var user = {
-  userName: "",
+  username: "",
   email: "",
   password: "",
-  firstName: "",
-  lastName: "",
+  password2: "",
+  fname: "",
+  lname: "",
   birthday: "",
-  firstAddress: "",
-  secondAddress: "",
-  postalCode: "",
+  address1: "",
+  address2: "",
+  pcode: "",
   country: "",
-  phoneCountryCode: "",
+  phone: "",
   phoneNumber: "",
 };
 /**
