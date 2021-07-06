@@ -35,11 +35,13 @@
             margin-top: -20px;
         }
 
-        .process-icons button {
+        .profile-icon, .address-icon, 
+        .shipping-icon, .finish-icon  {
             width: 20px;
             height: 20px;
             border-radius: 50%;
             border: 1px solid;
+            background-color: white;
         }
 
         hr {
@@ -50,6 +52,7 @@
             position: fixed;
             bottom: 0;
         }
+
     </style>
   </head>
 
@@ -76,10 +79,10 @@
           </div>
           <div class="horizontalLine"><hr></div>
           <div class="process-icons">
-              <div><button class="profile-icon"></button></div>
-              <div><button class="address-icon"></button></div>
-              <div><button class="shipping-icon"></button></div>
-              <div><button class="finish-icon"></button></div>
+              <div class="profile-icon"></div>
+              <div class="address-icon"></div>
+              <div class="shipping-icon"></div>
+              <div class="finish-icon"></div>
           </div>
         </div>
 
@@ -88,7 +91,7 @@
             <div class="info">
                 <h3>Shipping</h3>
                 <h4>Shipping type</h4>
-                <form action="#"" class="shipping-form">
+                <form id="shipping-form-submit" action="#" class="shipping-form">
                     <div class="shippingType">
                         <input type="radio" id="free" name="shipping-type" value="Free shipment (72H)">
                         <label for="free">Free shipment (72H)</label><br>
@@ -101,7 +104,7 @@
 
                     <div class="giftCheck">
                         <label>
-                          <input type="checkbox" >
+                          <input type="checkbox" name="giftCheck">
                           Is it a gift?
                         </label>
                     </div>
@@ -110,14 +113,13 @@
                     </div>
                     <div class="giftWrapper">
                         <p>Gift wrapper image</p>
-                        <input type="button" value="Select image">
+                        <input type="button" value="Select image" name="giftWrapper">
                     </div>
                     <div class="reset">
                       <input type="button" class="reset" value="Clear">
                     </div>
-                    <div class="reset">
-                      <input type="submit" value="submit form">
-                    </div>
+
+                    <input type="submit" value="submit form">
                 </form>
             </div>
             <div class="timing">
@@ -132,6 +134,35 @@
       </footer>
     <!-- <script src="shipping.js" async defer></script> --> 
     <script>
+
+        // process icon colors
+        var sections = document.getElementsByTagName('section');
+        var profileIcon = document.getElementsByClassName('profile-icon')[0];
+        var addressIcon = document.getElementsByClassName('address-icon')[0];
+        var shippingIcon = document.getElementsByClassName('shipping-icon')[0];
+        var finishIcon = document.getElementsByClassName('finish-icon')[0];
+        
+        for (let i = 0; i < sections.length; i++) {
+            if (sections[i].id === "shipping") {
+                profileIcon.style.backgroundColor = "black";
+                addressIcon.style.backgroundColor = "black";
+                shippingIcon.style.backgroundColor = "black";
+            } else if (sections[i].id === "thank-you") {
+                profileIcon.style.backgroundColor = "black";
+                addressIcon.style.backgroundColor = "black";
+                shippingIcon.style.backgroundColor = "black";
+                finishIcon.style.backgroundColor = "black";
+            } else if (sections[i].id === "profile") {
+                profileIcon.style.backgroundColor = "black";
+            } else if (sections[i].id === "address") {
+                profileIcon.style.backgroundColor = "black";
+                addressIcon.style.backgroundColor = "black";
+            } else if (sections[i].id === "finish") {
+                profileIcon.style.backgroundColor = "black";
+                addressIcon.style.backgroundColor = "black";
+                shippingIcon.style.backgroundColor = "black";
+            } 
+        }
 
         // Control information on shipping time
         var infoShipping = document.getElementById('infoShipping');
@@ -175,12 +206,24 @@
               clearInterval(setTime);
               alert("Time is up!");
             }
-        }
+        }     
 
+        // Form on submit
+        var form = document.querySelector('#shipping-form-submit');   
+        form.addEventListener('submit', function(event){
+          event.preventDefault();
+          
+          let formData = new FormData(form);
+          // Display the values
+          for(var input of formData.entries()) {
 
-        
-        
+            if (input[0] == 'shipping-type') {
+              shipping.type = input[1];
+            }
+            
+          }
 
+        });
     </script>
   </body>
 </html>
