@@ -71,6 +71,8 @@ function getValues() {
       : "";
     value[0] == "productPrice" ? (product.price = value[1]) : "";
   }
+  document.querySelector(".process").removeAttribute("hidden");
+  document.querySelector(".timing").removeAttribute("hidden");
   moveMainSection();
 }
 
