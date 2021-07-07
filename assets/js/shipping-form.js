@@ -1,7 +1,7 @@
 /**
  * Shipping Form Logic
  */
-form.addEventListener("submit", function (event) {
+ shippingForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   let formData = new FormData(form);

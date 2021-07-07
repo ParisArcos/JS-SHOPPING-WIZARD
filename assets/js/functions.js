@@ -3,7 +3,7 @@
  */
 function validatePassword(password, password2) {
   let errormsg = document.querySelector("#group__password2 .form__input-error");
-
+  console.log(password.value === password2.value);
   if (password.value === password2.value) {
     errormsg.style.display = "none";
     password2.setCustomValidity("");
