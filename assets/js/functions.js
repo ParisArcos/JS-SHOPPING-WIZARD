@@ -62,6 +62,7 @@ function drawImg() {
 }
 
 function getValues() {
+  event.preventDefault();
   var formValues = new FormData(productForm);
   for (const value of formValues.entries()) {
     value[0] == "productName"
@@ -70,6 +71,7 @@ function getValues() {
       : "";
     value[0] == "productPrice" ? (product.price = value[1]) : "";
   }
+  moveMainSection();
 }
 
 function buildSize() {
@@ -176,7 +178,7 @@ function clearFunction() {
 /**
  * Move Main
  */
-function moveMainSection() {   
-  positionMain-=100;
-  mainDiv.style.transform = "translateX("+ positionMain +"%)"; 
+function moveMainSection() {
+  positionMain -= 100;
+  mainDiv.style.transform = "translateX(" + positionMain + "%)";
 }
