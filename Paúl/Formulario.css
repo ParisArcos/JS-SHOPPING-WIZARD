@@ -1,3 +1,5 @@
+/*FORMULARIO DATOS CLIENTE Y DIRECCION*/
+
 .the-form {
   padding-left: 5%;
 }
@@ -67,3 +69,12 @@
 .form__group-incorrect .form__input {
   border: 2px solid red;
 }
+
+/*Quitar flechas del number*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*FIN FORMULARIO DATOS CLIENTE Y DIRECCION*/
