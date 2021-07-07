@@ -223,6 +223,10 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+/*Timing*/
+.timing {
+}
+
 /*FIN FORMULARIO DATOS CLIENTE Y DIRECCION*/
 
 /* Shipping Form */

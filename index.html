@@ -25,18 +25,39 @@
     <![endif]-->
     <header>
       <h3>E-commerce</h3>
+       <!--Timing-->
+      <div class="timing" hidden>
+          <p>
+            You started registering <span id="countdown"></span> minutes ago.
+          </p>
+          <p>Hurry up!</p>
+        </div>
     </header>
+    <!-- Buying Process -->
+      <div class="process" hidden>
+        <div class="process-phrase">
+          <h5>Profile</h5>
+          <h5>Adrress</h5>
+          <h5>Shipping</h5>
+          <h5>Finish</h5>
+        </div>
+        <div class="horizontalLine"><hr /></div>
+        <div class="process-icons">
+          <div class="profile-icon"></div>
+          <div class="address-icon"></div>
+          <div class="shipping-icon"></div>
+          <div class="finish-icon"></div>
+        </div>
+      </div>
     <div id="main">
     <section id="product-section" class="active">
       <!--Contenedor principal-->
       <div class="flex">
         <div class="col-container">
-          <!--Contenedor izquierdo--> 
+          <!--Contenedor izquierdo-->
           <div id="mainSlide" class="img-big"> </div>                
           <div id=carrousel class="carrousel"> </div>          
           </div>
-        
-        
         <div class="col-container">
           <!--Contenedor derecho-->
           <div class="name">
@@ -102,6 +123,7 @@
 
     <section id="profile" class="disabled">
       <form action="" class="the-form" id="user-form-1">
+         
         <h1>Profile</h1>
         <!--Group: Username-->
         <div class="form__group" id="group__username">
@@ -186,17 +208,19 @@
           </div>
           <p class="form__input-error">Both passwords must be the same.</p>
         </div>
+        <br />
         <!--Button-->
         <div class="form__group form__group-btn-submit">
+          <button type="reset" class="form__btn">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
-        <br />
         </form>
         </section>
 
         <section id="address" class="disabled">
         <form action="" class="the-form" id="user-form-2">
         <h1>Address</h1>
+
 
         <!--Group: FirstName-->
         <div class="form__group" id="group__fname">
@@ -373,13 +397,14 @@
         <!--Group: Confirm address-->
         <div class="form__group" id="group__confirm">
           <label class="form__label">
-            <input type="checkbox" name="confirm" id="confirm" />
+            <input type="checkbox" name="confirm" id="confirm" checked />
             This is my regular Address.
           </label>
         </div>
 
         <!--Button-->
         <div class="form__group form__group-btn-submit">
+          <button type="reset" class="form__btn">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
       </form>
@@ -387,24 +412,7 @@
 
     <!-- Shipping -->
     <section id="shipping" class="disabled">
-      <!-- Buying Process -->
-      <div class="process">
-        <div class="process-phrase">
-          <h5>Profile</h5>
-          <h5>Adrress</h5>
-          <h5>Shipping</h5>
-          <h5>Finish</h5>
-        </div>
-        <div class="horizontalLine"><hr /></div>
-        <div class="process-icons">
-          <div class="profile-icon"></div>
-          <div class="address-icon"></div>
-          <div class="shipping-icon"></div>
-          <div class="finish-icon"></div>
-        </div>
-      </div>
-
-      
+           
       <!-- Shippping info -->
       <div class="main-content">
         <div class="info">
@@ -448,13 +456,6 @@
               </div>
           </form>
         </div>
-        <div class="timing">
-          <p>
-            You started registering <span id="countdown"></span> minutes ago
-          </p>
-          <p>Hurry up!</p>
-        </div>
-      </div>
     </section>
 
     <section id="finish" class="disabled">
