@@ -20,7 +20,9 @@ for (let y = 0; y < product.combination.length; y++) {
   img.alt = product.combination[y].colorName;
   select2.appendChild(img);
 }
+drawImg();
 
+// evento click en colores
 for (const i of micros) {
   i.addEventListener("click", colorSlide);
 }
@@ -31,11 +33,12 @@ function colorSlide(event) {
     iterator.classList.remove("selected");
   }
   event.classList.add("selected");
+  drawImg();
 }
 
 //variable value (out)
 productForm.addEventListener("submit", getValues);
-function getValues(event) {
+function getValues() {
   var formValues = new FormData(productForm);
   for (const value of formValues.entries()) {
     value[0] == "productName" ? (product.name = value[1]) : "";
@@ -51,32 +54,39 @@ select2.addEventListener("submit", function () {
   product.size = select2.value;
 });
 
-//images colour
-
-product.combination.forEach((combination) => {
-  if (combination.colorHex === selected[0].dataset.hex) {
-    //<img id="img-big" class="img-fluid" src="assets/img/600x400-1.png" alt="Main-Image" />
-    var imgB = document.createElement("img");
-    imgB.setAttribute("class", "img-fluid");
-    imgB.src = combination.imageURL;
-    imgB.alt = combination.colorName;
-    imgB.id = "img-big";
-    mainSlide.appendChild(imgB);
-    for (let i = 0; i < combination.secondaryImg.length; i++) {
-      //<img class="mini cursor active" src="assets/img/600x400-1.png" alt="Small-Image1" /><!--img1-->
-      var imgSmll = document.createElement("img");
-      imgSmll.setAttribute(
-        "class",
-        i == 0 ? "mini cursor active" : "mini cursor"
-      );
-      imgSmll.src = combination.secondaryImg[i];
-      imgSmll.alt = combination.colorName;
-      imgSmll.id = "mini";
-      carrousel.appendChild(imgSmll);
+//draw images selected in colour selection
+function drawImg() {
+  mainSlide.innerHTML = "";
+  carrousel.innerHTML = "";
+  product.combination.forEach((combination) => {
+    if (combination.colorHex === selected[0].dataset.hex) {
+      //<img id="img-big" class="img-fluid" src="assets/img/600x400-1.png" alt="Main-Image" />
+      var imgB = document.createElement("img");
+      imgB.setAttribute("class", "img-fluid");
+      imgB.src = combination.imageURL;
+      imgB.alt = combination.colorName;
+      imgB.id = "img-big";
+      mainSlide.appendChild(imgB);
+      for (let i = 0; i <= combination.secondaryImg.length; i++) {
+        //<img class="mini cursor active" src="assets/img/600x400-1.png" alt="Small-Image1" /><!--img1-->
+        var imgSmll = document.createElement("img");
+        imgSmll.setAttribute("class", "mini cursor");
+        imgSmll.src = combination.secondaryImg[i];
+        imgSmll.alt = combination.colorName;
+        imgSmll.id = "mini";
+        carrousel.appendChild(imgSmll);
+        if (i == combination.secondaryImg.length) {
+          imgSmll.setAttribute("class", "mini cursor active");
+          imgSmll.src = combination.imageURL;
+          imgSmll.alt = combination.colorName;
+          imgSmll.id = "mini";
+          carrousel.appendChild(imgSmll);
+        }
+      }
     }
-  }
-});
-console.log(mainSlide.childNodes[1].src);
+  });
+}
+
 //images carousel
 for (const i of minis) {
   i.addEventListener("click", bigSlide);
