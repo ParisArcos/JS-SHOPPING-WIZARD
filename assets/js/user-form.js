@@ -2,10 +2,10 @@
  * User Form Logic
  */
 // Form on submit
-userForm2.addEventListener("submit", function (event) {
+userForm1.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  let formData = new FormData(userForm2);
+  let formData = new FormData(userForm1);
   // Display the values
   for (var input of formData.entries()) {
     if (input[0] === "username") {
@@ -17,6 +17,16 @@ userForm2.addEventListener("submit", function (event) {
     if (input[0] === "password") {
       user.password = input[1];
     }
+  }
+  moveMainSection();
+});
+
+userForm2.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let formData = new FormData(userForm2);
+  // Display the values
+  for (var input of formData.entries()) {
     if (input[0] === "fname") {
       user.firstName = input[1];
     }
@@ -48,6 +58,7 @@ userForm2.addEventListener("submit", function (event) {
       user.regularAddress = input[1];
     }
   }
+  moveMainSection();
 });
 
 //Mensaje ayuda formulario
