@@ -59,20 +59,42 @@ form.addEventListener("submit", function (event) {
       user.phoneNumber = input[1];
     }
   }
-  console.log(user);
 });
 
+//Mensaje ayuda formulario
 const inputs = document.querySelectorAll(".form__input");
-console.log(inputs);
-
-let errorMessage = document.querySelectorAll(".form__group-input");
-
-const inputError = function () {
-  for (let i = 0; i < errorMessage.length; i++) {
-    errorMessage[i].classList.add("form__input-error-active");
-  }
-};
-
+var inputHelp = document.querySelectorAll(".form__input-error");
 for (let index = 0; index < inputs.length; index++) {
-  inputs[index].addEventListener("invalid", inputError);
+  inputs[index].addEventListener("focus", function inputError() {
+    inputHelp[index].style.display = "block";
+  });
+  inputs[index].addEventListener("blur", function inputnoError() {
+    inputHelp[index].style.display = "none";
+  });
+}
+
+// Asignación del código de país tlf.
+let countryName = document.getElementById("country");
+let phoneCode = document.getElementById("phonecode");
+countryName.addEventListener("change", function (e) {
+  phoneCode.value = countryName.value;
+});
+
+// Validación de la contraseña
+let password = document.getElementById("password");
+let password2 = document.getElementById("password2");
+password2.addEventListener("keyup", function () {
+  validatePassword(password, password2);
+});
+
+function validatePassword(password, password2) {
+  let errormsg = document.querySelector("#group__password2 .form__input-error");
+
+  if (password.value === password2.value) {
+    errormsg.style.display = "none";
+    password2.setCustomValidity("");
+  } else {
+    errormsg.style.display = "block";
+    password2.setCustomValidity("Both passwords must be the same.");
+  }
 }

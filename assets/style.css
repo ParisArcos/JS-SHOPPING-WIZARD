@@ -1,4 +1,21 @@
 /* Generics */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+header {
+  padding: 25px 4.5%;
+  background-color: grey;
+  color: #fff;
+}
+footer {
+  padding: 25px 4.5%;
+  background-color: grey;
+  color: #fff;
+  text-align: center;
+}
 #main {
   padding: 2.5%;
 }
@@ -26,6 +43,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5%;
+  justify-content: center;
 }
 .img-small {
   float: left;
@@ -58,10 +76,22 @@
   margin: 5%;
 }
 .button-submit {
-  align-self: flex-end;
   margin: 10%;
+  text-align: center;
 }
-
+button {
+  border-style: hidden;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Roboto';
+  color: #fff;
+  background-color: black;
+}
+select {
+  border: solid 1px black;
+}
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -79,6 +109,15 @@
   width: 15px;
   border: solid 1px black;
 }
+#product-form #selection2 img {
+  max-width: 35px;
+  margin-right: 5px;
+  image-rendering: -webkit-optimize-contrast;
+}
+#carrousel img.mini {
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+} 
 /* Thank You Page */
 .flex {
   display: flex;
