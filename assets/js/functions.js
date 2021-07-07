@@ -19,8 +19,10 @@ function buildColors() {
 
 function colorSlide(event) {
   var event = event.target;
+  selected[0].style.outline = event.dataset.hex + " solid 0px";
   selected[0].classList.remove("selected");
   event.classList.add("selected");
+  event.style.outline = event.dataset.hex + " solid 2px";
   drawImg();
 }
 
@@ -142,7 +144,6 @@ function updateCountdown() {
     alert("Time is up!");
   }
 }
-
 
 for (let i = 0; i < sections.length; i++) {
   if (sections[i].id === "shipping") {
