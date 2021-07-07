@@ -1,3 +1,12 @@
+// Control timing
+var staringMinutes = setStaringMinutes();
+var time = staringMinutes * 60;
+var countdownEl = document.getElementById("countdown");
+
+var setTime = setInterval(updateCountdown(sections), 1000);
+
+var shippingForm = document.querySelector("#shipping-form-submit");
+
 /**
  * Shipping Form Logic
  */

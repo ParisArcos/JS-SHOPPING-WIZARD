@@ -18,6 +18,15 @@ footer {
 }
 section {
   padding: 2.5%;
+  position: relative;
+  left: 100%;
+  transition: 0.25s ease-in;
+}
+section.active {
+  left: 0%;
+}
+section.disabled {
+  left: -100%;
 }
 .container {
   display: flex;
