@@ -162,3 +162,20 @@ var countdownEl = document.getElementById("countdown");
 var setTime = setInterval(updateCountdown, 1000);
 
 var shippingForm = document.querySelector("#shipping-form-submit");
+
+/**
+ * Global finish page Variables
+ */
+var termsAndConditionsForm = document.querySelectorAll('#ch_finish-form');
+
+var orderProductName = document.querySelectorAll(".ch_product-name");
+var orderProductImage = document.querySelectorAll('.ch_product-image');
+var orderProductSize = document.querySelectorAll(".ch_product-size");
+var orderProductColor = document.querySelectorAll(".ch_product-color");
+var orderProductPrice = document.querySelectorAll(".ch_product-price");
+
+var orderDeliveryDate = document.querySelectorAll(".ch_delivery-date");
+var orderShippingName = document.querySelectorAll(".ch_shipping-name");
+var orderShippingCost = document.querySelectorAll(".ch_shipping-cost");
+
+var orderTotal = document.querySelectorAll('.ch_order-total');
