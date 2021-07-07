@@ -156,6 +156,8 @@ var shipBtns = document.querySelectorAll(".shippingType input");
 
 // Control information on gift 
 var infoGift = document.querySelector(".giftCheck input");
+var giftCheckMoreInfo = document.getElementsByClassName("giftCheckMoreInfo")[0];
+
 
 // Control timing
 var staringMinutes = setStaringMinutes();
