@@ -93,17 +93,26 @@
                 <h4>Shipping type</h4>
                 <form id="shipping-form-submit" action="#" class="shipping-form">
                     <div class="shippingType">
-                        <input type="radio" id="free" name="shipping-type" value="Free shipment (72H)">
+                        <input type="radio" id="free" name="shipping-type" value="Free shipment">
                         <label for="free">Free shipment (72H)</label><br>
 
-                        <input type="radio" id="extra" name="shipping-type" value="Extra shipping (48h)">
+                        <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
                         <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
 
-                        <input type="radio" id="premium" name="shipping-type" value="Premium (24h)">
+                        <input type="radio" id="premium" name="shipping-type" value="Premium">
                         <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
 
                         <div id="infoShipping"></div>
-                        <input type="text" value="" name="shipping-info">
+                        <div class="shippingDate" hidden>
+                          <select id="shipping-date" name="shipping-date" required >
+                            <option value="
+                            25 de Julio de 2020 14:00h and 25 de Julio de 2020 20:00h
+                            ">Extra</option>
+                            <option value="
+                            21 de Julio de 2020 14:00h and 21 de Julio de 2020 20:00h
+                            ">Premium</option>
+                          </select>
+                        </div>
                     </div>  
 
                     <div class="giftCheck">
@@ -111,7 +120,7 @@
                         <input type="checkbox" name="gift-check">
                     </div>
                     <div class="giftMessage">
-                        <label>Gift Message</label>
+                        <label>Gift Message:</label>
                         <textarea rows="4" cols="50" name="comment"></textarea>
                     </div>
                     <div class="giftWrapper">
@@ -140,11 +149,11 @@
     <script>
 
         // process icon colors
-        var sections = document.getElementsByTagName('section');
-        var profileIcon = document.getElementsByClassName('profile-icon')[0];
-        var addressIcon = document.getElementsByClassName('address-icon')[0];
-        var shippingIcon = document.getElementsByClassName('shipping-icon')[0];
-        var finishIcon = document.getElementsByClassName('finish-icon')[0];
+        var sections = document.getElementsByTagName("section");
+        var profileIcon = document.getElementsByClassName("profile-icon")[0];
+        var addressIcon = document.getElementsByClassName("address-icon")[0];
+        var shippingIcon = document.getElementsByClassName("shipping-icon")[0];
+        var finishIcon = document.getElementsByClassName("finish-icon")[0];
         
         for (let i = 0; i < sections.length; i++) {
             if (sections[i].id === "shipping") {
@@ -169,11 +178,11 @@
         }
 
         // Control information on shipping time
-        var infoShipping = document.getElementById('infoShipping');
-        var shipBtns = document.querySelectorAll('.shippingType input');
+        var infoShipping = document.getElementById("infoShipping");
+        var shipBtns = document.querySelectorAll(".shippingType input");
 
         shipBtns.forEach(shipBtn => {
-            shipBtn.addEventListener('click', (e) => {
+            shipBtn.addEventListener("click", (e) => {
               if (e.target.id == "extra") {
                 infoShipping.innerHTML =  `
                   <h4>Your order will arrive:</h4>
@@ -187,35 +196,39 @@
                   <p>Between <span style="font-weight: bold;">21 de Julio de 2020 14:00h</span> and <span style="font-weight: bold;">21 de Julio de 2020 20:00h.</span></p>
                   `;
               } else if (e.target.id == "free") {
-                infoShipping.innerHTML = '';
+                infoShipping.innerHTML = "";
               }
             }) 
         });
 
         // Control timing 
-        var staringMinutes = 3;
+        var staringMinutes = setStaringMinutes();
         var time = staringMinutes * 60;
         var countdownEl = document.getElementById('countdown');
 
         var setTime = setInterval(updateCountdown, 1000);
+
+        function setStaringMinutes() { 
+          let  minutes;    
+          for (let i = 0; i < sections.length; i++) {
+              if (sections[i].id === "shipping") {
+                  minutes = 3;   
+              } else if (sections[i].id === "address") {
+                  minutes = 2;  
+              } else if (sections[i].id === "finish") {
+                  minutes = 4;  
+              }      
+          }
+          return minutes;
+        };
         
         function updateCountdown() {
-          for (let i = 0; i < sections.length; i++) {
-            if (sections[i].id === "shipping") {
-                staringMinutes = 3;   
-            } else if (sections[i].id === "address") {
-                staringMinutes = 2;  
-            } else if (sections[i].id === "finish") {
-                staringMinutes = 4;  
-            } 
-          }
-          
           let minutes = Math.floor(time / 60);
           let seconds = time % 60;
           seconds = seconds < 10 ? '0' + seconds : seconds;
           countdownEl.innerHTML = `${minutes}:${seconds}`;
           time--;
-
+          // console.log(time)
           if  (minutes <= 0 && seconds == 0) {
             clearInterval(setTime);
             alert("Time is up!");
@@ -233,11 +246,11 @@
             type: "",
             amount: 0,
             date: "",
-            shippingPrice: "",
+            shippingCost: "",
         };
 
-        var form = document.querySelector('#shipping-form-submit');   
-        form.addEventListener('submit', function(event){
+        var form = document.querySelector("#shipping-form-submit");   
+        form.addEventListener("submit", function(event){
           event.preventDefault();
           
           let formData = new FormData(form);
@@ -245,26 +258,26 @@
           for(var input of formData.entries()) {
             console.log(input)
             // shipping data
-            if (input[0] == 'shipping-type') {
+            if (input[0] == "shipping-type") {
                 shipping.type = input[1];
-                if (shipping.type == "Extra shipping (48h)") {
-                    shipping.shippingPrice =  4.99;
-                } else if (shipping.type == "Premium (24h)") {
-                  shipping.shippingPrice = 9.99;
+                if (shipping.type == "Extra shipping") {
+                    shipping.shippingCost =  4.99;
+                } else if (shipping.type == "Premium") {
+                  shipping.shippingCost = 9.99;
                 }
-                console.log(shipping.shippingPrice)
+                console.log(shipping.shippingCost)
             } 
 
             // shipping.date = infoShipping.innerHTML;
             
             // gift data
-            if (input[0] == 'gift-check') {
+            if (input[0] == "gift-check") {
                 gift.isset = input[1];
             } 
-            if (input[0] == 'comment') {
+            if (input[0] == "comment") {
                 gift.message = input[1];
             } 
-            if (input[0] == 'gift-wrapper') {
+            if (input[0] == "gift-wrapper") {
                 gift.image = input[1];
             } 
           }
@@ -273,6 +286,7 @@
         // Form clear
         function clearFunction() {
             form.reset();
+            infoShipping.innerHTML = "";
         }
 
     </script>
