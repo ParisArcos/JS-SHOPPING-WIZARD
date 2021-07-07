@@ -82,7 +82,7 @@ var product = {
     {
       colorName: "Lima",
       imageURL: "assets/img/products/lima/0.webp",
-      colorHex: "#646174",
+      colorHex: "#cbd683",
       secondaryImg: [
         "assets/img/products/lima/1.webp",
         "assets/img/products/lima/2.webp",
@@ -110,7 +110,6 @@ var shipping = {
   type: "",
   amount: 0,
   date: "",
-  shippingPrice: "",
 };
 /**
  * Gift Global Variables
