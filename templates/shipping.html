@@ -92,7 +92,7 @@
           <h4>Shipping type</h4>
           <form id="shipping-form-submit" action="#" class="shipping-form">
             <div class="shippingType">
-              <input type="radio" id="free" name="shipping-type" value="Free shipment">
+              <input type="radio" id="free" name="shipping-type" value="Free shipment" required>
               <label for="free">Free shipment (72H)</label><br>
 
               <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
@@ -113,18 +113,20 @@
                   </select>
                 </div>
               </div>  
-
+              
               <div class="giftCheck">
                 <label> Is it a gift?</label>
                 <input type="checkbox" name="gift-check">
               </div>
-              <div class="giftMessage">
-                  <label>Gift Message:</label>
-                  <textarea rows="4" cols="50" name="comment"></textarea>
-              </div>
-              <div class="giftWrapper">
-                  <label>Gift wrapper image</label>
-                  <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
+              <div class="gift">  
+                <div class="giftMessage">
+                    <label>Gift Message:</label>
+                    <textarea rows="4" cols="50" name="comment"></textarea>
+                </div>
+                <div class="giftWrapper">
+                    <label>Gift wrapper image</label>
+                    <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
+                </div>
               </div>
               <div class="reset">
                   <input type="button" class="reset" value="Clear" onclick="clearFunction()">
