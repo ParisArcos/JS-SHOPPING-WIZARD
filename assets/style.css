@@ -16,11 +16,8 @@ footer {
   color: #fff;
   text-align: center;
 }
-#main {
-  padding: 2.5%;
-}
 section {
-  padding: 0;
+  padding: 2.5%;
 }
 .container {
   display: flex;
