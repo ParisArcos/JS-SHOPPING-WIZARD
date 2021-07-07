@@ -201,25 +201,7 @@
         }
       });
     });  
-      // Control timing
-      var staringMinutes = 3;
-      var time = staringMinutes * 60;
-      var countdownEl = document.getElementById("countdown");
-
-      var setTime = setInterval(updateCountdown, 1000);
-
-      function updateCountdown() {
-        let minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        countdownEl.innerHTML = `${minutes}:${seconds}`;
-        time--;
-
-        if (minutes <= 0 && seconds == 0) {
-          clearInterval(setTime);
-          alert("Time is up!");
-        }
-      }
+      
 
       // Control timing 
       var staringMinutes = setStaringMinutes();
@@ -241,6 +223,7 @@
           }
         return minutes;
       };
+
         
       function updateCountdown() {
         let minutes = Math.floor(time / 60);
@@ -281,11 +264,11 @@
             if (input[0] == "shipping-type") {
                 shipping.type = input[1];
                 if (shipping.type == "Extra shipping") {
-                    shipping.shippingCost =  4.99;
+                    shipping.amount =  4.99;
                 } else if (shipping.type == "Premium") {
-                  shipping.shippingCost = 9.99;
-                }
-                console.log(shipping.shippingCost)
+                  shipping.amount = 9.99;
+                } 
+                console.log(shipping.amount)
             } 
 
             // shipping.date = infoShipping.innerHTML;
