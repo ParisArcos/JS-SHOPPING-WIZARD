@@ -4,20 +4,42 @@ buildSize();
 buildColors();
 
 //------------------------------------------------------------- EVENTS --------------------------------------------------------------\\
-// evento click en imgColores
+//event carrousel
+carrousel.addEventListener("click", bigSlide);
+// event click on imgColores
 for (const i of micros) {
   i.addEventListener("click", colorSlide);
 }
 // evento submit de form
 productForm.addEventListener("submit", getValues);
 
-//!cmabiar despues de img
-select2.addEventListener("submit", function () {
-  product.size = select2.value;
-});
+//propagacion de eventos
 
 //------------------------------------------------------------- FUNCTIONS --------------------------------------------------------------\\
-//draw images selected in colour selection
+function buildColors() {
+  //colores
+  for (let y = 0; y < product.combination.length; y++) {
+    var img = document.createElement("img");
+    img.setAttribute(
+      "class",
+      y == 0 ? "micro cursor selected" : "micro cursor"
+    );
+    img.setAttribute("data-Hex", product.combination[y].colorHex);
+    img.src = product.combination[y].imageURL;
+    img.title = product.combination[y].colorName;
+    img.alt = product.combination[y].colorName;
+    select2.appendChild(img);
+  }
+  drawImg();
+}
+
+function colorSlide(event) {
+  var event = event.target;
+  selected[0].classList.remove("selected");
+  event.classList.add("selected");
+  drawImg();
+}
+
 function drawImg() {
   mainSlide.innerHTML = "";
   carrousel.innerHTML = "";
@@ -34,7 +56,6 @@ function drawImg() {
       for (let i = 0; i <= combination.secondaryImg.length; i++) {
         var imgSmll = document.createElement("img");
         imgSmll.setAttribute("class", "mini cursor");
-        imgSmll.setAttribute("onclick", "bigSlide(event)");
         imgSmll.src = combination.secondaryImg[i];
         imgSmll.alt = combination.colorName;
         imgSmll.title = combination.colorName;
@@ -43,10 +64,9 @@ function drawImg() {
 
         if (i == combination.secondaryImg.length) {
           imgSmll.setAttribute("class", "mini cursor active");
-          imgSmll.setAttribute("onclick", "bigSlide()");
           imgSmll.src = combination.imageURL;
           imgSmll.alt = combination.colorName;
-          imgSmll.alt = combination.colorName;
+          imgSmll.title = combination.colorName;
           imgSmll.id = "mini";
           carrousel.appendChild(imgSmll);
         }
@@ -58,27 +78,12 @@ function drawImg() {
 function getValues() {
   var formValues = new FormData(productForm);
   for (const value of formValues.entries()) {
-    value[0] == "productName" ? (product.name = value[1]) : "";
+    value[0] == "productName"
+      ? (product.name =
+          value[1] + "-" + selected[0].title + "-" + select1.value)
+      : "";
     value[0] == "productPrice" ? (product.price = value[1]) : "";
   }
-  product.colors.color = select1.value;
-}
-
-function buildColors() {
-  //colores
-  for (let y = 0; y < product.combination.length; y++) {
-    var img = document.createElement("img");
-    img.setAttribute(
-      "class",
-      y == 0 ? "micro cursor selected" : "micro cursor"
-    );
-    img.setAttribute("data-Hex", product.combination[y].colorHex);
-    img.src = product.combination[y].imageURL;
-    img.alt = product.combination[y].colorName;
-    img.alt = product.combination[y].colorName;
-    select2.appendChild(img);
-  }
-  drawImg();
 }
 
 function buildSize() {
@@ -99,18 +104,13 @@ function buildProductText() {
   document.getElementById("productPrice").value = product.price;
 }
 
-function colorSlide(event) {
-  var event = event.target;
-  selected[0].classList.remove("selected");
-  event.classList.add("selected");
-  drawImg();
-}
-
 function bigSlide(event) {
   var event = event.target;
-  for (const iterator of minis) {
-    iterator.classList.remove("active");
+  if (event.id == "mini") {
+    for (const iterator of minis) {
+      iterator.classList.remove("active");
+    }
+    event.classList.add("active");
+    mainSlide.childNodes[0].src = event.src;
   }
-  event.classList.add("active");
-  mainSlide.childNodes[0].src = event.src;
 }
