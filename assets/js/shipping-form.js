@@ -34,28 +34,7 @@ form.addEventListener("submit", function (event) {
   }
 });
 
-for (let i = 0; i < sections.length; i++) {
-  if (sections[i].id === "shipping") {
-    profileIcon.style.backgroundColor = "black";
-    addressIcon.style.backgroundColor = "black";
-    shippingIcon.style.backgroundColor = "black";
-  } else if (sections[i].id === "thank-you") {
-    profileIcon.style.backgroundColor = "black";
-    addressIcon.style.backgroundColor = "black";
-    shippingIcon.style.backgroundColor = "black";
-    finishIcon.style.backgroundColor = "black";
-  } else if (sections[i].id === "profile") {
-    profileIcon.style.backgroundColor = "black";
-  } else if (sections[i].id === "address") {
-    profileIcon.style.backgroundColor = "black";
-    addressIcon.style.backgroundColor = "black";
-  } else if (sections[i].id === "finish") {
-    profileIcon.style.backgroundColor = "black";
-    addressIcon.style.backgroundColor = "black";
-    shippingIcon.style.backgroundColor = "black";
-  }
-}
-
+// Display shipping time
 shipBtns.forEach((shipBtn) => {
   shipBtn.addEventListener("click", (e) => {
     if (e.target.id == "extra") {
@@ -75,3 +54,13 @@ shipBtns.forEach((shipBtn) => {
     }
   });
 });
+
+// Display gift information 
+infoGift.addEventListener("click", () => {
+  let giftCheckMoreInfo = document.getElementsByClassName("giftCheckMoreInfo");
+    if (giftCheckMoreInfo.style.display === "none") {
+      giftCheckMoreInfo.style.display = "block";
+    } else {
+      giftCheckMoreInfo.style.display = "none";
+    }
+})

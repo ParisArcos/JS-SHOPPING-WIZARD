@@ -418,30 +418,24 @@
               <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
 
               <div id="infoShipping"></div>
-                <div class="shippingDate" hidden>
-                  <select id="shipping-date" name="shipping-date" required >
-                    <option value="
-                    25 de Julio de 2020 14:00h and 25 de Julio de 2020 20:00h
-                    ">Extra</option>
-                    <option value="
-                    21 de Julio de 2020 14:00h and 21 de Julio de 2020 20:00h
-                    ">Premium</option>
-                  </select>
-                </div>
               </div>  
 
               <div class="giftCheck">
                 <label> Is it a gift?</label>
-                <input type="checkbox" name="gift-check">
+                <input type="checkbox" name="gift-check" >
               </div>
-              <div class="giftMessage">
-                  <label>Gift Message:</label>
-                  <textarea rows="4" cols="50" name="comment"></textarea>
+
+              <div class="giftInfo">
+                <div class="giftMessage">
+                    <label>Gift Message:</label>
+                    <textarea rows="4" cols="50" name="comment" maxlength="200"></textarea>
+                </div>
+                <div class="giftWrapper">
+                    <label>Gift wrapper image</label>
+                    <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
+                </div>
               </div>
-              <div class="giftWrapper">
-                  <label>Gift wrapper image</label>
-                  <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
-              </div>
+
               <div class="reset">
                   <input type="button" class="reset" value="Clear" onclick="clearFunction()">
               </div>
