@@ -123,6 +123,8 @@ var gift = {
 /**
  * Index Global Variables
  */
+var positionMain = 0;
+var mainDiv = document.querySelector('#main');
 var mainSlide = document.getElementById("mainSlide");
 var carrousel = document.getElementById("carrousel");
 var slide = document.getElementById("img-big");

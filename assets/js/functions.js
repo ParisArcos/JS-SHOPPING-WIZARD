@@ -172,3 +172,11 @@ function clearFunction() {
   form.reset();
   infoShipping.innerHTML = "";
 }
+
+/**
+ * Move Main
+ */
+function moveMainSection() {   
+  positionMain-=100;
+  mainDiv.style.transform = "translateX("+ positionMain +"%)"; 
+}

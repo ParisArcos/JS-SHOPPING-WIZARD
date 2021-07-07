@@ -20,6 +20,8 @@ footer {
 #main {
   display: flex;
   flex-direction: row;
+  transform: translateX(0);
+  transition: 0.25s ease-in-out;
 }
 section {
   padding: 0;
