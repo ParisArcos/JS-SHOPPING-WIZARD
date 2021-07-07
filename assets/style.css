@@ -19,6 +19,9 @@ footer {
 #main {
   padding: 2.5%;
 }
+section {
+  padding: 0;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -75,15 +78,14 @@ footer {
   margin: 5%;
 }
 .button-submit {
-  margin: 10%;
-  text-align: center;
+  margin: 10% 0;
 }
-.button-submit button:hover {
+button:hover {
   cursor: pointer;
-  box-shadow: 0px 7.5px 7.5px #404040;
+  box-shadow: 0px 7.5px 7.5px #888;
   top: -5px;
 }
-.button-submit button {
+button {
   position: relative;
   top: 0px;
 }
@@ -128,16 +130,136 @@ select {
   height: auto;
   image-rendering: -webkit-optimize-contrast;
 } 
+/*FORMULARIO DATOS CLIENTE Y DIRECCION*/
+.the-form {
+  padding-left: 5%;
+}
+
+.form__label {
+  display: block;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.form__group-input {
+  position: relative;
+}
+
+.form__input {
+  width: 200px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px 0 5px;
+  transition: 0.3s ease all;
+}
+
+.form__input:focus {
+  border: 2px dashed slategrey;
+  outline: none;
+}
+
+.form__input-error {
+  display: none;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.form__input-error-active {
+  display: block;
+}
+
+.form__validation-status {
+  position: absolute;
+  left: 195px;
+  top: 7px;
+  z-index: 100;
+  font-size: 1rem;
+  opacity: 0;
+}
+
+/*Validation Styles*/
+.form__group-correct .form__validation-status {
+  color: chartreuse;
+  opacity: 1;
+}
+
+.form__group-incorrect .form__label {
+  color: red;
+}
+
+.form__group-incorrect .form__validation-status {
+  color: red;
+  opacity: 1;
+}
+
+.form__group-incorrect .form__input {
+  border: 2px solid red;
+}
+
+/*Quitar flechas del number*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*FIN FORMULARIO DATOS CLIENTE Y DIRECCION*/
+
+/* Shipping Form */
+section {
+
+}
+
+.process-phrase {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -15px;
+}
+
+.main-content {
+  display: flex;
+}
+
+.process-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.profile-icon,
+.address-icon,
+.shipping-icon,
+.finish-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  background-color: white;
+}
+
+hr {
+  border: 2px solid lightgrey;
+}
+/*
+footer {
+  position: fixed;
+  bottom: 0;
+}*/
 /* Thank You Page */
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.flex > div {
+#thank-you .flex > div {
   margin-bottom: 25px;
 }
-#thank-you .card {
+.card {
   background-color: white;
   box-shadow: 0 5px 10px #00000026;
   padding: 1.5rem 1.5rem;

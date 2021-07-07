@@ -8,14 +8,15 @@ var user = {
   firstName: "",
   lastName: "",
   birthday: "",
-  address1: "",
-  address2: "",
+  firstAddress: "",
+  secondAddress: "",
   postalCode: "",
   country: "",
-  phoneCountry: "",
+  phoneCountryCode: "",
   phoneNumber: "",
-  regularAddress: false,
+  regularAddress: false
 };
+
 /**
  * Product Global Variables
  */
@@ -132,4 +133,32 @@ var productForm = document.getElementById("product-form");
 var select1 = document.getElementById("selection1");
 var select2 = document.getElementById("selection2");
 var selected = document.getElementsByClassName("selected");
-//onclick event-> forOf-> currentSlide(index)
+
+/**
+ * Form Global Variables
+ */
+const userForm1 = document.getElementById("user-form-1");
+const userForm2 = document.getElementById("user-form-2");
+
+/**
+ * Global Shipping Variables 
+ */
+// process icon colors
+var sections = document.getElementsByTagName("section");
+var profileIcon = document.getElementsByClassName("profile-icon")[0];
+var addressIcon = document.getElementsByClassName("address-icon")[0];
+var shippingIcon = document.getElementsByClassName("shipping-icon")[0];
+var finishIcon = document.getElementsByClassName("finish-icon")[0];
+
+// Control information on shipping time
+var infoShipping = document.getElementById("infoShipping");
+var shipBtns = document.querySelectorAll(".shippingType input");
+
+// Control timing
+var staringMinutes = setStaringMinutes();
+var time = staringMinutes * 60;
+var countdownEl = document.getElementById("countdown");
+
+var setTime = setInterval(updateCountdown, 1000);
+
+var shippingForm = document.querySelector("#shipping-form-submit");
