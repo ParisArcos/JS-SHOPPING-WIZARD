@@ -145,6 +145,7 @@ function updateCountdown() {
   }
 }
 
+
 for (let i = 0; i < sections.length; i++) {
   if (sections[i].id === "shipping") {
     profileIcon.style.backgroundColor = "black";

@@ -65,12 +65,7 @@ shipBtns.forEach((shipBtn) => {
 });
 
 // Display gift information 
-infoGift.addEventListener("click", () => {
-  let giftCheckMoreInfo = document.getElementsByClassName("giftCheckMoreInfo")[0];
-  console.log(giftCheckMoreInf)
-    if (giftCheckMoreInfo.style.display === "none") {
-      giftCheckMoreInfo.style.display = "block";
-    } else {
-      giftCheckMoreInfo.style.display = "none";
-    }
-})
+function giftCheckFunction() {
+  var giftCheckMoreInfo = document.querySelector(".giftCheckMoreInfo");
+  giftCheckMoreInfo.removeAttribute("hidden");
+}

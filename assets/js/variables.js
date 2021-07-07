@@ -156,9 +156,6 @@ var finishIcon = document.getElementsByClassName("finish-icon")[0];
 var infoShipping = document.getElementById("infoShipping");
 var shipBtns = document.querySelectorAll(".shippingType input");
 
-// Control information on gift
-var infoGift = document.querySelector(".giftCheck input");
-var giftCheckMoreInfo = document.getElementsByClassName("giftCheckMoreInfo")[0];
 
 /**
  * Global finish page Variables
