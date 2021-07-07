@@ -473,14 +473,14 @@
                 />
               </div>
               <div class="product-details">
-                <p>Product Name</p>
+                <p class="ch_product-name">Product Name</p>
     
-                <p>Size: {productSize}</p>
+                <p id="ch_product-size">Size: {productSize}</p>
     
                 
-                <p>Color: <span class="product-color red"><!--{productColor}--></span></p>
+                <p>Color: <span id="ch_product-color" class="product-color"><!--{productColor}--></span></p>
     
-                <div id="delivery-date">
+                <div id="ch_delivery-date">
                   <span>Estimated delivery date:</span>
                   <p>Between 21 of July of 2021 14:00h <br />
                   and 21 of July of 2021 20:00h</p>
@@ -489,8 +489,8 @@
             </div>
   
             <form>
-            <label><input type="checkbox" id="terms-and-conditions" value="true" required > I have read and I accept the terms and conditions.</label><br>
-            <p class="alert-red">Please accept the terms and conditions</p>
+            <label><input type="checkbox" id="terms-and-conditions" value="true" required  oninvalid="this.setCustomValidity('Este campo es requerido')"> He leído y acepto los términos y condiciones.</label><br>
+            <p class="alert-red">Por favor acepta los términos y condiciones</p>
               <button type="submit">Buy now</button>
           </form>
           
@@ -500,17 +500,17 @@
         <div class="order-payment-details">
           <div class="card">
             <p><strong>Payment details</strong></p><br>
-            <p>{productName}: <strong>{productPrice}€</strong></p>
-            <p>{shippingName}: <strong>{shippingCost}€</strong></p>
+            <p><span class="ch_product-name"></span>: <strong id="ch_product-price">{productPrice}€</strong></p>
+            <p><span id="ch_shipping-name"></span>: <strong id="ch_shipping-cost">{shippingCost}€</strong></p>
             <hr />
-            <p>Total: {orderTotal}€</p>
+            <p>Total: <span id="ch_order-total">{orderTotal}</span>€</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="thank-you">
-      <h1>Hi {userName}, your order is complete!</h1>
+      <h1>Hi <span id="ch_user-name">{userName}</span>, your order is complete!</h1>
       <p>Thank you for your order!</p>
     
       <div class="flex">
@@ -526,14 +526,14 @@
                 />
               </div>
               <div class="product-details">
-                <p>Product Name</p>
+                <p class="ch_product-name">Product Name</p>
     
-                <p>Size: {productSize}</p>
+                <p id="ch_product-size">Size: {productSize}</p>
     
                 
-                <p>Color: <span class="product-color red"><!--{productColor}--></span></p>
+                <p>Color: <span id="ch_product-color" class="product-color"><!--{productColor}--></span></p>
     
-                <div id="delivery-date">
+                <div id="ch_delivery-date">
                   <span>Estimated delivery date:</span>
                   <p>Between 21 of July of 2021 14:00h <br />
                   and 21 of July of 2021 20:00h</p>
@@ -546,10 +546,10 @@
         <div class="order-payment-details">
           <div class="card">
             <p><strong>Payment details</strong></p><br>
-            <p>{productName}: <strong>{productPrice}€</strong></p>
-            <p>{shippingName}: <strong>{shippingCost}€</strong></p>
+            <p><span class="ch_product-name"></span>: <strong id="ch_product-price">{productPrice}€</strong></p>
+            <p><span id="ch_shipping-name"></span>: <strong id="ch_shipping-cost">{shippingCost}€</strong></p>
             <hr />
-            <p>Total: {orderTotal}€</p>
+            <p>Total: <span id="ch_order-total">{orderTotal}</span>€</p>
           </div>
         </div>
       </div>
@@ -573,6 +573,9 @@
     <script src="assets/js/product.js"></script>
     <script src="assets/js/user-form.js"></script>
     <script src="assets/js/shipping-form.js"></script>
+    <script src="assets/js/finish-form.js"></script>
+    <script src="assets/js/thank-you.js"></script>
+    
 
   </body>
 </html>
