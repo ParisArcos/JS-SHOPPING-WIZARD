@@ -5,7 +5,7 @@
 userForm2.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  let formData = new FormData(form);
+  let formData = new FormData(userForm2);
   // Display the values
   for (var input of formData.entries()) {
     if (input[0] === "username") {
@@ -45,8 +45,8 @@ userForm2.addEventListener("submit", function (event) {
       user.phoneNumber = input[1];
     }
     if (input[0] === "confirm") {
-        user.regularAddress = input[1];
-      }
+      user.regularAddress = input[1];
+    }
   }
 });
 
