@@ -43,6 +43,7 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5%;
+  justify-content: center;
 }
 .img-small {
   float: left;
@@ -108,6 +109,15 @@ select {
   width: 15px;
   border: solid 1px black;
 }
+#product-form #selection2 img {
+  max-width: 35px;
+  margin-right: 5px;
+  image-rendering: -webkit-optimize-contrast;
+}
+#carrousel img.mini {
+  height: auto;
+  image-rendering: -webkit-optimize-contrast;
+} 
 /* Thank You Page */
 .flex {
   display: flex;
