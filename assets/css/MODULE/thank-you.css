@@ -15,6 +15,14 @@
 #thank-you {
   background-color: #f4f4f4;
 }
-.product-image {
+.ch_product-image {
   margin-right: 15px;
+}
+.ch_product-name {
+  font-size: x-large;
+  font-weight: bold;
+}
+.ch_delivery-date {
+  font-style: italic;
+  font-size: medium;
 }
