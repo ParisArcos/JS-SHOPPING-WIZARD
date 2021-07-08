@@ -19,6 +19,7 @@ userForm1.addEventListener("submit", function (event) {
     }
   }
   moveMainSection();
+  maxMinDate();
 });
 
 userForm2.addEventListener("submit", function (event) {

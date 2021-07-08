@@ -136,7 +136,23 @@ function validatePassword(password, password2) {
     password2.setCustomValidity("Both passwords must be the same.");
   }
 }
+function maxMinDate() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1; //January is 0!
+  var yyyy = today.getFullYear();
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
 
+  max = yyyy - 100 + "-" + mm + "-" + dd;
+  min = yyyy - 18 + "-" + mm + "-" + dd;
+  document.getElementById("birthday").setAttribute("max", max);
+  document.getElementById("birthday").setAttribute("min", min);
+}
 /**
  * Shipping Form Helpers
  */
@@ -185,10 +201,10 @@ function moveMainSection() {
   mainDiv.style.transform = "translateX(" + positionMain + "%)";
 
   // Scroll to Top
-  window.scrollTo( 0, 0);
+  window.scrollTo(0, 0);
 
   // Hide Footer during checkout
-  document.querySelector('footer').style.display = 'none';
+  document.querySelector("footer").style.display = "none";
 
   if (positionMain === -100) {
     // Profile
