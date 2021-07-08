@@ -11,6 +11,6 @@ for (const i of micros) {
   i.addEventListener("click", colorSlide);
 }
 // evento submit de form
-productForm.addEventListener("submit", getValues);
+productForm.addEventListener("submit", initCheckoutOrder);
 
 //propagacion de eventos

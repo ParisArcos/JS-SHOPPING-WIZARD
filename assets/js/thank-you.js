@@ -11,10 +11,10 @@ function updateCounter(counter) {
     console.log(counter);
 
     // Display Modal every 60 secs
-    if (counter%60 === 0) { 
+    if (counter%10 === 0) { 
         let timeToDisplay = counter/60;
         showTimerModal(timeToDisplay);
-        setTimeout(hideTimerModal(), 5000)
+        setTimeout(hideTimerModal, 5000);
     }
 
     // 300secs === 5min
@@ -55,6 +55,7 @@ function showTimerModal(timeToDisplay) {
 }
 
 function hideTimerModal() {
+
     let timeDiv = document.querySelector('.timing'); 
     timeDiv.style.display = 'none';
 }

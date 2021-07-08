@@ -65,7 +65,7 @@ function drawImg() {
   });
 }
 
-function getValues() {
+function initCheckoutOrder() {
   event.preventDefault();
   var formValues = new FormData(productForm);
   for (const value of formValues.entries()) {
@@ -76,8 +76,9 @@ function getValues() {
   productOrder.imageSrc = selected[0].src;
   productOrder.size = select1.value;
   document.querySelector(".process").removeAttribute("hidden");
-  document.querySelector(".timing").removeAttribute("hidden");
+  document.getElementById('logo').setAttribute('hidden', true);
   moveMainSection();
+  initCounter();
 }
 
 function buildSize() {
@@ -138,7 +139,7 @@ function validatePassword(password, password2) {
 /**
  * Shipping Form Helpers
  */
-
+/*
 // Control timing
 function setStaringMinutes() {
   let minutes;
@@ -166,7 +167,7 @@ function updateCountdown() {
     alert("Time is up!");
   }
 }
-
+*/
 // change color of icons in buying process
 
 
@@ -182,4 +183,17 @@ function clearFunction() {
 function moveMainSection() {
   positionMain -= 100;
   mainDiv.style.transform = "translateX(" + positionMain + "%)";
+
+  if (positionMain === (-100)) { // Profile
+    document.querySelector('.profile-icon').style.backgroundColor = '#000';
+  }
+  if (positionMain === (-200)) { // Address
+    document.querySelector('.address-icon').style.backgroundColor = '#000';
+  }
+  if (positionMain === (-300)) { // Shipping
+    document.querySelector('.shipping-icon').style.backgroundColor = '#000';
+  }
+  if (positionMain === (-400)) { // Finish
+    document.querySelector('.finish-icon').style.backgroundColor = '#000';
+  }
 }
