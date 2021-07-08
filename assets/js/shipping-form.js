@@ -44,6 +44,7 @@ var shippingForm = document.querySelector("#shipping-form-submit");
       gift.image = input[1];
     }
   }
+  moveMainSection();
 });
 
 shipBtns.forEach((shipBtn) => {
@@ -120,3 +121,44 @@ function giftCheckFunction() {
     console.log(giftCheckMoreInfo.style.display)
   }
 }
+
+// change icon colors
+var ifVisible = false;
+
+// to check if a section is visible on viewport
+var observer = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true)
+		console.log('Element is fully visible in screen');
+}, { threshold: [0] });
+
+observer.observe(document.querySelector("#profile"));
+
+
+
+/* for (let i = 0; i < sections.length; i++) {
+  switch(sections[i].id) {
+    case "profile":
+      profileIcon.style.backgroundColor = "black";
+      break;
+    case "address":
+      profileIcon.style.backgroundColor = "black";
+      addressIcon.style.backgroundColor = "black";
+      break;
+    case "shipping":
+      profileIcon.style.backgroundColor = "black";
+      addressIcon.style.backgroundColor = "black";
+      shippingIcon.style.backgroundColor = "black";
+      break;
+    case "finish":
+      profileIcon.style.backgroundColor = "black";
+      addressIcon.style.backgroundColor = "black";
+      shippingIcon.style.backgroundColor = "black";
+      break;
+    case "thank-you":
+      profileIcon.style.backgroundColor = "black";
+      addressIcon.style.backgroundColor = "black";
+      shippingIcon.style.backgroundColor = "black";
+      finishIcon.style.backgroundColor = "black";
+      break; 
+  }
+} */
