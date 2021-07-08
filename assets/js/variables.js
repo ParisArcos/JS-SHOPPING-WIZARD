@@ -108,12 +108,13 @@ var product = {
  * Order Object Var
  */
 var productOrder = {
-  name: '',
+  name: "",
   price: 0,
-  imageSrc: '',
-  size: '',
-  colorName: ''
-}
+  imageSrc: "",
+  size: "",
+  hex: "",
+  colorName: "",
+};
 
 /**
  * Shipping Global Variables
@@ -136,7 +137,7 @@ var gift = {
  * Index Global Variables
  */
 var positionMain = 0;
-var mainDiv = document.querySelector('#main');
+var mainDiv = document.querySelector("#main");
 var mainSlide = document.getElementById("mainSlide");
 var carrousel = document.getElementById("carrousel");
 var slide = document.getElementById("img-big");
@@ -165,8 +166,7 @@ var shippingIcon = document.getElementsByClassName("shipping-icon")[0];
 var finishIcon = document.getElementsByClassName("finish-icon")[0];
 // console.log(addressIcon)
 
-
-// Control information on shipping time and gift 
+// Control information on shipping time and gift
 var infoShipping = document.getElementById("infoShipping");
 var shipBtns = document.querySelectorAll(".shippingType input");
 var giftCheckMoreInfo = document.querySelector(".giftInfo");

@@ -75,8 +75,9 @@ function initCheckoutOrder() {
   productOrder.colorName = selected[0].title;
   productOrder.imageSrc = selected[0].src;
   productOrder.size = select1.value;
+  productOrder.hex = selected[0].dataset.hex;
   document.querySelector(".process").removeAttribute("hidden");
-  document.getElementById('logo').setAttribute('hidden', true);
+  document.getElementById("logo").setAttribute("hidden", true);
   moveMainSection();
   initCounter();
 }
@@ -170,7 +171,6 @@ function updateCountdown() {
 */
 // change color of icons in buying process
 
-
 // Clear shipping form
 function clearFunction() {
   shippingForm.reset();
@@ -184,16 +184,20 @@ function moveMainSection() {
   positionMain -= 100;
   mainDiv.style.transform = "translateX(" + positionMain + "%)";
 
-  if (positionMain === (-100)) { // Profile
-    document.querySelector('.profile-icon').style.backgroundColor = '#000';
+  if (positionMain === -100) {
+    // Profile
+    document.querySelector(".profile-icon").style.backgroundColor = "#000";
   }
-  if (positionMain === (-200)) { // Address
-    document.querySelector('.address-icon').style.backgroundColor = '#000';
+  if (positionMain === -200) {
+    // Address
+    document.querySelector(".address-icon").style.backgroundColor = "#000";
   }
-  if (positionMain === (-300)) { // Shipping
-    document.querySelector('.shipping-icon').style.backgroundColor = '#000';
+  if (positionMain === -300) {
+    // Shipping
+    document.querySelector(".shipping-icon").style.backgroundColor = "#000";
   }
-  if (positionMain === (-400)) { // Finish
-    document.querySelector('.finish-icon').style.backgroundColor = '#000';
+  if (positionMain === -400) {
+    // Finish
+    document.querySelector(".finish-icon").style.backgroundColor = "#000";
   }
 }

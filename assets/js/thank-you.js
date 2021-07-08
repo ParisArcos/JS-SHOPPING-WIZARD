@@ -8,10 +8,10 @@ function initCounter() {
 
 function updateCounter(counter) {
     counter++;
-    console.log(counter);
+    //console.log(counter);
 
     // Display Modal every 60 secs
-    if (counter%10 === 0) { 
+    if (counter%60 === 0) { 
         let timeToDisplay = counter/60;
         showTimerModal(timeToDisplay);
         setTimeout(hideTimerModal, 5000);
@@ -27,7 +27,7 @@ function updateCounter(counter) {
     // When we get last page
     if (thankYouPageIsVisible()) {
         let timeToDispay = counter/60;
-        displaySessionTime(timeToDispay.toString());
+        displaySessionTime(timeToDispay);
         return;
     }
 
@@ -60,12 +60,19 @@ function hideTimerModal() {
     timeDiv.style.display = 'none';
 }
 
-function displaySessionTime(time) {
+function displaySessionTime(timeToDispay) {
     let timeDiv = document.querySelector('#timer-sesion');
+    console.log(timeToDispay)
+    let time = timeToDispay.toFixed(2);
+    console.log(time)
     let arrayTime = time.split('.');
+    let minutes = arrayTime[0];
+    let seconds = arrayTime[1];
+
+    console.log(minutes, seconds);
     timeDiv.innerHTML = 
         `
-        <p>Your registration took: <strong>${arrayTime[0]} minutes and ${arrayTime[1]} seconds</strong>.</p>
+        <p>Your registration took: <strong>${minutes} minutes and ${seconds} seconds</strong>.</p>
         `
     ;
 }
