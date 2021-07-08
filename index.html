@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -118,7 +118,7 @@
               <i class="form__validation-status fas fa-times-circle"></i>
             </div>
             <p class="form__input-error">
-              Please enter the username (max. 20 characters).
+              Please enter the username without spaces (max. 20 characters).
             </p>
           </div>
           <!--Group: Email-->
@@ -126,11 +126,11 @@
             <label for="email" class="form__label">Email</label>
             <div class="form__group-input">
               <input type="email" class="form__input" id="email" name="email" placeholder="jamesparker@gmail.com"
-                minlength="8" maxlength="20" required />
+                minlength="8" maxlength="50" required />
               <i class="form__validation-status fas fa-times-circle"></i>
             </div>
             <p class="form__input-error">
-              Please enter your email (max. 20 characters).
+              Please enter your email (max. 50 characters).
             </p>
           </div>
         </div>
@@ -146,7 +146,8 @@
             </div>
             <p class="form__input-error">
               Password must contain, one number, one uppercase<br />
-              letter, one lowercase letter and one special character.
+              letter, one lowercase letter and one special character<br />
+              (min. 8 characters).
             </p>
           </div>
           <!--Group: Confirm Password-->
@@ -271,7 +272,6 @@
               <option value="30">30 - GRC</option>
             </select>
           </div>
-          <p class="form__input-error">Please enter your Phone Number.</p>
         </div>
 
         <!--Group: Phone-->
@@ -310,7 +310,8 @@
         <h4>Shipping type</h4>
         <form id="shipping-form-submit" action="#" class="shipping-form the-form">
           <div class="shippingType">
-            <input type="radio" id="free" name="shipping-type" value="Free shipment" required>
+            <input type="radio" id="free" name="shipping-type" value="Free shipment" 
+            oninvalid="this.setCustomValidity('Please choose an option')" required>
             <label for="free">Free shipment (72H)</label><br>
 
             <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
@@ -377,9 +378,8 @@
 
             <form id="ch_finish-form">
               <label><input type="checkbox" id="terms-and-conditions" value="true" required
-                  oninvalid="this.setCustomValidity('Este campo es requerido')"> He leído y acepto los términos y
-                condiciones.</label><br>
-              <p class="alert-red">Por favor acepta los términos y condiciones</p>
+                  oninvalid="this.setCustomValidity('This field is required')"> I have read and agree to the terms and conditions.</label><br>
+              <p class="alert-red">Please accept the terms and conditions</p>
               <button type="submit">Buy now</button>
             </form>
 
