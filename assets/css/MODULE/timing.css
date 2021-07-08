@@ -1,5 +1,12 @@
 /* TIMING */
 
-.timing{
-
+.timing {
+    position: relative;
+    color: black;
+    background: #fff;
+    text-align: center;
+}
+.timing p {
+    margin: 0px;
+    padding: 10px;
 }
