@@ -92,10 +92,11 @@ shipBtns.forEach((shipBtn) => {
 
     // For "finish" and "thank-you" section
     orderDeliveryDate.forEach(elm => elm.innerHTML = `
+      <h4>Your order will arrive:</h4>
       <p>Between <span>${dtDate} of ${dtMonth} of ${dtYear} ${dtHours}:${dtMin}h</span> 
       and <span>${dtMaxDate} of ${dtMaxMonth} of ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
     `);
-    
+
   });
 });
 
