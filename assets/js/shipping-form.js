@@ -1,8 +1,9 @@
+/*
 var staringMinutes = setStaringMinutes();
 var time = staringMinutes * 60;
 var countdownEl = document.getElementById("countdown");
-
 var setTime = setInterval(updateCountdown(sections), 1000);
+*/
 
 // Store shipping info of customers
 var shippingForm = document.querySelector("#shipping-form-submit");

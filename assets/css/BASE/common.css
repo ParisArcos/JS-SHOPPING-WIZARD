@@ -18,6 +18,7 @@ section {
   transition: 0.25s ease-in;
   position: relative;
   min-width: 100%;
+  overflow: auto;
 }
 
 hr {

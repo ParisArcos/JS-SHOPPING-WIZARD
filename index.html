@@ -25,33 +25,32 @@
       </p>
     <![endif]-->
   <header>
-    <h3>E-commerce</h3>
+    <h3 id="logo">E-commerce</h3>
+
+    <!-- Buying Process -->
+    <div class="process" hidden>
+      <div class="process-phrase">
+        <h5>Profile</h5>
+        <h5>Address</h5>
+        <h5>Shipping</h5>
+        <h5>Finish</h5>
+      </div>
+      <div class="horizontalLine">
+        <hr />
+      </div>
+
+      <div class="process-icons">
+        <div class="circle-icon profile-icon"></div>
+        <div class="circle-icon address-icon"></div>
+        <div class="circle-icon shipping-icon"></div>
+        <div class="circle-icon finish-icon"></div>
+      </div>
+    </div>
+
     <!--Timing-->
-    <div class="timing" hidden>
-      <p>
-        You started registering <span id="countdown"></span> minutes ago.
-      </p>
-      <p>Hurry up!</p>
+    <div class="timing">
     </div>
   </header>
-  <!-- Buying Process -->
-  <div class="process" hidden>
-    <div class="process-phrase">
-      <h5>Profile</h5>
-      <h5>Address</h5>
-      <h5>Shipping</h5>
-      <h5>Finish</h5>
-    </div>
-    <div class="horizontalLine">
-      <hr />
-    </div>
-    <div class="process-icons">
-      <div class="circle-icon profile-icon"></div>
-      <div class="circle-icon address-icon"></div>
-      <div class="circle-icon shipping-icon"></div>
-      <div class="circle-icon finish-icon"></div>
-    </div>
-  </div>
   <div id="main">
     <section id="product-section" class="active">
       <!--Contenedor principal-->
@@ -76,7 +75,7 @@
             </div>
             <div class="description">
               <!--Descpcion-->
-              <h3>Descripcion</h3>
+              <h3>Description</h3>
               <p>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -101,7 +100,7 @@
                 <div id="selection2" name="selection2"> </select>
                 </div>
                 <div class="button-submit">
-                  <button type="submit">Comprar</button>
+                  <button type="submit">Buy</button>
                 </div>
             </form>
           </div>
@@ -113,63 +112,63 @@
       <form action="" class="the-form" id="user-form-1">
 
         <h1>Profile</h1>
-        <!--Group: Username-->
-        <div class="form__group" id="group__username">
-          <label for="username" class="form__label">Username</label>
-          <div class="form__group-input">
-            <input type="text" class="form__input" id="username" name="username" placeholder="TheKiller26" minlength="5"
-              maxlength="20" pattern="^\S*$" required />
-            <i class="form__validation-status fas fa-times-circle"></i>
-          </div>
-          <p class="form__input-error">
-            Please enter the username (max. 20 characters).
-          </p>
-        </div>
-        <br />
 
-        <!--Group: Email-->
-        <div class="form__group" id="group__email">
-          <label for="email" class="form__label">Email</label>
-          <div class="form__group-input">
-            <input type="email" class="form__input" id="email" name="email" placeholder="jamesparker@gmail.com"
-              minlength="8" maxlength="20" required />
-            <i class="form__validation-status fas fa-times-circle"></i>
+        <div class="form__row">
+          <!--Group: Username-->
+          <div class="form__group" id="group__username">
+            <label for="username" class="form__label">Username</label>
+            <div class="form__group-input">
+              <input type="text" class="form__input" id="username" name="username" placeholder="TheKiller26"
+                minlength="5" maxlength="20" pattern="^\S*$" required />
+              <i class="form__validation-status fas fa-times-circle"></i>
+            </div>
+            <p class="form__input-error">
+              Please enter the username (max. 20 characters).
+            </p>
           </div>
-          <p class="form__input-error">
-            Please enter your email (max. 20 characters).
-          </p>
+          <!--Group: Email-->
+          <div class="form__group" id="group__email">
+            <label for="email" class="form__label">Email</label>
+            <div class="form__group-input">
+              <input type="email" class="form__input" id="email" name="email" placeholder="jamesparker@gmail.com"
+                minlength="8" maxlength="20" required />
+              <i class="form__validation-status fas fa-times-circle"></i>
+            </div>
+            <p class="form__input-error">
+              Please enter your email (max. 20 characters).
+            </p>
+          </div>
         </div>
-        <br />
 
-        <!--Group: Password-->
-        <div class="form__group" id="group__password">
-          <label for="password" class="form__label">Password</label>
-          <div class="form__group-input">
-            <input type="password" class="form__input" id="password" name="password"
-              pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$" required />
-            <i class="form__validation-status fas fa-times-circle"></i>
+        <div class="form__row">
+          <!--Group: Password-->
+          <div class="form__group" id="group__password">
+            <label for="password" class="form__label">Password</label>
+            <div class="form__group-input">
+              <input type="password" class="form__input" id="password" name="password"
+                pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$" required />
+              <i class="form__validation-status fas fa-times-circle"></i>
+            </div>
+            <p class="form__input-error">
+              Password must contain, one number, one uppercase<br />
+              letter, one lowercase letter and one special character.
+            </p>
           </div>
-          <p class="form__input-error">
-            Password must contain, one number, one uppercase<br />
-            letter, one lowercase letter and one special character.
-          </p>
+          <!--Group: Confirm Password-->
+          <div class="form__group" id="group__password2">
+            <label for="password2" class="form__label">Confirm Password</label>
+            <div class="form__group-input">
+              <input type="password" class="form__input" id="password2" name="password2" minlength="8" maxlength="20"
+                required />
+              <i class="form__validation-status fas fa-times-circle"></i>
+            </div>
+            <p class="form__input-error">Both passwords must be the same.</p>
+          </div>
         </div>
-        <br />
 
-        <!--Group: Confirm Password-->
-        <div class="form__group" id="group__password2">
-          <label for="password2" class="form__label">Confirm Password</label>
-          <div class="form__group-input">
-            <input type="password" class="form__input" id="password2" name="password2" minlength="8" maxlength="20"
-              required />
-            <i class="form__validation-status fas fa-times-circle"></i>
-          </div>
-          <p class="form__input-error">Both passwords must be the same.</p>
-        </div>
-        <br />
         <!--Buttons-->
         <div class="form__group form__group-btn-submit">
-          <button type="reset" class="form__btn red">Clear</button>
+          <button type="reset" class="reset form__btn">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
       </form>
@@ -192,7 +191,6 @@
             Please enter your First Name (max. 20 characters).
           </p>
         </div>
-        <br />
 
         <!--Group: LastName-->
         <div class="form__group" id="group__lname">
@@ -206,7 +204,6 @@
             Please enter your Last Name (max. 20 characters).
           </p>
         </div>
-        <br />
 
         <!--Group: Birthday-->
         <div class="form__group" id="group__birthday">
@@ -216,7 +213,6 @@
           </div>
           <p class="form__input-error">Please enter your Birthday.</p>
         </div>
-        <br />
 
         <!--Group: Address1-->
         <div class="form__group" id="group__address1">
@@ -230,7 +226,6 @@
             Please enter your Address (max. 50 characters).
           </p>
         </div>
-        <br />
 
         <!--Group: Address2-->
         <div class="form__group" id="group__address2">
@@ -242,7 +237,6 @@
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
         </div>
-        <br />
 
         <!--Group: Postal Code-->
         <div class="form__group" id="group__pcode">
@@ -254,7 +248,6 @@
           </div>
           <p class="form__input-error">Please enter your Postal Code.</p>
         </div>
-        <br />
 
         <!--Group: Country-->
         <div class="form__group" id="group__country">
@@ -270,7 +263,6 @@
           </div>
           <p class="form__input-error">Please select your Country.</p>
         </div>
-        <br />
 
         <!--Group: Phone Country Code-->
         <div class="form__group" id="group__phonecode">
@@ -286,7 +278,6 @@
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
         </div>
-        <br />
 
         <!--Group: Phone-->
         <div class="form__group" id="group__phone">
@@ -298,7 +289,6 @@
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
         </div>
-        <br />
 
         <!--Group: Confirm address-->
         <div class="form__group" id="group__confirm">
@@ -310,7 +300,7 @@
 
         <!--Buttons-->
         <div class="form__group form__group-btn-submit">
-          <button type="reset" class="form__btn red">Clear</button>
+          <button type="reset" class="reset form__btn">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
       </form>
