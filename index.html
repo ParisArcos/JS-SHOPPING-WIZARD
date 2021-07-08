@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -310,7 +310,8 @@
         <h4>Shipping type</h4>
         <form id="shipping-form-submit" action="#" class="shipping-form the-form">
           <div class="shippingType">
-            <input type="radio" id="free" name="shipping-type" value="Free shipment" required>
+            <input type="radio" id="free" name="shipping-type" value="Free shipment" 
+            oninvalid="this.setCustomValidity('Please choose an option')" required>
             <label for="free">Free shipment (72H)</label><br>
 
             <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
@@ -377,9 +378,8 @@
 
             <form id="ch_finish-form">
               <label><input type="checkbox" id="terms-and-conditions" value="true" required
-                  oninvalid="this.setCustomValidity('Este campo es requerido')"> He leído y acepto los términos y
-                condiciones.</label><br>
-              <p class="alert-red">Por favor acepta los términos y condiciones</p>
+                  oninvalid="this.setCustomValidity('This field is required')"> I have read and agree to the terms and conditions.</label><br>
+              <p class="alert-red">Please accept the terms and conditions</p>
               <button type="submit">Buy now</button>
             </form>
 
