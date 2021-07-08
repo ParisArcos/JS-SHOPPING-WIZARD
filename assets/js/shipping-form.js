@@ -29,9 +29,6 @@ var shippingForm = document.querySelector("#shipping-form-submit");
       }
       console.log(shipping.amount);
     }
-
-    // shipping time
-    // shipping.date = "";
   
     // gift data
     if (input[0] == "gift-check") {
@@ -122,14 +119,13 @@ function giftCheckFunction() {
   }
 }
 
-// change icon colors
-var ifVisible = false;
 
 // to check if a section is visible on viewport
-var observer = new IntersectionObserver(function(entries) {
+/* var observer = new IntersectionObserver(function(entries) {
 	if(entries[0].isIntersecting === true)
 		console.log('Element is fully visible in screen');
 }, { threshold: [0] });
 
-observer.observe(document.querySelector("#profile"));
+observer.observe(document.querySelector("#profile")); */
+
 
