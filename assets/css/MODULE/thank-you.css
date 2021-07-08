@@ -1,0 +1,18 @@
+/* THANK YOU */
+
+#thank-you .flex > div {
+  margin-bottom: 25px;
+}
+.card {
+  background-color: white;
+  box-shadow: 0 5px 10px #00000026;
+  padding: 1.5rem 1.5rem;
+}
+#thank-you.product-image,
+#thank-you.product-details {
+  padding: 17.5px;
+}
+
+#thank-you {
+  background-color: #f4f4f4;
+}

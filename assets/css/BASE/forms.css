@@ -1,0 +1,126 @@
+/* FORMS */
+
+/* Formulario datos cliente y dirección */
+
+.the-form {
+  padding-left: 5%;
+}
+
+.form__label {
+  display: block;
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.form__group-input {
+  position: relative;
+}
+
+.form__input {
+  width: 200px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px 0 5px;
+  transition: 0.2s ease all;
+}
+
+.form__input:focus {
+  border: 3px dashed black;
+  outline: none;
+}
+
+.form__input-error {
+  display: none;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.form__input-error-active {
+  display: block;
+}
+
+.form__validation-status {
+  position: absolute;
+  left: 195px;
+  top: 7px;
+  z-index: 100;
+  font-size: 1rem;
+  opacity: 0;
+}
+
+.red {
+  background-color: white;
+  color: black;
+  margin-right: 15px;
+}
+
+/* Validation Styles */
+.form__group-correct .form__validation-status {
+  color: chartreuse;
+  opacity: 1;
+}
+
+.form__group-incorrect .form__label {
+  color: red;
+}
+
+.form__group-incorrect .form__validation-status {
+  color: red;
+  opacity: 1;
+}
+
+.form__group-incorrect .form__input {
+  border: 2px solid red;
+}
+
+/* Quitar flechas del number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/*FIN FORMULARIO DATOS CLIENTE Y DIRECCION*/
+
+/* Shipping Form */
+
+textarea {
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 100px;
+  line-height: 25px;
+  padding: 0 10px 0 5px;
+  transition: 0.3s ease all;
+}
+
+.shippingType {
+  margin-left: -6%;
+  line-height: 30px;
+}
+
+.giftCheck {
+  margin-top: 15px;
+  margin-left: -5%;
+  line-height: 30px;
+}
+
+.giftInfo {
+  margin-left: -4%;
+  line-height: 30px;
+}
+
+.shipping-buttons {
+  margin-left: -4%;
+  margin-top: 10px;
+}
+
+#infoShipping {
+  margin-left: 2%;
+}

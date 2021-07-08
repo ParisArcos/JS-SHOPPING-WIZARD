@@ -1,0 +1,25 @@
+/* PROCESS */
+
+.process{
+  padding: 15px 45px;
+}
+
+.process-phrase {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -15px;
+}
+
+.process-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.circle-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  background-color: white;
+}
