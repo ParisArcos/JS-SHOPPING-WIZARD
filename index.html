@@ -369,18 +369,14 @@
                     <!--{productColor}-->
                   </span></p>
 
-                <div id="ch_delivery-date">
-                  <span>Estimated delivery date:</span>
-                  <p>Between 21 of July of 2021 14:00h <br />
-                    and 21 of July of 2021 20:00h</p>
+                <div class="ch_delivery-date">
                 </div>
               </div>
             </div>
 
             <form id="ch_finish-form">
-              <label><input type="checkbox" id="terms-and-conditions" value="true" required
-                  oninvalid="this.setCustomValidity('This field is required')"> I have read and agree to the terms and conditions.</label><br>
-              <p class="alert-red">Please accept the terms and conditions</p>
+              <label><input type="checkbox" id="terms-and-conditions"> I have read and agree to the terms and conditions.</label>
+              <p class="alert-red" hidden>Please accept the terms and conditions.*</p>
               <button type="submit">Buy now</button>
             </form>
 

@@ -16,3 +16,12 @@
 .timing.show {
     max-height: 99999px;
 }
+#ch_finish-form .alert-red {
+    font-size: 0.8rem;
+    margin-bottom: 10px 0px;
+    color: rgb(255, 0, 0);
+}
+#ch_finish-form {
+    display: flex;
+    flex-direction: column;
+}

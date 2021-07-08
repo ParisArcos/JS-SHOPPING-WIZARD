@@ -24,5 +24,14 @@ function buildOrderVariables() {
     }
     console.log(orderTotalAmount());
     orderTotal.forEach( elm => elm.innerHTML = orderTotalAmount());
-
 }
+
+document.querySelector('#ch_finish-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (document.querySelector('#terms-and-conditions').checked == false) {
+        document.querySelector('#ch_finish-form .alert-red').removeAttribute('hidden');
+    } else {
+        moveMainSection();
+    }
+});
