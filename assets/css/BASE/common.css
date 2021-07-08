@@ -19,6 +19,7 @@ section {
   position: relative;
   min-width: 100%;
   overflow: auto;
+  background-color: #f4f4f4;
 }
 
 hr {

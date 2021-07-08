@@ -11,7 +11,10 @@
 #thank-you.product-details {
   padding: 17.5px;
 }
-
+#thank-you > h1,
+#thank-you > p {
+  text-align: center;
+}
 #thank-you {
   background-color: #f4f4f4;
 }
