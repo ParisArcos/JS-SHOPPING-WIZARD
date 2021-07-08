@@ -5,7 +5,7 @@ function buildOrderVariables() {
     orderProductSize.innerHTML = `Talla: ${productOrder.size}`;
     orderProductColor.innerHTML = productOrder.colorName;
 
-    orderDeliveryDate.innerHTML = shipping.date;
+    //orderDeliveryDate.innerHTML = shipping.date;
     orderShippingName.innerHTML = shipping.type;
     orderShippingCost.innerHTML = shipping.amount;
 
