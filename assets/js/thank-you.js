@@ -51,13 +51,13 @@ function showTimerModal(timeToDisplay) {
         `
     ;
 
-    timeDiv.style.display = 'block';
+    timeDiv.classList.add('show');
 }
 
 function hideTimerModal() {
 
     let timeDiv = document.querySelector('.timing'); 
-    timeDiv.style.display = 'none';
+    timeDiv.classList.remove('show');
 }
 
 function displaySessionTime(timeToDispay) {
