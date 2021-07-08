@@ -17,9 +17,16 @@
 }
 .ch_product-image {
   margin-right: 15px;
+  margin-bottom: 15px;
 }
-.ch_product-name {
+.ch_product-image img {
+  max-width: 150px;
+}
+.order-purchases .ch_product-name {
   font-size: x-large;
+  font-weight: bold;
+}
+.order-payment-details .ch_product-name {
   font-weight: bold;
 }
 .ch_delivery-date {
