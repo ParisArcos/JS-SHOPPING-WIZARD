@@ -24,6 +24,8 @@ var shippingForm = document.querySelector("#shipping-form-submit");
         shipping.amount = 4.99;
       } else if (shipping.type == "Premium") {
         shipping.amount = 9.99;
+      } else if (shipping.type == "Free shipment") {
+        shipping.amount = 0;
       }
       console.log(shipping.amount);
     }
@@ -100,7 +102,6 @@ shipBtns.forEach((shipBtn) => {
     
     // For "finish" and "thank-you" section
     orderDeliveryDate.innerHTML = `
-        <h4>Your order will arrive:</h4>
         <h4>estimate delivery date:</h4>
         <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
         and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
