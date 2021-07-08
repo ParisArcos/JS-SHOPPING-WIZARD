@@ -14,5 +14,3 @@ for (const i of micros) {
 productForm.addEventListener("submit", getValues);
 
 //propagacion de eventos
-
-//------------------------------------------------------------- FUNCTIONS --------------------------------------------------------------\\
