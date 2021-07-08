@@ -1,10 +1,10 @@
-// Control timing
 var staringMinutes = setStaringMinutes();
 var time = staringMinutes * 60;
 var countdownEl = document.getElementById("countdown");
 
 var setTime = setInterval(updateCountdown(sections), 1000);
 
+// Store shipping info of customers
 var shippingForm = document.querySelector("#shipping-form-submit");
 
 /**
@@ -13,11 +13,11 @@ var shippingForm = document.querySelector("#shipping-form-submit");
  shippingForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  let formData = new FormData(form);
+  let formData = new FormData(shippingForm);
   // Display the values
   for (var input of formData.entries()) {
     console.log(input);
-    // shipping data
+    // shipping cost
     if (input[0] == "shipping-type") {
       shipping.type = input[1];
       if (shipping.type == "Extra shipping") {
@@ -28,8 +28,9 @@ var shippingForm = document.querySelector("#shipping-form-submit");
       console.log(shipping.amount);
     }
 
-    // shipping.date = infoShipping.innerHTML;
-
+    // shipping time
+    // shipping.date = "";
+  
     // gift data
     if (input[0] == "gift-check") {
       gift.isset = input[1];
@@ -43,29 +44,78 @@ var shippingForm = document.querySelector("#shipping-form-submit");
   }
 });
 
-// Display shipping time
 shipBtns.forEach((shipBtn) => {
   shipBtn.addEventListener("click", (e) => {
     if (e.target.id == "extra") {
-      infoShipping.innerHTML = `
-        <h4>Your order will arrive:</h4>
-        <h4>estimate delivery date:</h4>
-        <p>Between <span>25 de Julio de 2020 14:00h</span> and <span>25 de Julio de 2020 20:00h.</span></p>
-        `;
+      var dt = new Date();
+      dt.setHours(dt.getHours() + 48);
+      var dtYear = dt.getFullYear();
+      var dtMonth = dt.toLocaleString('default', { month: 'long' });
+      var dtDate = dt.getDate();
+      var dtHours = dt.getHours();
+      var dtMin = dt.getMinutes();
+      dt.setHours(dt.getHours() + 24);
+      var dtMaxYear = dt.getFullYear();
+      var dtMaxMonth = dt.toLocaleString('default', { month: 'long' });
+      var dtMaxDate = dt.getDate();
+      var dtMaxHours = dt.getHours();
+      var dtMaxMin = dt.getMinutes(); 
     } else if (e.target.id == "premium") {
-      infoShipping.innerHTML = `
+      var dt = new Date();
+      dt.setHours(dt.getHours() + 24);
+      var dtYear = dt.getFullYear();
+      var dtMonth = dt.toLocaleString('default', { month: 'long' });
+      var dtDate = dt.getDate();
+      var dtHours = dt.getHours();
+      var dtMin = dt.getMinutes();
+      dt.setHours(dt.getHours() + 24);
+      var dtMaxYear = dt.getFullYear();
+      var dtMaxMonth = dt.toLocaleString('default', { month: 'long' });
+      var dtMaxDate = dt.getDate();
+      var dtMaxHours = dt.getHours();
+      var dtMaxMin = dt.getMinutes(); 
+    } else if (e.target.id == "free") {
+      var dt = new Date();
+      dt.setHours(dt.getHours() + 72);
+      var dtYear = dt.getFullYear();
+      var dtMonth = dt.toLocaleString('default', { month: 'long' });
+      var dtDate = dt.getDate();
+      var dtHours = dt.getHours();
+      var dtMin = dt.getMinutes();
+      dt.setHours(dt.getHours() + 24);
+      var dtMaxYear = dt.getFullYear();
+      var dtMaxMonth = dt.toLocaleString('default', { month: 'long' });
+      var dtMaxDate = dt.getDate();
+      var dtMaxHours = dt.getHours();
+      var dtMaxMin = dt.getMinutes(); 
+    }
+
+    // For "shipping" section
+    infoShipping.innerHTML = `
         <h4>Your order will arrive:</h4>
         <h4>estimate delivery date:</h4>
-        <p>Between <span>21 de Julio de 2020 14:00h</span> and <span>21 de Julio de 2020 20:00h.</span></p>
+        <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
+        and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
         `;
-    } else if (e.target.id == "free") {
-      infoShipping.innerHTML = "";
-    }
+    
+    // For "finish" and "thank-you" section
+    orderDeliveryDate.innerHTML = `
+        <h4>Your order will arrive:</h4>
+        <h4>estimate delivery date:</h4>
+        <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
+        and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
+        `; 
   });
-});
+    console.log(orderDeliveryDate.innerHTML)
+}); 
 
 // Display gift information 
 function giftCheckFunction() {
-  var giftCheckMoreInfo = document.querySelector(".giftCheckMoreInfo");
-  giftCheckMoreInfo.removeAttribute("hidden");
+  if (giftCheckMoreInfo.style.display === "block") {
+    giftCheckMoreInfo.style.display = "none";
+    console.log(giftCheckMoreInfo.style.display)
+  } else {
+    giftCheckMoreInfo.style.display = "block";
+    console.log(giftCheckMoreInfo.style.display)
+  }
 }

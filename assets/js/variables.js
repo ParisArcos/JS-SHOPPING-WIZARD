@@ -111,6 +111,7 @@ var shipping = {
   type: "",
   amount: 0,
   date: "",
+  maxDate: "",
 };
 /**
  * Gift Global Variables
@@ -151,11 +152,13 @@ var profileIcon = document.getElementsByClassName("profile-icon")[0];
 var addressIcon = document.getElementsByClassName("address-icon")[0];
 var shippingIcon = document.getElementsByClassName("shipping-icon")[0];
 var finishIcon = document.getElementsByClassName("finish-icon")[0];
+// console.log(addressIcon)
 
-// Control information on shipping time
+
+// Control information on shipping time and gift 
 var infoShipping = document.getElementById("infoShipping");
 var shipBtns = document.querySelectorAll(".shippingType input");
-
+var giftCheckMoreInfo = document.querySelector(".giftInfo");
 
 /**
  * Global finish page Variables
