@@ -155,7 +155,7 @@ select {
   padding-bottom: 0.3rem;
   font-weight: bold;
   cursor: pointer;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .form__group-input {
@@ -170,11 +170,11 @@ select {
   height: 25px;
   line-height: 25px;
   padding: 0 10px 0 5px;
-  transition: 0.3s ease all;
+  transition: 0.2s ease all;
 }
 
 .form__input:focus {
-  border: 2px dashed slategrey;
+  border: 3px dashed black;
   outline: none;
 }
 
@@ -195,6 +195,12 @@ select {
   z-index: 100;
   font-size: 1rem;
   opacity: 0;
+}
+
+.red {
+  background-color: white;
+  color: black;
+  margin-right: 15px;
 }
 
 /*Validation Styles*/
