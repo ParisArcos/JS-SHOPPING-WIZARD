@@ -4,14 +4,18 @@
 function buildColors() {
   for (let y = 0; y < product.combination.length; y++) {
     var img = document.createElement("img");
-    img.setAttribute(
-      "class",
-      y == 0 ? "micro cursor selected" : "micro cursor"
-    );
+    if (y == 0) {
+      img.setAttribute("class", "micro cursor selected");
+      img.style.outline = product.combination[y].colorHex + " solid 2px";
+    } else {
+      img.setAttribute("class", "micro cursor");
+    }
+
     img.setAttribute("data-Hex", product.combination[y].colorHex);
     img.src = product.combination[y].imageURL;
     img.title = product.combination[y].colorName;
     img.alt = product.combination[y].colorName;
+
     select2.appendChild(img);
   }
   drawImg();
@@ -65,12 +69,12 @@ function getValues() {
   event.preventDefault();
   var formValues = new FormData(productForm);
   for (const value of formValues.entries()) {
-    value[0] == "productName"
-      ? (product.name =
-          value[1] + "-" + selected[0].title + "-" + select1.value)
-      : "";
-    value[0] == "productPrice" ? (product.price = value[1]) : "";
+    value[0] == "productName" ? (productOrder.name = value[1]) : "";
+    value[0] == "productPrice" ? (productOrder.price = value[1]) : "";
   }
+  productOrder.colorName = selected[0].title;
+  productOrder.imageSrc = selected[0].src;
+  productOrder.size = select1.value;
   document.querySelector(".process").removeAttribute("hidden");
   document.querySelector(".timing").removeAttribute("hidden");
   moveMainSection();
@@ -108,10 +112,23 @@ function bigSlide(event) {
  */
 function validatePassword(password, password2) {
   let errormsg = document.querySelector("#group__password2 .form__input-error");
+
+  var valideJs =
+    /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$/.test(
+      password.value
+    );
+
   console.log(password.value === password2.value);
+  console.log(valideJs);
+
   if (password.value === password2.value) {
-    errormsg.style.display = "none";
-    password2.setCustomValidity("");
+    if (valideJs) {
+      errormsg.style.display = "none";
+      password2.setCustomValidity("");
+    } else {
+      errormsg.style.display = "block";
+      password2.setCustomValidity("Error Pattern");
+    }
   } else {
     errormsg.style.display = "block";
     password2.setCustomValidity("Both passwords must be the same.");
@@ -151,7 +168,6 @@ function updateCountdown() {
 }
 
 // change color of icons in buying process
-
 
 
 // Clear shipping form

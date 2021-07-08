@@ -4,65 +4,68 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Shopping Wizard</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Style tags -->
-    <link rel="stylesheet" href="assets/style.css" />
 
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Shopping Wizard</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body>
-    <!--[if lt IE 7]>
+  <!-- Style tags -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+
+<body>
+  <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <header>
-      <h3>E-commerce</h3>
-       <!--Timing-->
-      <div class="timing" hidden>
-          <p>
-            You started registering <span id="countdown"></span> minutes ago.
-          </p>
-          <p>Hurry up!</p>
-        </div>
-    </header>
-    <!-- Buying Process -->
-      <div class="process" hidden>
-        <div class="process-phrase">
-          <h5>Profile</h5>
-          <h5>Address</h5>
-          <h5>Shipping</h5>
-          <h5>Finish</h5>
-        </div>
-        <div class="horizontalLine"><hr /></div>
-        <div class="process-icons">
-          <div class="profile-icon"></div>
-          <div class="address-icon"></div>
-          <div class="shipping-icon"></div>
-          <div class="finish-icon"></div>
-        </div>
-      </div>
-    <div id="main">
+  <header>
+    <h3>E-commerce</h3>
+    <!--Timing-->
+    <div class="timing" hidden>
+      <p>
+        You started registering <span id="countdown"></span> minutes ago.
+      </p>
+      <p>Hurry up!</p>
+    </div>
+  </header>
+  <!-- Buying Process -->
+  <div class="process" hidden>
+    <div class="process-phrase">
+      <h5>Profile</h5>
+      <h5>Address</h5>
+      <h5>Shipping</h5>
+      <h5>Finish</h5>
+    </div>
+    <div class="horizontalLine">
+      <hr />
+    </div>
+    <div class="process-icons">
+      <div class="circle-icon profile-icon"></div>
+      <div class="circle-icon address-icon"></div>
+      <div class="circle-icon shipping-icon"></div>
+      <div class="circle-icon finish-icon"></div>
+    </div>
+  </div>
+  <div id="main">
     <section id="product-section" class="active">
       <!--Contenedor principal-->
-      <div class="flex">
-        <div class="col-container">
+      <div class="product__group flex">
+        <div class="product__images">
           <!--Contenedor izquierdo-->
-          <div id="mainSlide" class="img-big"> </div>                
-          <div id=carrousel class="carrousel"> </div>          
-          </div>
-        <div class="col-container">
+          <div id="mainSlide" class="img-big"> </div>
+          <div id=carrousel class="carrousel"> </div>
+        </div>
+        <div class="product__info">
           <!--Contenedor derecho-->
           <div class="name">
             <!--Nombre Producto-->
-            <h2 id=name >{productName}</h2>
+            <h2 id=name>{productName}</h2>
             <span class="tag">new!</span>
           </div>
           <div class="info">
@@ -84,38 +87,23 @@
                 sunt in culpa qui officia deserunt mollit anim id est laborum."
               </p>
             </div>
-            <form name="product-form" id="product-form" action="#" >
+            <form name="product-form" id="product-form" action="#">
               <input type="hidden" id="productName" name="productName" value="{productName}">
               <input type="hidden" id="productPrice" name="productPrice" value="{productPrice}">
-            <div class="selection1">
-              <!--Select 1-->
-              <h4>Size</h4>
-              <select id="selection1" name="selection1"> </select>
-            </div>
-            <div class="selection2">
-              <!--Selectpicker 2-->
-              <h4>Color</h4>
-              <div id="selection2" name="selection2"> </select>
-            </div>
-            <div class="button-submit">
-              <button type="submit">Comprar</button>
-            </div>
+              <div class="selection1">
+                <!--Select 1-->
+                <h4>Size</h4>
+                <select id="selection1" name="selection1"> </select>
+              </div>
+              <div class="selection2">
+                <!--Selectpicker 2-->
+                <h4>Color</h4>
+                <div id="selection2" name="selection2"> </select>
+                </div>
+                <div class="button-submit">
+                  <button type="submit">Comprar</button>
+                </div>
             </form>
-            <div class="additional-info">
-              <details>
-                <h3></h3><summary>Info Adicional</summary></h3>
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                  nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                  sunt in culpa qui officia deserunt mollit anim id est laborum."
-                </p>
-              </details>
-              <!--Desplegable info adicional(EXTRA)-->
-            </div>
           </div>
         </div>
       </div>
@@ -123,23 +111,14 @@
 
     <section id="profile" class="disabled">
       <form action="" class="the-form" id="user-form-1">
-         
+
         <h1>Profile</h1>
         <!--Group: Username-->
         <div class="form__group" id="group__username">
           <label for="username" class="form__label">Username</label>
           <div class="form__group-input">
-            <input
-              type="text"
-              class="form__input"
-              id="username"
-              name="username"
-              placeholder="TheKiller26"
-              minlength="5"
-              maxlength="20"
-              pattern="^\S*$"
-              required
-            />
+            <input type="text" class="form__input" id="username" name="username" placeholder="TheKiller26" minlength="5"
+              maxlength="20" pattern="^\S*$" required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">
@@ -152,16 +131,8 @@
         <div class="form__group" id="group__email">
           <label for="email" class="form__label">Email</label>
           <div class="form__group-input">
-            <input
-              type="email"
-              class="form__input"
-              id="email"
-              name="email"
-              placeholder="jamesparker@gmail.com"
-              minlength="8"
-              maxlength="20"
-              required
-            />
+            <input type="email" class="form__input" id="email" name="email" placeholder="jamesparker@gmail.com"
+              minlength="8" maxlength="20" required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">
@@ -174,14 +145,8 @@
         <div class="form__group" id="group__password">
           <label for="password" class="form__label">Password</label>
           <div class="form__group-input">
-            <input
-              type="password"
-              class="form__input"
-              id="password"
-              name="password"
-              pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$"
-              required
-            />
+            <input type="password" class="form__input" id="password" name="password"
+              pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$" required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">
@@ -195,15 +160,8 @@
         <div class="form__group" id="group__password2">
           <label for="password2" class="form__label">Confirm Password</label>
           <div class="form__group-input">
-            <input
-              type="password"
-              class="form__input"
-              id="password2"
-              name="password2"
-              minlength="8"
-              maxlength="20"
-              required
-            />
+            <input type="password" class="form__input" id="password2" name="password2" minlength="8" maxlength="20"
+              required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">Both passwords must be the same.</p>
@@ -214,11 +172,11 @@
           <button type="reset" class="form__btn red">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
-        </form>
-        </section>
+      </form>
+    </section>
 
-        <section id="address" class="disabled">
-        <form action="" class="the-form" id="user-form-2">
+    <section id="address" class="disabled">
+      <form action="" class="the-form" id="user-form-2">
         <h1>Address</h1>
 
 
@@ -226,15 +184,8 @@
         <div class="form__group" id="group__fname">
           <label for="fname" class="form__label">First Name</label>
           <div class="form__group-input">
-            <input
-              type="text"
-              class="form__input"
-              id="fname"
-              name="fname"
-              placeholder="Michael"
-              maxlength="20"
-              required
-            />
+            <input type="text" class="form__input" id="fname" name="fname" placeholder="Michael" maxlength="20"
+              required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">
@@ -247,15 +198,8 @@
         <div class="form__group" id="group__lname">
           <label for="lname" class="form__label">Last Name</label>
           <div class="form__group-input">
-            <input
-              type="text"
-              class="form__input"
-              id="lname"
-              name="lname"
-              placeholder="Scofield"
-              maxlength="20"
-              required
-            />
+            <input type="text" class="form__input" id="lname" name="lname" placeholder="Scofield" maxlength="20"
+              required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">
@@ -268,13 +212,7 @@
         <div class="form__group" id="group__birthday">
           <label for="birthday" class="form__label">Birthday</label>
           <div class="form__group-input">
-            <input
-              type="date"
-              class="form__input"
-              id="birthday"
-              name="birthday"
-              required
-            />
+            <input type="date" class="form__input" id="birthday" name="birthday" required />
           </div>
           <p class="form__input-error">Please enter your Birthday.</p>
         </div>
@@ -284,15 +222,8 @@
         <div class="form__group" id="group__address1">
           <label for="address1" class="form__label">Address1</label>
           <div class="form__group-input">
-            <input
-              type="text"
-              class="form__input"
-              id="address1"
-              name="address1"
-              maxlength="50"
-              placeholder="General Elorza 35 6D"
-              required
-            />
+            <input type="text" class="form__input" id="address1" name="address1" maxlength="50"
+              placeholder="General Elorza 35 6D" required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">
@@ -305,14 +236,8 @@
         <div class="form__group" id="group__address2">
           <label for="address2" class="form__label">Address2</label>
           <div class="form__group-input">
-            <input
-              type="text"
-              class="form__input"
-              id="address2"
-              name="address2"
-              maxlength="50"
-              placeholder="Langreo Asturias"
-            />
+            <input type="text" class="form__input" id="address2" name="address2" maxlength="50"
+              placeholder="Langreo Asturias" />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
@@ -323,15 +248,8 @@
         <div class="form__group" id="group__pcode">
           <label for="pcode" class="form__label">Postal Code</label>
           <div class="form__group-input">
-            <input
-              type="number"
-              class="form__input"
-              id="pcode"
-              name="pcode"
-              maxlength="5"
-              placeholder="33161"
-              required
-            />
+            <input type="number" class="form__input" id="pcode" name="pcode" maxlength="5" placeholder="33161"
+              required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">Please enter your Postal Code.</p>
@@ -358,12 +276,7 @@
         <div class="form__group" id="group__phonecode">
           <label for="phonecode" class="form__label">Phone Country Code</label>
           <div class="form__group-input">
-            <select
-              class="form__input"
-              id="phonecode"
-              name="phonecode"
-              disabled
-            >
+            <select class="form__input" id="phonecode" name="phonecode" disabled>
               <option value="376">376 - AND</option>
               <option value="34">34 - ESP</option>
               <option value="33">33 - FRA</option>
@@ -379,15 +292,8 @@
         <div class="form__group" id="group__phone">
           <label for="phone" class="form__label">Phone</label>
           <div class="form__group-input">
-            <input
-              type="tel"
-              class="form__input"
-              id="phone"
-              name="phone"
-              placeholder="658547953"
-              pattern="[0-9]{9}"
-              required
-            />
+            <input type="tel" class="form__input" id="phone" name="phone" placeholder="658547953" pattern="[0-9]{9}"
+              required />
             <i class="form__validation-status fas fa-times-circle"></i>
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
@@ -412,47 +318,48 @@
 
     <!-- Shipping -->
     <section id="shipping" class="disabled">
-           
+
       <!-- Shippping info -->
-        <div class="info">
-          <h3>Shipping</h3>
-          <h4>Shipping type</h4>
-          <form id="shipping-form-submit" action="#" class="shipping-form the-form">
-            <div class="shippingType">
-              <input type="radio" id="free" name="shipping-type" value="Free shipment" required>
-              <label for="free">Free shipment (72H)</label><br>
+      <div class="info">
+        <h3>Shipping</h3>
+        <h4>Shipping type</h4>
+        <form id="shipping-form-submit" action="#" class="shipping-form the-form">
+          <div class="shippingType">
+            <input type="radio" id="free" name="shipping-type" value="Free shipment" required>
+            <label for="free">Free shipment (72H)</label><br>
 
-              <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
-              <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
+            <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
+            <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
 
-              <input type="radio" id="premium" name="shipping-type" value="Premium">
-              <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
+            <input type="radio" id="premium" name="shipping-type" value="Premium">
+            <label for="premium">Premium (24h) <span class="shipping">9,99$</span></label>
 
-              <div id="infoShipping"></div>
-              </div>  
+            <div id="infoShipping"></div>
+          </div>
 
-              <div class="giftCheck">
-                <input type="checkbox" name="gift-check" onclick="giftCheckFunction()">
-                <label> Is it a gift? </label>
-              </div>
+          <div class="giftCheck">
+            <input type="checkbox" name="gift-check" onclick="giftCheckFunction()">
+            <label> Is it a gift? </label>
+          </div>
 
-              <div class="giftInfo" hidden>
-                <div class="giftMessage">
-                    <label class="form__label">Gift Message:</label>
-                    <textarea rows="4" cols="50" name="comment" maxlength="200"></textarea>                 
-                </div>
-                <div class="giftWrapper">
-                    <label class="form__label">Gift wrapper image</label>
-                    <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png" class="select-image">
-                </div>
-              </div>
-              <!-- -->
-              <div class="shipping-buttons">
-                <button type="reset" class="reset form__btn" value="Clear" onclick="clearFunction()">Clear</button>
-                <button type="submit" value="submit form" class="form__btn">Next</button>
-              </div>
-          </form>
-        </div>
+          <div class="giftInfo" hidden>
+            <div class="giftMessage">
+              <label class="form__label">Gift Message:</label>
+              <textarea rows="4" cols="50" name="comment" maxlength="200"></textarea>
+            </div>
+            <div class="giftWrapper">
+              <label class="form__label">Gift wrapper image</label>
+              <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png"
+                class="select-image">
+            </div>
+          </div>
+          <!-- -->
+          <div class="shipping-buttons">
+            <button type="reset" class="reset form__btn" value="Clear" onclick="clearFunction()">Clear</button>
+            <button type="submit" value="submit form" class="form__btn">Next</button>
+          </div>
+        </form>
+      </div>
     </section>
 
     <section id="finish" class="disabled">
@@ -462,37 +369,38 @@
             <h3>Your purchase</h3>
             <div class="flex">
               <div class="product-image">
-                <img
-                  width="150"
-                  class="img-fluid"
-                  src="https://www.americanzone.net/wp-content/uploads/2016/06/Grey-T-Shirt-PNG.png"
-                />
+                <img width="150" class="img-fluid"
+                  src="https://www.americanzone.net/wp-content/uploads/2016/06/Grey-T-Shirt-PNG.png" />
               </div>
               <div class="product-details">
                 <p class="ch_product-name">Product Name</p>
-    
+
                 <p class="ch_product-size">Size: {productSize}</p>
-    
-                
-                <p>Color: <span class="product-color ch_product-color"><!--{productColor}--></span></p>
-    
+
+
+                <p>Color: <span class="product-color ch_product-color">
+                    <!--{productColor}-->
+                  </span></p>
+
                 <div id="ch_delivery-date">
                   <span>Estimated delivery date:</span>
                   <p>Between 21 of July of 2021 14:00h <br />
-                  and 21 of July of 2021 20:00h</p> 
+                    and 21 of July of 2021 20:00h</p>
                 </div>
               </div>
             </div>
-  
+
             <form id="ch_finish-form">
-            <label><input type="checkbox" id="terms-and-conditions" value="true" required  oninvalid="this.setCustomValidity('Este campo es requerido')"> He leído y acepto los términos y condiciones.</label><br>
-            <p class="alert-red">Por favor acepta los términos y condiciones</p>
+              <label><input type="checkbox" id="terms-and-conditions" value="true" required
+                  oninvalid="this.setCustomValidity('Este campo es requerido')"> He leído y acepto los términos y
+                condiciones.</label><br>
+              <p class="alert-red">Por favor acepta los términos y condiciones</p>
               <button type="submit">Buy now</button>
-          </form>
-          
-      </div>
+            </form>
+
+          </div>
         </div>
-    
+
         <div class="order-payment-details">
           <div class="card">
             <p><strong>Payment details</strong></p><br>
@@ -508,37 +416,36 @@
     <section id="thank-you" class="disabled">
       <h1>Hi <span id="ch_user-name">{userName}</span>, your order is complete!</h1>
       <p>Thank you for your order!</p>
-      <br/>
+      <br />
       <div class="flex">
         <div class="order-purchases">
           <div class="card">
             <h3>Your purchase</h3>
             <div class="flex">
               <div class="ch_product-image">
-                <img
-                  width="150"
-                  class="img-fluid"
-                  src="https://www.americanzone.net/wp-content/uploads/2016/06/Grey-T-Shirt-PNG.png"
-                />
+                <img width="150" class="img-fluid"
+                  src="https://www.americanzone.net/wp-content/uploads/2016/06/Grey-T-Shirt-PNG.png" />
               </div>
               <div class="product-details">
                 <p class="ch_product-name">Product Name</p>
-    
+
                 <p class="ch_product-size">Size: {productSize}</p>
-    
-                
-                <p>Color: <span class="product-color ch_product-color"><!--{productColor}--></span></p>
-    
+
+
+                <p>Color: <span class="product-color ch_product-color">
+                    <!--{productColor}-->
+                  </span></p>
+
                 <div id="ch_delivery-date">
                   <span>Estimated delivery date:</span>
                   <p>Between 21 of July of 2021 14:00h <br />
-                  and 21 of July of 2021 20:00h</p>
+                    and 21 of July of 2021 20:00h</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    
+
         <div class="order-payment-details">
           <div class="card">
             <p><strong>Payment details</strong></p><br>
@@ -549,29 +456,30 @@
           </div>
         </div>
       </div>
-    
+
       <div id="timer-sesion">
         <p>Your registration took: <strong>{time with format X minutes and Y seconds }</strong>.</p>
       </div>
     </section>
 
-    </div>
+  </div>
 
 
-    <footer>
-      <p>Shopping Wizard 2021</p>
-    </footer>
+  <footer>
+    <p>Shopping Wizard 2021</p>
+  </footer>
 
-    <!-- Script tags -->
-    <script src="assets/js/variables.js"></script>
-    <script src="assets/js/functions.js"></script>
-    
-    <script src="assets/js/product.js"></script>
-    <script src="assets/js/user-form.js"></script>
-    <script src="assets/js/shipping-form.js"></script>
-    <script src="assets/js/finish-form.js"></script>
-    <script src="assets/js/thank-you.js"></script>
-    
+  <!-- Script tags -->
+  <script src="assets/js/variables.js"></script>
+  <script src="assets/js/functions.js"></script>
 
-  </body>
+  <script src="assets/js/product.js"></script>
+  <script src="assets/js/user-form.js"></script>
+  <script src="assets/js/shipping-form.js"></script>
+  <script src="assets/js/finish-form.js"></script>
+  <script src="assets/js/thank-you.js"></script>
+
+
+</body>
+
 </html>
