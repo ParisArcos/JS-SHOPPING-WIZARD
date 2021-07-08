@@ -16,6 +16,8 @@ function buildOrderVariables() {
 
     orderDeliveryDate.forEach(elm => elm.innerHTML = shipping.date);
 
+    document.querySelector('#ch_user-name').innerHTML = user.name;
+
 
     let orderTotalAmount = () => {
         return product.price + shipping.amount;
