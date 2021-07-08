@@ -65,12 +65,15 @@ userForm2.addEventListener("submit", function (event) {
 //Mensaje ayuda formulario
 const inputs = document.querySelectorAll(".form__input");
 var inputHelp = document.querySelectorAll(".form__input-error");
+var formLabel = document.querySelectorAll(".form__label");
 for (let index = 0; index < inputs.length; index++) {
   inputs[index].addEventListener("focus", function inputError() {
     inputHelp[index].style.display = "block";
+    formLabel[index].style.color = "red";
   });
   inputs[index].addEventListener("blur", function inputnoError() {
     inputHelp[index].style.display = "none";
+    formLabel[index].style.color = "black";
   });
 }
 

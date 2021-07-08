@@ -223,3 +223,4 @@ function moveMainSection() {
     document.querySelector(".finish-icon").style.backgroundColor = "#000";
   }
 }
+

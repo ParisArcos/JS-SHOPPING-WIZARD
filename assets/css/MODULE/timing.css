@@ -1,5 +1,18 @@
 /* TIMING */
 
-.timing{
-
+.timing {
+    position: relative;
+    color: black;
+    background: #fff;
+    text-align: center;
+    transition: 0.25s ease-in;
+    max-height: 0px;
+    overflow: hidden;
+}
+.timing p {
+    margin: 0px;
+    padding: 10px;
+}
+.timing.show {
+    max-height: 99999px;
 }
