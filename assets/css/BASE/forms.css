@@ -7,13 +7,13 @@
   text-align: center;
 }
 
-.form__row{
+.form__row {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.form__group{
+.form__group {
   padding: 0 15px;
   margin-bottom: 15px;
 }
@@ -42,7 +42,7 @@
 }
 
 .form__input:focus {
-  border: 3px dashed black;
+  border: 3px dashed rgb(255, 0, 0);
   outline: none;
 }
 
@@ -50,6 +50,7 @@
   display: none;
   font-size: 0.8rem;
   margin-bottom: 0;
+  color: rgb(255, 0, 0);
 }
 
 .form__input-error-active {
@@ -97,12 +98,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-
 /*FIN FORMULARIO DATOS CLIENTE Y DIRECCION*/
 
 /* Shipping Form */
 
-#shipping{
+#shipping {
   text-align: center;
 }
 
@@ -141,7 +141,7 @@ textarea {
   margin-left: 2%;
 }
 
-.form__group-btn-submit{
+.form__group-btn-submit {
   padding-top: 15px;
   text-align: center;
 }
