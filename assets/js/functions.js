@@ -184,6 +184,12 @@ function moveMainSection() {
   positionMain -= 100;
   mainDiv.style.transform = "translateX(" + positionMain + "%)";
 
+  // Scroll to Top
+  window.scrollTo( 0, 0);
+
+  // Hide Footer during checkout
+  document.querySelector('footer').style.display = 'none';
+
   if (positionMain === -100) {
     // Profile
     document.querySelector(".profile-icon").style.backgroundColor = "#000";

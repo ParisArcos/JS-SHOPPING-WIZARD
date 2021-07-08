@@ -1,14 +1,14 @@
 function buildOrderVariables() {
     
-    orderProductName.forEach(elm => elm.innerHTML = productOrder.name);
+    orderProductName.forEach(elm => elm.innerHTML = productOrder.name+' '+ productOrder.colorName);
 
     orderProductPrice.forEach(elm => elm.innerHTML = productOrder.price);
 
     orderProductImage.forEach(elm => elm.innerHTML = `<img class="img-fluid" src="${productOrder.imageSrc}">`);
 
-    orderProductSize.forEach(elm => elm.innerHTML = `Talla: ${productOrder.size}`);
+    orderProductSize.forEach(elm => elm.innerHTML = productOrder.size);
 
-    orderProductColor.forEach(elm => elm.innerHTML = productOrder.colorName);
+    orderProductColor.forEach(elm => elm.style.backgroundColor = productOrder.hex);
 
     orderShippingName.forEach(elm => elm.innerHTML = shipping.type);
 
