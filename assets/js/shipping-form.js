@@ -86,14 +86,14 @@ shipBtns.forEach((shipBtn) => {
     // For "shipping" section
     infoShipping.innerHTML = `
         <h4>Your order will arrive:</h4>
-        <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
-        and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
+        <p>Between <span>${dtDate} of ${dtMonth} of ${dtYear} ${dtHours}:${dtMin}h</span> 
+        and <span>${dtMaxDate} of ${dtMaxMonth} of ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
         `;
 
     // For "finish" and "thank-you" section
     orderDeliveryDate.innerHTML = `
-        <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
-        and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
+        <p>Between <span>${dtDate} of ${dtMonth} of ${dtYear} ${dtHours}:${dtMin}h</span> 
+        and <span>${dtMaxDate} of ${dtMaxMonth} of ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
         `;
   });
 });
