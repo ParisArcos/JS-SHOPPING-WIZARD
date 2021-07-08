@@ -125,9 +125,6 @@ function validatePassword(password, password2) {
       password.value
     );
 
-  console.log(password.value === password2.value);
-  console.log(valideJs);
-
   if (password.value === password2.value) {
     if (valideJs) {
       errormsg.style.display = "none";
@@ -158,38 +155,7 @@ function maxMinDate() {
   document.getElementById("birthday").setAttribute("max", max);
   document.getElementById("birthday").setAttribute("min", min);
 }
-/**
- * Shipping Form Helpers
- */
-/*
-// Control timing
-function setStaringMinutes() {
-  let minutes;
-  for (let i = 0; i < sections.length; i++) {
-    if (sections[i].id === "shipping") {
-      minutes = 3;
-    } else if (sections[i].id === "address") {
-      minutes = 2;
-    } else if (sections[i].id === "finish") {
-      minutes = 4;
-    }
-  }
-  return minutes;
-}
 
-function updateCountdown() {
-  let minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-  countdownEl.innerHTML = `${minutes}:${seconds}`;
-  time--;
-  // console.log(time)
-  if (minutes <= 0 && seconds == 0) {
-    clearInterval(setTime);
-    alert("Time is up!");
-  }
-}
-*/
 // change color of icons in buying process
 
 // Clear shipping form
@@ -223,10 +189,6 @@ function moveMainSection() {
     // Shipping
     document.querySelector(".shipping-icon").style.backgroundColor = "#000";
   }
-  //if (positionMain === -400) {
-  // Finish
-  //document.querySelector(".finish-icon").style.backgroundColor = "#000";
-  // }
   if (positionMain === -500) {
     // Finish
     document.querySelector(".finish-icon").style.backgroundColor = "#000";
