@@ -4,14 +4,18 @@
 function buildColors() {
   for (let y = 0; y < product.combination.length; y++) {
     var img = document.createElement("img");
-    img.setAttribute(
-      "class",
-      y == 0 ? "micro cursor selected" : "micro cursor"
-    );
+    if (y == 0) {
+      img.setAttribute("class", "micro cursor selected");
+      img.style.outline = product.combination[y].colorHex + " solid 2px";
+    } else {
+      img.setAttribute("class", "micro cursor");
+    }
+
     img.setAttribute("data-Hex", product.combination[y].colorHex);
     img.src = product.combination[y].imageURL;
     img.title = product.combination[y].colorName;
     img.alt = product.combination[y].colorName;
+
     select2.appendChild(img);
   }
   drawImg();
