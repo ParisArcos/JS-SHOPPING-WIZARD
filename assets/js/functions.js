@@ -218,9 +218,12 @@ function moveMainSection() {
     // Shipping
     document.querySelector(".shipping-icon").style.backgroundColor = "#000";
   }
-  if (positionMain === -400) {
+  //if (positionMain === -400) {
+  // Finish
+  //document.querySelector(".finish-icon").style.backgroundColor = "#000";
+  // }
+  if (positionMain === -500) {
     // Finish
     document.querySelector(".finish-icon").style.backgroundColor = "#000";
   }
 }
-
