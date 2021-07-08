@@ -1,10 +1,3 @@
-/*
-var staringMinutes = setStaringMinutes();
-var time = staringMinutes * 60;
-var countdownEl = document.getElementById("countdown");
-var setTime = setInterval(updateCountdown(sections), 1000);
-*/
-
 // Store shipping info of customers
 var shippingForm = document.querySelector("#shipping-form-submit");
 
@@ -17,7 +10,6 @@ shippingForm.addEventListener("submit", function (event) {
   let formData = new FormData(shippingForm);
   // Display the values
   for (var input of formData.entries()) {
-    console.log(input);
     // shipping cost
     if (input[0] == "shipping-type") {
       shipping.type = input[1];
@@ -28,7 +20,6 @@ shippingForm.addEventListener("submit", function (event) {
       } else if (shipping.type == "Free shipment") {
         shipping.amount = 0;
       }
-      console.log(shipping.amount);
     }
 
     // gift data
@@ -95,36 +86,23 @@ shipBtns.forEach((shipBtn) => {
     // For "shipping" section
     infoShipping.innerHTML = `
         <h4>Your order will arrive:</h4>
-        <h4>estimate delivery date:</h4>
         <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
         and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
         `;
 
     // For "finish" and "thank-you" section
     orderDeliveryDate.innerHTML = `
-        <h4>estimate delivery date:</h4>
         <p>Between <span>${dtDate} de ${dtMonth} de ${dtYear} ${dtHours}:${dtMin}h</span> 
         and <span>${dtMaxDate} de ${dtMaxMonth} de ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
         `;
   });
-  console.log(orderDeliveryDate.innerHTML);
 });
 
 // Display gift information
 function giftCheckFunction() {
   if (giftCheckMoreInfo.style.display === "block") {
     giftCheckMoreInfo.style.display = "none";
-    console.log(giftCheckMoreInfo.style.display);
   } else {
     giftCheckMoreInfo.style.display = "block";
-    console.log(giftCheckMoreInfo.style.display);
   }
 }
-
-// to check if a section is visible on viewport
-/* var observer = new IntersectionObserver(function(entries) {
-	if(entries[0].isIntersecting === true)
-		console.log('Element is fully visible in screen');
-}, { threshold: [0] });
-
-observer.observe(document.querySelector("#profile")); */

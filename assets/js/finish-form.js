@@ -1,6 +1,6 @@
 function buildOrderVariables() {
-    
-    orderProductName.forEach(elm => elm.innerHTML = productOrder.name+' '+ productOrder.colorName);
+
+    orderProductName.forEach(elm => elm.innerHTML = productOrder.name + ' ' + productOrder.colorName);
 
     orderProductPrice.forEach(elm => elm.innerHTML = productOrder.price);
 
@@ -14,16 +14,15 @@ function buildOrderVariables() {
 
     orderShippingCost.forEach(elm => elm.innerHTML = shipping.amount);
 
-    orderDeliveryDate.forEach(elm => elm.innerHTML = shipping.date);
+    orderDeliveryDate.forEach(elm => elm.innerHTML = `Your order will be delivered ${shipping.date}`);
 
     document.querySelector('#ch_user-name').innerHTML = user.name;
-
 
     let orderTotalAmount = () => {
         return product.price + shipping.amount;
     }
-    console.log(orderTotalAmount());
-    orderTotal.forEach( elm => elm.innerHTML = orderTotalAmount());
+
+    orderTotal.forEach(elm => elm.innerHTML = orderTotalAmount());
 }
 
 document.querySelector('#ch_finish-form').addEventListener('submit', e => {

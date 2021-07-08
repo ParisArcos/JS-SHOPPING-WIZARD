@@ -78,7 +78,9 @@
               <!--Descpcion-->
               <h3>Description</h3>
               <p>
-                This is where we're going. This T-Shirt from K Clothing  is made from 100% sustainable materials, using a blend of recycled polyester, recycled cotton and organic cotton fibres. The blend is at least 10% recycled fibres or at least 10% organic cotton fibres.
+                This is where we're going. This T-Shirt from K Clothing  is made from 100% sustainable materials, using
+                a blend of recycled polyester, recycled cotton and organic cotton fibres. The blend is at least 10%
+                recycled fibres or at least 10% organic cotton fibres.
               </p>
             </div>
             <form name="product-form" id="product-form" action="#">
@@ -108,58 +110,54 @@
 
         <h1>Profile</h1>
 
-        <div class="form__row">
-          <!--Group: Username-->
-          <div class="form__group" id="group__username">
-            <label for="username" class="form__label">Username</label>
-            <div class="form__group-input">
-              <input type="text" class="form__input" id="username" name="username" placeholder="TheKiller26"
-                minlength="5" maxlength="20" pattern="^\S*$" required />
-              <i class="form__validation-status fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              Please enter the username without spaces (max. 20 characters).
-            </p>
+        <!--Group: Username-->
+        <div class="form__group" id="group__username">
+          <label for="username" class="form__label">Username</label>
+          <div class="form__group-input">
+            <input type="text" class="form__input" id="username" name="username" placeholder="TheKiller26" minlength="5"
+              maxlength="20" pattern="^\S*$" required />
+            <i class="form__validation-status fas fa-times-circle"></i>
           </div>
-          <!--Group: Email-->
-          <div class="form__group" id="group__email">
-            <label for="email" class="form__label">Email</label>
-            <div class="form__group-input">
-              <input type="email" class="form__input" id="email" name="email" placeholder="jamesparker@gmail.com"
-                minlength="8" maxlength="50" required />
-              <i class="form__validation-status fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              Please enter your email (max. 50 characters).
-            </p>
+          <p class="form__input-error">
+            Please enter the username without spaces (max. 20 characters).
+          </p>
+        </div>
+        <!--Group: Email-->
+        <div class="form__group" id="group__email">
+          <label for="email" class="form__label">Email</label>
+          <div class="form__group-input">
+            <input type="email" class="form__input" id="email" name="email" placeholder="jamesparker@gmail.com"
+              minlength="8" maxlength="50" required />
+            <i class="form__validation-status fas fa-times-circle"></i>
           </div>
+          <p class="form__input-error">
+            Please enter your email (max. 50 characters).
+          </p>
         </div>
 
-        <div class="form__row">
-          <!--Group: Password-->
-          <div class="form__group" id="group__password">
-            <label for="password" class="form__label">Password</label>
-            <div class="form__group-input">
-              <input type="password" class="form__input" id="password" name="password"
-                pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$" required />
-              <i class="form__validation-status fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">
-              Password must contain, one number, one uppercase<br />
-              letter, one lowercase letter and one special character<br />
-              (min. 8 characters).
-            </p>
+        <!--Group: Password-->
+        <div class="form__group" id="group__password">
+          <label for="password" class="form__label">Password</label>
+          <div class="form__group-input">
+            <input type="password" class="form__input" id="password" name="password"
+              pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,20}$" required />
+            <i class="form__validation-status fas fa-times-circle"></i>
           </div>
-          <!--Group: Confirm Password-->
-          <div class="form__group" id="group__password2">
-            <label for="password2" class="form__label">Confirm Password</label>
-            <div class="form__group-input">
-              <input type="password" class="form__input" id="password2" name="password2" minlength="8" maxlength="20"
-                required />
-              <i class="form__validation-status fas fa-times-circle"></i>
-            </div>
-            <p class="form__input-error">Both passwords must be the same.</p>
+          <p class="form__input-error">
+            Password must contain, one number, one uppercase<br />
+            letter, one lowercase letter and one special character<br />
+            (min. 8 characters).
+          </p>
+        </div>
+        <!--Group: Confirm Password-->
+        <div class="form__group" id="group__password2">
+          <label for="password2" class="form__label">Confirm Password</label>
+          <div class="form__group-input">
+            <input type="password" class="form__input" id="password2" name="password2" minlength="8" maxlength="20"
+              required />
+            <i class="form__validation-status fas fa-times-circle"></i>
           </div>
+          <p class="form__input-error">Both passwords must be the same.</p>
         </div>
 
         <!--Buttons-->
@@ -308,12 +306,11 @@
       <!-- Shippping info -->
       <div class="info">
         <h3>Shipping</h3>
-        <h4>Shipping type</h4>
         <form id="shipping-form-submit" action="#" class="shipping-form the-form">
           <div class="shippingType">
-            <input type="radio" id="free" name="shipping-type" value="Free shipment" 
-            oninvalid="this.setCustomValidity('Please choose an option')" required>
-            <label for="free">Free shipment (72H)</label><br>
+            <input type="radio" id="free" name="shipping-type" value="Free shipment"
+              oninvalid="this.setCustomValidity('Please choose an option')" required>
+            <label for="free">Free shipment (72h)</label><br>
 
             <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
             <label for="extra">Extra shipping (48h) <span class="shipping">4,99$</span></label><br>
@@ -375,7 +372,8 @@
             </div>
 
             <form id="ch_finish-form">
-              <label><input type="checkbox" id="terms-and-conditions"> I have read and agree to the terms and conditions.</label>
+              <label><input type="checkbox" id="terms-and-conditions"> I have read and agree to the terms and
+                conditions.</label>
               <p class="alert-red" hidden>Please accept the terms and conditions.*</p>
               <button type="submit">Buy now</button>
             </form>
@@ -405,7 +403,7 @@
             <h3>Your purchase</h3>
             <div class="flex">
               <div class="ch_product-image">
-                
+
               </div>
               <div class="product-details">
                 <p class="ch_product-name"></p>

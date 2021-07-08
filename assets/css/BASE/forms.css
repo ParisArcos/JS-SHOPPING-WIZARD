@@ -7,12 +7,6 @@
   text-align: center;
 }
 
-.form__row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .form__group {
   padding: 0 15px;
   margin-bottom: 15px;
@@ -117,23 +111,19 @@ textarea {
 }
 
 .shippingType {
-  margin-left: -6%;
   line-height: 30px;
 }
 
 .giftCheck {
   margin-top: 15px;
-  margin-left: -5%;
   line-height: 30px;
 }
 
 .giftInfo {
-  margin-left: -4%;
   line-height: 30px;
 }
 
 .shipping-buttons {
-  margin-left: -4%;
   margin-top: 10px;
 }
 
