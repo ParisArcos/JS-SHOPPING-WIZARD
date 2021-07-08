@@ -26,7 +26,7 @@ var product = {
   size: ["XS", "S", "M", "L", "XL", "XXL"],
   combination: [
     {
-      colorName: "Arena",
+      colorName: "Sand",
       imageURL: "assets/img/products/arena/0.webp",
       colorHex: "#bbac9a",
       secondaryImg: [
@@ -37,7 +37,7 @@ var product = {
       ],
     },
     {
-      colorName: "Blanco",
+      colorName: "White",
       imageURL: "assets/img/products/blanco/0.webp",
       colorHex: "#fff",
       secondaryImg: [
@@ -48,7 +48,7 @@ var product = {
       ],
     },
     {
-      colorName: "Gris medio",
+      colorName: "Medium grey",
       imageURL: "assets/img/products/gris-medio/0.webp",
       colorHex: "#646174",
       secondaryImg: [
@@ -70,7 +70,7 @@ var product = {
       ],
     },
     {
-      colorName: "Lila",
+      colorName: "Purple",
       imageURL: "assets/img/products/lila/0.webp",
       colorHex: "#c6bbd5",
       secondaryImg: [
@@ -81,7 +81,7 @@ var product = {
       ],
     },
     {
-      colorName: "Lima",
+      colorName: "Lime",
       imageURL: "assets/img/products/lima/0.webp",
       colorHex: "#cbd683",
       secondaryImg: [
@@ -92,7 +92,7 @@ var product = {
       ],
     },
     {
-      colorName: "Negro",
+      colorName: "Black",
       imageURL: "assets/img/products/negro/0.webp",
       colorHex: "#131217",
       secondaryImg: [
