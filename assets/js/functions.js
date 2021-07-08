@@ -184,24 +184,23 @@ function moveMainSection() {
   positionMain -= 100;
   mainDiv.style.transform = "translateX(" + positionMain + "%)";
 
+  // Hide Footer during checkout
+  document.querySelector('footer').style.display = 'none';
+
   if (positionMain === -100) {
     // Profile
     document.querySelector(".profile-icon").style.backgroundColor = "#000";
-    document.querySelector('#product-section').style.height = '0px';
   }
   if (positionMain === -200) {
     // Address
     document.querySelector(".address-icon").style.backgroundColor = "#000";
-    document.querySelector('#profile').style.height = '0px';
   }
   if (positionMain === -300) {
     // Shipping
     document.querySelector(".shipping-icon").style.backgroundColor = "#000";
-    document.querySelector('#address').style.height = '0px';
   }
   if (positionMain === -400) {
     // Finish
     document.querySelector(".finish-icon").style.backgroundColor = "#000";
-    document.querySelector('#shipping').style.height = '0px';
   }
 }
