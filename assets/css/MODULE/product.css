@@ -140,7 +140,3 @@ select {
   height: auto;
   image-rendering: -webkit-optimize-contrast;
 }
-
-.micro{
-  cursor: pointer;
-}

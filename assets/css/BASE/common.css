@@ -25,6 +25,10 @@ hr {
   border: 2px solid lightgrey;
 }
 
+.cursor{
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
