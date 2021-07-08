@@ -37,7 +37,7 @@
       <div class="process" hidden>
         <div class="process-phrase">
           <h5>Profile</h5>
-          <h5>Adrress</h5>
+          <h5>Address</h5>
           <h5>Shipping</h5>
           <h5>Finish</h5>
         </div>
@@ -194,9 +194,9 @@
           <p class="form__input-error">Both passwords must be the same.</p>
         </div>
         <br />
-        <!--Button-->
+        <!--Buttons-->
         <div class="form__group form__group-btn-submit">
-          <button type="reset" class="form__btn">Clear</button>
+          <button type="reset" class="form__btn red">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
         </form>
@@ -387,9 +387,9 @@
           </label>
         </div>
 
-        <!--Button-->
+        <!--Buttons-->
         <div class="form__group form__group-btn-submit">
-          <button type="reset" class="form__btn">Clear</button>
+          <button type="reset" class="form__btn red">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
       </form>
@@ -399,13 +399,12 @@
     <section id="shipping" class="disabled">
            
       <!-- Shippping info -->
-      <div class="main-content">
         <div class="info">
           <h3>Shipping</h3>
           <h4>Shipping type</h4>
-          <form id="shipping-form-submit" action="#" class="shipping-form">
+          <form id="shipping-form-submit" action="#" class="shipping-form the-form">
             <div class="shippingType">
-              <input type="radio" id="free" name="shipping-type" value="Free shipment">
+              <input type="radio" id="free" name="shipping-type" value="Free shipment" required>
               <label for="free">Free shipment (72H)</label><br>
 
               <input type="radio" id="extra" name="shipping-type" value="Extra shipping">
@@ -418,26 +417,24 @@
               </div>  
 
               <div class="giftCheck">
-                <label> Is it a gift?</label>
-                <input type="checkbox" name="gift-check" >
+                <input type="checkbox" name="gift-check" onclick="giftCheckFunction()">
+                <label> Is it a gift? </label>
               </div>
 
-              <div class="giftInfo">
+              <div class="giftInfo" hidden>
                 <div class="giftMessage">
-                    <label>Gift Message:</label>
-                    <textarea rows="4" cols="50" name="comment" maxlength="200"></textarea>
+                    <label class="form__label">Gift Message:</label>
+                    <textarea rows="4" cols="50" name="comment" maxlength="200"></textarea>                 
                 </div>
                 <div class="giftWrapper">
-                    <label>Gift wrapper image</label>
-                    <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png">
+                    <label class="form__label">Gift wrapper image</label>
+                    <input type="file" value="Select image" name="gift-wrapper" accept=".jpg, .jpeg, .png" class="select-image">
                 </div>
               </div>
-
-              <div class="reset">
-                  <input type="button" class="reset" value="Clear" onclick="clearFunction()">
-              </div>
-              <div class="reset">
-                  <input type="submit" value="submit form">
+              <!-- -->
+              <div class="shipping-buttons">
+                <button type="reset" class="reset form__btn" value="Clear" onclick="clearFunction()">Clear</button>
+                <button type="submit" value="submit form" class="form__btn">Next</button>
               </div>
           </form>
         </div>
@@ -467,7 +464,7 @@
                 <div id="ch_delivery-date">
                   <span>Estimated delivery date:</span>
                   <p>Between 21 of July of 2021 14:00h <br />
-                  and 21 of July of 2021 20:00h</p>
+                  and 21 of July of 2021 20:00h</p> 
                 </div>
               </div>
             </div>
