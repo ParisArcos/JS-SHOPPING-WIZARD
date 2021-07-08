@@ -77,7 +77,7 @@ function initCheckoutOrder() {
   productOrder.size = select1.value;
   productOrder.hex = selected[0].dataset.hex;
   document.querySelector(".process").removeAttribute("hidden");
-  document.getElementById("logo").setAttribute("hidden", true);
+  document.querySelector(".logo").setAttribute("hidden", true);
   moveMainSection();
   initCounter();
 }
