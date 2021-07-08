@@ -4,6 +4,12 @@
   padding: 15px 45px;
 }
 
+@media (max-width: 575px) {
+  .process{
+    padding: 15px 0;
+  }
+}
+
 .process-phrase {
   display: flex;
   justify-content: space-between;
