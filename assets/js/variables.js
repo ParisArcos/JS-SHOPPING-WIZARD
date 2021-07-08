@@ -105,6 +105,17 @@ var product = {
   ],
 };
 /**
+ * Order Object Var
+ */
+var productOrder = {
+  name: '',
+  price: 0,
+  imageSrc: '',
+  size: '',
+  colorName: ''
+}
+
+/**
  * Shipping Global Variables
  */
 var shipping = {
