@@ -13,4 +13,5 @@ for (const i of micros) {
 // evento submit de form
 productForm.addEventListener("submit", initCheckoutOrder);
 
-//propagacion de eventos
+//preven tab arround
+document.addEventListener("keydown", preventTab);

@@ -108,6 +108,11 @@ function bigSlide(event) {
     mainSlide.childNodes[0].src = event.src;
   }
 }
+function preventTab() {
+  if (event.keyCode == 9) {
+    event.preventDefault();
+  }
+}
 
 /**
  * Form Helper Functions
@@ -148,8 +153,8 @@ function maxMinDate() {
     mm = "0" + mm;
   }
 
-  max = yyyy - 100 + "-" + mm + "-" + dd;
-  min = yyyy - 18 + "-" + mm + "-" + dd;
+  min = yyyy - 100 + "-" + mm + "-" + dd;
+  max = yyyy - 18 + "-" + mm + "-" + dd;
   document.getElementById("birthday").setAttribute("max", max);
   document.getElementById("birthday").setAttribute("min", min);
 }
@@ -223,4 +228,3 @@ function moveMainSection() {
     document.querySelector(".finish-icon").style.backgroundColor = "#000";
   }
 }
-
