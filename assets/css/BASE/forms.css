@@ -3,7 +3,19 @@
 /* Formulario datos cliente y dirección */
 
 .the-form {
-  padding-left: 5%;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.form__row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form__group{
+  padding: 0 15px;
+  margin-bottom: 15px;
 }
 
 .form__label {
@@ -53,7 +65,7 @@
   opacity: 0;
 }
 
-.red {
+.reset {
   background-color: white;
   color: black;
   margin-right: 15px;
@@ -90,6 +102,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Shipping Form */
 
+#shipping{
+  text-align: center;
+}
+
 textarea {
   width: 200px;
   border: 2px solid black;
@@ -123,4 +139,9 @@ textarea {
 
 #infoShipping {
   margin-left: 2%;
+}
+
+.form__group-btn-submit{
+  padding-top: 15px;
+  text-align: center;
 }

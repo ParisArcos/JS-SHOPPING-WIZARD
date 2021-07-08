@@ -21,7 +21,7 @@ var user = {
  * Product Global Variables
  */
 var product = {
-  name: "Camiseta básica",
+  name: "Basic t-shirt",
   price: 9.99,
   size: ["XS", "S", "M", "L", "XL", "XXL"],
   combination: [
