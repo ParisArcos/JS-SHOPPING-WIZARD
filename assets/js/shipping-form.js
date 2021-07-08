@@ -42,7 +42,7 @@ shippingForm.addEventListener("submit", function (event) {
       gift.image = input[1];
     }
   }
-  buildProductVariable();
+  buildOrderVariables();
   moveMainSection();
 });
 
