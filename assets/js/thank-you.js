@@ -25,14 +25,13 @@ function updateCounter(counter) {
 
     // When we get last page
     if (thankYouPageIsVisible()) {
-        let timeToDispay = counter / 60;
-        displaySessionTime(timeToDispay);
+        let timeToDisplay = counter / 60;
+        displaySessionTime(timeToDisplay);
         return;
     }
 
     return setTimeout(updateCounter, 1000, counter);
 }
-
 
 function showTimerModal(timeToDisplay) {
     let minutes = 'minutes';
@@ -59,12 +58,19 @@ function hideTimerModal() {
     timeDiv.classList.remove('show');
 }
 
-function displaySessionTime(timeToDispay) {
+function displaySessionTime(timeToDisplay) {
     let timeDiv = document.querySelector('#timer-sesion');
-    let time = timeToDispay.toFixed(2);
+    let time = timeToDisplay.toFixed(2);
     let arrayTime = time.split('.');
-    let minutes = arrayTime[0];
-    let seconds = arrayTime[1];
+
+    // Get an array with Min and Secs
+    let provMinutes = parseInt(arrayTime[0]);
+    let provSeconds = parseInt(arrayTime[1]);
+    
+    // To get the real Minutes when seconds is > 60
+    var minutes= provMinutes + parseInt((provSeconds/60).toFixed());
+    var seconds= provSeconds%60;
+
 
     timeDiv.innerHTML =
         `
