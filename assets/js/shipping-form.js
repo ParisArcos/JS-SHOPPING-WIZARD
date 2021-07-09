@@ -43,13 +43,13 @@ shipBtns.forEach((shipBtn) => {
       var dt = new Date();
       dt.setHours(dt.getHours() + 48);
       var dtYear = dt.getFullYear();
-      var dtMonth = dt.toLocaleString('en-IN', { month: "long" });
+      var dtMonth = dt.toLocaleString("en-IN", { month: "long" });
       var dtDate = dt.getDate();
       var dtHours = dt.getHours();
       var dtMin = dt.getMinutes();
       dt.setHours(dt.getHours() + 24);
       var dtMaxYear = dt.getFullYear();
-      var dtMaxMonth = dt.toLocaleString('en-IN', { month: "long" });
+      var dtMaxMonth = dt.toLocaleString("en-IN", { month: "long" });
       var dtMaxDate = dt.getDate();
       var dtMaxHours = dt.getHours();
       var dtMaxMin = dt.getMinutes();
@@ -57,13 +57,13 @@ shipBtns.forEach((shipBtn) => {
       var dt = new Date();
       dt.setHours(dt.getHours() + 24);
       var dtYear = dt.getFullYear();
-      var dtMonth = dt.toLocaleString('en-IN', { month: "long" });
+      var dtMonth = dt.toLocaleString("en-IN", { month: "long" });
       var dtDate = dt.getDate();
       var dtHours = dt.getHours();
       var dtMin = dt.getMinutes();
       dt.setHours(dt.getHours() + 24);
       var dtMaxYear = dt.getFullYear();
-      var dtMaxMonth = dt.toLocaleString('en-IN', { month: "long" });
+      var dtMaxMonth = dt.toLocaleString("en-IN", { month: "long" });
       var dtMaxDate = dt.getDate();
       var dtMaxHours = dt.getHours();
       var dtMaxMin = dt.getMinutes();
@@ -71,13 +71,13 @@ shipBtns.forEach((shipBtn) => {
       var dt = new Date();
       dt.setHours(dt.getHours() + 72);
       var dtYear = dt.getFullYear();
-      var dtMonth = dt.toLocaleString('en-IN', { month: "long" });
+      var dtMonth = dt.toLocaleString("en-IN", { month: "long" });
       var dtDate = dt.getDate();
       var dtHours = dt.getHours();
       var dtMin = dt.getMinutes();
       dt.setHours(dt.getHours() + 24);
       var dtMaxYear = dt.getFullYear();
-      var dtMaxMonth = dt.toLocaleString('en-IN', { month: "long" });
+      var dtMaxMonth = dt.toLocaleString("en-IN", { month: "long" });
       var dtMaxDate = dt.getDate();
       var dtMaxHours = dt.getHours();
       var dtMaxMin = dt.getMinutes();
@@ -91,12 +91,14 @@ shipBtns.forEach((shipBtn) => {
         `;
 
     // For "finish" and "thank-you" section
-    orderDeliveryDate.forEach(elm => elm.innerHTML = `
+    orderDeliveryDate.forEach(
+      (elm) =>
+        (elm.innerHTML = `
       <h4>Your order will arrive:</h4>
       <p>Between <span>${dtDate} of ${dtMonth} of ${dtYear} ${dtHours}:${dtMin}h</span> 
       and <span>${dtMaxDate} of ${dtMaxMonth} of ${dtMaxYear} ${dtMaxHours}:${dtMaxMin}h.</span></p>
-    `);
-
+    `)
+    );
   });
 });
 

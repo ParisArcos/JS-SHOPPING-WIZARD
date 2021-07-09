@@ -1,27 +1,27 @@
 /* TIMING */
 
 .timing {
-    position: relative;
-    color: black;
-    background: #fff;
-    text-align: center;
-    transition: 0.25s ease-in;
-    max-height: 0px;
-    overflow: hidden;
+  position: relative;
+  color: black;
+  background: #fff;
+  text-align: center;
+  transition: 0.25s ease-in;
+  max-height: 0px;
+  overflow: hidden;
 }
 .timing p {
-    margin: 0px;
-    padding: 10px;
+  margin: 0px;
+  padding: 10px;
 }
 .timing.show {
-    max-height: 99999px;
+  max-height: 99999px;
 }
 #ch_finish-form .alert-red {
-    font-size: 0.8rem;
-    margin: 10px 0px;
-    color: rgb(255, 0, 0);
+  font-size: 0.8rem;
+  margin: 10px 0px;
+  color: rgb(255, 0, 0);
 }
 #ch_finish-form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

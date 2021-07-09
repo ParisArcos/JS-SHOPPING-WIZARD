@@ -1,6 +1,6 @@
 /* PROCESS */
 
-.process{
+.process {
   padding: 15px 45px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 @media (max-width: 575px) {
-  .process{
+  .process {
     padding: 15px 0;
   }
 }
