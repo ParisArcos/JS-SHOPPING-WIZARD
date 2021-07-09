@@ -4,14 +4,14 @@
 /* BASE FOLDER (Are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.) */
 @import "BASE/vars.css";
 @import "BASE/reset.css";
-@import "BASE/common.css";
-@import "BASE/forms.css";
 @import "BASE/buttons.css";
 
 /* LAYOUT FOLDER (Divide the page into sections. Layouts hold one or more modules together.) */
 
 /* MODULE FOLDER (Are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.) */
+@import "MODULE/common.css";
 @import "MODULE/product.css";
+@import "MODULE/forms.css";
 @import "MODULE/timing.css";
 @import "MODULE/thank-you.css";
 @import "MODULE/process.css";

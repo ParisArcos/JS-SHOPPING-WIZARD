@@ -51,31 +51,38 @@
     <!--Timing-->
     <div class="timing">
     </div>
+    <!--Timing-->
   </header>
   <div id="main">
     <section id="product-section" class="active">
-      <!--Contenedor principal-->
+
+      <!--Product container-->
       <div class="product__group flex">
+
+        <!--Product images-->
         <div class="product__images">
-          <!--Contenedor izquierdo-->
           <div id="mainSlide" class="img-big"> </div>
           <div id=carrousel class="carrousel"> </div>
         </div>
+        <!--Product images-->
+
+        <!--Product info-->
         <div class="product__info">
-          <!--Contenedor derecho-->
           <div class="name">
-            <!--Nombre Producto-->
+            <!--Product Name-->
             <h2 id=name>{productName}</h2>
             <span class="tag">new!</span>
           </div>
+
+          <!--Container Info-->
           <div class="info">
-            <!--Contenedor Informacion-->
             <div class="price">
-              <!--Precio-->
+              <!--Price-->
               <h3>Price <span id=price>{productPrice}€</span></h3>
             </div>
+
+            <!--Description-->
             <div class="description">
-              <!--Descpcion-->
               <h3>Description</h3>
               <p>
                 This is where we're going. This T-Shirt from K Clothing  is made from 100% sustainable materials, using
@@ -83,6 +90,8 @@
                 recycled fibres or at least 10% organic cotton fibres.
               </p>
             </div>
+            <!--Description-->
+
             <form name="product-form" id="product-form" action="#">
               <input type="hidden" id="productName" name="productName" value="{productName}">
               <input type="hidden" id="productPrice" name="productPrice" value="{productPrice}">
@@ -101,8 +110,11 @@
                 </div>
             </form>
           </div>
+          <!--Container Info-->
         </div>
+        <!--Product info-->
       </div>
+      <!--Product container-->
     </section>
 
     <section id="profile" class="disabled">
@@ -122,6 +134,8 @@
             Please enter the username without spaces (max. 20 characters).
           </p>
         </div>
+        <!--Group: Username-->
+
         <!--Group: Email-->
         <div class="form__group" id="group__email">
           <label for="email" class="form__label">Email</label>
@@ -134,6 +148,7 @@
             Please enter your email (max. 50 characters).
           </p>
         </div>
+        <!--Group: Email-->
 
         <!--Group: Password-->
         <div class="form__group" id="group__password">
@@ -149,6 +164,8 @@
             (min. 8 characters).
           </p>
         </div>
+        <!--Group: Password-->
+
         <!--Group: Confirm Password-->
         <div class="form__group" id="group__password2">
           <label for="password2" class="form__label">Confirm Password</label>
@@ -159,19 +176,20 @@
           </div>
           <p class="form__input-error">Both passwords must be the same.</p>
         </div>
+        <!--Group: Confirm Password-->
 
         <!--Buttons-->
         <div class="form__group form__group-btn-submit">
           <button type="reset" class="reset form__btn">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
+        <!--Buttons-->
       </form>
     </section>
 
     <section id="address" class="disabled">
       <form action="" class="the-form" id="user-form-2">
         <h1>Address</h1>
-
 
         <!--Group: FirstName-->
         <div class="form__group" id="group__fname">
@@ -185,6 +203,7 @@
             Please enter your First Name (max. 20 characters).
           </p>
         </div>
+        <!--Group: FirstName-->
 
         <!--Group: LastName-->
         <div class="form__group" id="group__lname">
@@ -198,6 +217,7 @@
             Please enter your Last Name (max. 20 characters).
           </p>
         </div>
+        <!--Group: LastName-->
 
         <!--Group: Birthday-->
         <div class="form__group" id="group__birthday">
@@ -207,6 +227,7 @@
           </div>
           <p class="form__input-error">Please enter your Birthday.</p>
         </div>
+        <!--Group: Birthday-->
 
         <!--Group: Address1-->
         <div class="form__group" id="group__address1">
@@ -220,6 +241,7 @@
             Please enter your Address (max. 50 characters).
           </p>
         </div>
+        <!--Group: Address1-->
 
         <!--Group: Address2-->
         <div class="form__group" id="group__address2">
@@ -231,6 +253,7 @@
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
         </div>
+        <!--Group: Address2-->
 
         <!--Group: Postal Code-->
         <div class="form__group" id="group__pcode">
@@ -242,6 +265,7 @@
           </div>
           <p class="form__input-error">Please enter your Postal Code.</p>
         </div>
+        <!--Group: Postal Code-->
 
         <!--Group: Country-->
         <div class="form__group" id="group__country">
@@ -257,6 +281,7 @@
           </div>
           <p class="form__input-error">Please select your Country.</p>
         </div>
+        <!--Group: Country-->
 
         <!--Group: Phone Country Code-->
         <div class="form__group" id="group__phonecode">
@@ -272,6 +297,7 @@
           </div>
           <p class="form__input-error">This is your Phone Country Code.</p>
         </div>
+        <!--Group: Phone Country Code-->
 
         <!--Group: Phone-->
         <div class="form__group" id="group__phone">
@@ -283,6 +309,7 @@
           </div>
           <p class="form__input-error">Please enter your Phone Number.</p>
         </div>
+        <!--Group: Phone-->
 
         <!--Group: Confirm address-->
         <div class="form__group" id="group__confirm">
@@ -291,12 +318,14 @@
             This is my regular Address.
           </label>
         </div>
+        <!--Group: Confirm address-->
 
         <!--Buttons-->
         <div class="form__group form__group-btn-submit">
           <button type="reset" class="reset form__btn">Clear</button>
           <button type="submit" class="form__btn">Next</button>
         </div>
+        <!--Buttons-->
       </form>
     </section>
 
@@ -343,8 +372,8 @@
             <button type="submit" value="submit form" class="form__btn">Next</button>
           </div>
         </form>
-      </div>
-    </section>
+      </div><!-- Shippping info -->
+    </section><!-- Shipping -->
 
     <section id="finish" class="disabled">
       <div class="flex">
@@ -429,7 +458,6 @@
 
   </div>
 
-
   <footer>
     <p>Shopping Wizard 2021</p>
   </footer>
@@ -437,13 +465,11 @@
   <!-- Script tags -->
   <script src="assets/js/variables.js"></script>
   <script src="assets/js/functions.js"></script>
-
   <script src="assets/js/product.js"></script>
   <script src="assets/js/user-form.js"></script>
   <script src="assets/js/shipping-form.js"></script>
   <script src="assets/js/finish-form.js"></script>
   <script src="assets/js/thank-you.js"></script>
-
 
 </body>
 
