@@ -11,6 +11,10 @@
   margin: 2.5% 0;
 }
 
+.button-submit {
+  margin: 10% 0;
+}
+
 @media (max-width: 768px) {
   .flex > div {
     max-width: 100%;
